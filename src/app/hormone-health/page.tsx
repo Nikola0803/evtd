@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Hormone Health Education | evolv",
+  title: "Hormone Health Education",
   description: "Plain-language hormone health education and resources for more informed conversations with a licensed healthcare professional.",
   alternates: { canonical: "/hormone-health" },
 };
@@ -16,7 +17,7 @@ const TOPICS = [
   {
     icon: "ri-line-chart-line",
     title: "Patterns and questions",
-    body: "Organize what you notice and prepare clearer questions for a licensed healthcare professional.",
+    body: "Organize what you notice and learn how to separate personal observations from general research claims.",
   },
   {
     icon: "ri-leaf-line",
@@ -28,14 +29,18 @@ const TOPICS = [
 export default function HormoneHealthPage() {
   return (
     <>
-      <section className="-mt-[90px] bg-charcoal pb-20 pt-[150px] text-center text-white md:-mt-[100px] md:pb-28 md:pt-[180px]">
-        <div className="mx-auto max-w-[820px] px-4 md:px-8">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-copper">Wellness Education</p>
-          <h1 className="font-display text-4xl font-semibold leading-tight md:text-6xl">Hormone Health Education</h1>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
-            Clear information about hormone health, everyday wellbeing, and the questions you may want to bring to a licensed healthcare professional.
-          </p>
-          <p className="mt-4 text-xs uppercase tracking-widest text-white/40">Education only · No diagnosis · No treatment</p>
+      <section className="bg-[#F6F0E7] px-4 py-8 md:px-8 md:py-14">
+        <div className="mx-auto grid max-w-[1400px] overflow-hidden rounded-[2rem] bg-[#D77E5F] lg:grid-cols-[1fr_1.05fr]">
+          <div className="flex flex-col justify-center p-8 text-white md:p-14 lg:p-16">
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/65">Wellness Education</p>
+            <h1 className="font-display text-4xl font-semibold leading-tight md:text-6xl">Hormone Health Education</h1>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">Clear information about hormone health, everyday wellbeing, and the research language behind common questions.</p>
+            <p className="mt-4 text-xs uppercase tracking-widest text-white/55">Education only · No diagnosis · No treatment</p>
+            <Link href="/book" className="mt-8 w-fit rounded-full bg-[#18231E] px-7 py-3.5 text-[12px] font-semibold uppercase tracking-[0.16em] text-white">Book Your First Call</Link>
+          </div>
+          <div className="relative min-h-[360px] lg:min-h-[620px]">
+            <Image src="/images/brand/program-hormone-education-v2.png" alt="Women exploring hormone health education together" fill priority sizes="(max-width: 1024px) 100vw, 52vw" className="object-cover object-center" />
+          </div>
         </div>
       </section>
 

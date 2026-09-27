@@ -59,7 +59,7 @@ export function AffiliatePanel() {
     load();
   }, []);
 
-  const referralLink = data?.referralCode ? `https://evolvpeptides.com/?ref=${data.referralCode}` : "";
+  const referralLink = data?.referralCode ? `https://evlvtoday.com/?ref=${data.referralCode}` : "";
 
   async function copyLink() {
     try {

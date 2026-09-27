@@ -4,7 +4,6 @@ import "./globals.css";
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { QuizWidget } from "@/components/layout/QuizWidget";
 import { ReferralCapture } from "@/components/layout/ReferralCapture";
 import { VerificationSync } from "@/components/layout/VerificationSync";
 import { AgeGate } from "@/components/layout/AgeGate";
@@ -16,7 +15,7 @@ import { GoogleTagManagerHead, GoogleTagManagerBody } from "@/components/layout/
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { ChunkErrorReload } from "@/components/layout/ChunkErrorReload";
 
-const SITE_URL = "https://evolvpeptides.com";
+const SITE_URL = "https://evlvtoday.com";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -42,8 +41,8 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "evolv: Peptide & Wellness Education",
-    template: "%s | evolv",
+    default: "EVLV: Peptide & Wellness Education",
+    template: "%s | EVLV",
   },
   description:
     "Plain-language peptide and wellness education built around your goals, with research guides and resources for better provider conversations.",
@@ -61,14 +60,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    siteName: "evolv",
-    title: "evolv: Peptide & Wellness Education",
+    siteName: "EVLV",
+    title: "EVLV: Peptide & Wellness Education",
     description: "Plain-language peptide and wellness education, research guides, and resources for better provider conversations.",
-    images: [{ url: "/images/brand/wellness-hero.png", width: 1200, height: 630, alt: "evolv wellness education" }],
+    images: [{ url: "/images/brand/wellness-hero.png", width: 1200, height: 630, alt: "EVLV wellness education" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "evolv: Peptide & Wellness Education",
+    title: "EVLV: Peptide & Wellness Education",
     description: "Plain-language peptide and wellness education, research guides, and resources for better provider conversations.",
     images: ["/images/brand/wellness-hero.png"],
   },
@@ -81,7 +80,7 @@ export const metadata: Metadata = {
 const ORGANIZATION_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "evolv",
+  name: "EVLV",
   url: SITE_URL,
   logo: `${SITE_URL}/logo/evlv-logo-light.png`,
   description: "Plain-language peptide and wellness education, research guides, and resources for better provider conversations.",
@@ -90,7 +89,7 @@ const ORGANIZATION_JSON_LD = {
 const WEBSITE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "evolv",
+  name: "EVLV",
   url: SITE_URL,
   potentialAction: {
     "@type": "SearchAction",
@@ -124,7 +123,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <Header />
               <main className="flex-1 pt-[90px] md:pt-[100px]">{children}</main>
               <Footer />
-              <QuizWidget />
           </CartProvider>
         </CurrencyProvider>
       </body>

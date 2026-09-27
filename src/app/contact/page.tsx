@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | evolv",
-  description: "Get in touch with the evolv support team.",
+  title: "Contact",
+  description: "Get in touch with the EVLV support team.",
 };
 
 export default function ContactPage() {
@@ -13,7 +13,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-[1400px] px-4 md:px-8">
           <h1 className="mb-4 font-display text-4xl font-semibold md:text-5xl lg:text-6xl">Contact Us</h1>
           <p className="mx-auto max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
-            Have a question about an order, product, or need assistance? We typically respond within minutes.
+            Have a question about our education, membership, or first call? We are here to help.
           </p>
         </div>
       </section>
@@ -24,14 +24,14 @@ export default function ContactPage() {
             <div>
               <h3 className="mb-4 font-display text-xl font-semibold text-charcoal">Get in touch</h3>
               <p className="text-sm leading-relaxed text-charcoal/60">
-                Our support team is available to help with orders, product questions, and anything else you need.
+                Our team can help you find the right education page, understand membership, or prepare for your first call.
               </p>
             </div>
 
             <div className="space-y-4">
               <ContactRow icon="ri-mail-line" label="Email">
-                <a href="mailto:support@evolvpeptides.com" className="text-sm text-sage-deep transition hover:underline">
-                  support@evolvpeptides.com
+                <a href="mailto:support@evlvtoday.com" className="text-sm text-sage-deep transition hover:underline">
+                  support@evlvtoday.com
                 </a>
               </ContactRow>
               <ContactRow icon="ri-time-line" label="Response Time">
@@ -40,9 +40,9 @@ export default function ContactPage() {
             </div>
 
             <div className="rounded-lg border border-stone bg-ivory-soft p-5">
-              <h4 className="mb-2 text-sm font-semibold text-charcoal">A note on compliance</h4>
+              <h4 className="mb-2 text-sm font-semibold text-charcoal">A clear boundary</h4>
               <p className="text-xs leading-relaxed text-charcoal/60">
-                evolv products are supplied for research use only and are not intended for human consumption.
+                EVLV is an education service. We do not diagnose, prescribe, or provide medical treatment.
               </p>
             </div>
           </div>

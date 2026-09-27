@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/account", "/checkout", "/order-success"],
       },
     ],
-    sitemap: "https://evolvpeptides.com/sitemap.xml",
+    sitemap: "https://evlvtoday.com/sitemap.xml",
   };
 }

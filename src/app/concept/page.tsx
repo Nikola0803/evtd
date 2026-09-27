@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 
 export const metadata: Metadata = {
-  title: "evolv | Peptide & Wellness Education",
+  title: { absolute: "EVLV | Peptide & Wellness Education" },
   description: "Clear, practical education about peptide science, hormone health, longevity, and everyday wellness.",
 };
 
@@ -46,21 +46,21 @@ const programs = [
     eyebrow: "Core education",
     title: "Peptide Education",
     copy: "Understand the language, research categories, and limits of common peptide claims.",
-    image: "/images/brand/program-peptide-education.png",
+    image: "/images/brand/program-peptide-education-v2.png",
     href: "/peptides",
   },
   {
     eyebrow: "Health education",
     title: "Hormone Health",
-    copy: "Build useful context and prepare clearer questions for a licensed healthcare professional.",
-    image: "/images/brand/program-hormone-education.png",
+    copy: "Build useful context around hormone health and learn to assess common claims.",
+    image: "/images/brand/program-hormone-education-v2.png",
     href: "/hormone-health",
   },
   {
     eyebrow: "Ongoing learning",
     title: "Monthly Membership",
     copy: "Education sessions, organized resources, and support for the questions that matter to you.",
-    image: "/images/brand/program-membership-education.png",
+    image: "/images/brand/program-membership-education-v2.png",
     href: "/membership",
   },
 ];
@@ -87,10 +87,10 @@ const faqs = [
   ["What does the session cost?", "Nothing. Your first 15-minute call is free, with no obligation."],
   ["Who will I be speaking with?", "One of our peptide education specialists. They listen to your questions and explain our resources in plain language."],
   ["Do I need to prepare anything?", "No. Come with whatever questions are on your mind."],
-  ["Is this medical advice?", "No. evolv is an education platform. We do not diagnose, prescribe, or provide treatment."],
+  ["Is this medical advice?", "No. EVLV is an education platform. We do not diagnose, prescribe, or provide treatment."],
   ["Will you try to sell me something?", "No. The first call is educational. There is no pitch and no obligation."],
   ["What happens to my information?", "It stays with our team. We follow applicable U.S. privacy laws and never sell your details."],
-  ["Where is evolv available?", "Online, across the United States. All you need is a phone or computer."],
+  ["Where is EVLV available?", "Online, across the United States. All you need is a phone or computer."],
 ];
 
 export default function ConceptPage() {
@@ -102,9 +102,9 @@ export default function ConceptPage() {
             <Image src="/images/brand/wellness-hero.png" alt="Woman exploring practical wellness education" fill priority sizes="(max-width: 1024px) 100vw, 68vw" className="object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/5" />
             <div className="absolute inset-x-0 bottom-0 p-7 text-white md:p-12 lg:p-14">
-              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#F2A58C]">Evolve. Alter.</p>
+              <p className="mb-5 text-lg font-semibold uppercase tracking-[0.18em] text-[#F2A58C] md:text-xl">Evolve. Alter.</p>
               <h1 className="max-w-4xl font-display text-5xl font-semibold leading-[.95] tracking-[-.045em] md:text-7xl lg:text-[5.6rem]">
-                Become your<br /><span className="text-[#F2A58C]">ultimate.</span>
+                Become your <br /><span className="text-[#F2A58C]">ultimate.</span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
                 Understand peptide science, hormone health, longevity, and everyday wellness. Clear education. No hype and no medical promises.
@@ -126,12 +126,12 @@ export default function ConceptPage() {
                 <Link href="/peptides" className="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em]">Read the overview <span aria-hidden>→</span></Link>
               </div>
             </div>
-            <div className="flex min-h-[310px] flex-col justify-between rounded-[2rem] bg-[#D77E5F] p-7 text-white md:p-9">
+            <div className="flex min-h-[310px] flex-col rounded-[2rem] bg-[#D77E5F] p-7 text-white md:p-9">
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/65">A better first step</p>
                 <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.02]">Bring the questions.<br />We’ll bring context.</h2>
               </div>
-              <div>
+              <div className="mt-6">
                 <p className="max-w-sm text-sm leading-relaxed text-white/75">Your first call is a free 15-minute conversation about what you want to learn.</p>
                 <Link href="/book" className="mt-5 inline-flex rounded-full bg-[#1B1D19] px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-white">Book an education call</Link>
               </div>
@@ -140,16 +140,7 @@ export default function ConceptPage() {
         </div>
       </section>
 
-      <section className="bg-[#1B1D19] px-4 py-7 text-[#F6F0E7] md:px-8">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 md:flex-row md:items-center">
-          <p className="font-display text-2xl font-semibold md:text-3xl">Evidence deserves context.</p>
-          <div className="flex flex-wrap gap-x-7 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/55">
-            <span>Plain language</span><span>Research aware</span><span>Education only</span><span>U.S. based</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#1B1D19] px-4 py-20 text-[#F6F0E7] md:px-8 md:py-28">
+      <section id="goals" className="scroll-mt-28 bg-[#1B1D19] px-4 py-20 text-[#F6F0E7] md:px-8 md:py-28">
         <div className="mx-auto max-w-[1440px]">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div>
@@ -204,7 +195,7 @@ export default function ConceptPage() {
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E8B89F]">How it works</p>
             <h2 className="mt-4 font-display text-5xl font-semibold leading-[1] tracking-[-.04em] md:text-6xl">Learn without being sold a medical promise.</h2>
-            <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/65 md:text-base">We keep the boundary simple: evolv explains research and organizes resources. Licensed healthcare professionals handle personal medical care.</p>
+            <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/65 md:text-base">We keep the boundary simple: EVLV explains research and organizes resources. Licensed healthcare professionals handle personal medical care.</p>
           </div>
           <div className="grid gap-px overflow-hidden rounded-[1.7rem] bg-white/15 md:grid-cols-3">
             {[
@@ -229,7 +220,7 @@ export default function ConceptPage() {
               <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F2A58C]">
                 <span className="h-px w-7 bg-[#F2A58C]" />A different category of education
               </p>
-              <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] md:text-6xl">evolv vs. scattered online claims.</h2>
+              <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] md:text-6xl">EVLV vs. scattered online claims.</h2>
             </div>
             <p className="max-w-md text-sm leading-relaxed text-white/55 lg:text-right md:text-base">The difference is not hype. It is having a clear place to understand the research, its limits, and what it may mean for your goals.</p>
           </div>
@@ -247,7 +238,7 @@ export default function ConceptPage() {
               <div className="overflow-hidden rounded-[1.35rem] border border-white/12">
                 <div className="grid grid-cols-[1.7fr_1fr_1fr] items-center gap-2 bg-white/[.07] px-4 py-4 text-[10px] font-semibold uppercase tracking-[0.12em] md:px-5">
                   <span className="text-white/65">What matters</span>
-                  <span className="text-center text-[#F2A58C]">evolv</span>
+                  <span className="text-center text-[#F2A58C]">EVLV</span>
                   <span className="text-center text-white/35">Going it alone</span>
                 </div>
                 {comparisonRows.map((row, index) => (
@@ -259,7 +250,7 @@ export default function ConceptPage() {
                 ))}
               </div>
 
-              <p className="mt-5 max-w-2xl text-xs leading-relaxed text-white/40">This comparison is general. evolv provides education only. We do not diagnose, prescribe, recommend doses, or provide medical treatment.</p>
+              <p className="mt-5 max-w-2xl text-xs leading-relaxed text-white/40">This comparison is general. EVLV provides education only. We do not diagnose, prescribe, recommend doses, or provide medical treatment.</p>
               <Link href="/book" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#C86B4D]">Book an education call <span aria-hidden>→</span></Link>
             </div>
           </div>
@@ -317,7 +308,7 @@ export default function ConceptPage() {
           <div className="flex flex-col justify-center p-8 text-white md:p-14 lg:p-16">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/60">Your first call is free</p>
             <h2 className="mt-5 font-display text-5xl font-semibold leading-[.98] tracking-[-.04em] md:text-6xl">Start with one honest conversation.</h2>
-            <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/75 md:text-base">Tell us what you want to learn. We’ll explain what evolv can help you understand—and what belongs with a licensed professional.</p>
+            <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/75 md:text-base">Tell us what you want to learn. We’ll explain what EVLV can help you understand—and what belongs with a licensed professional.</p>
             <Link href="/book" className="mt-8 inline-flex w-fit rounded-full bg-[#1B1D19] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white">Book your first call</Link>
           </div>
           <div className="relative min-h-[360px] lg:min-h-full">

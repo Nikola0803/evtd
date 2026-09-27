@@ -1,13 +1,11 @@
 import type { MetadataRoute } from "next";
-import { getProducts } from "@/lib/products";
 import { getJournalArticles } from "@/lib/journal-data";
 
-const BASE_URL = "https://evolvpeptides.com";
+const BASE_URL = "https://evlvtoday.com";
 
 const STATIC_ROUTES = [
   { path: "/", priority: 1, changeFrequency: "daily" as const },
-  { path: "/shop", priority: 0.9, changeFrequency: "daily" as const },
-  { path: "/coas", priority: 0.7, changeFrequency: "weekly" as const },
+  { path: "/shop", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/journal", priority: 0.6, changeFrequency: "weekly" as const },
   { path: "/peptides", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/hormone-health", priority: 0.6, changeFrequency: "weekly" as const },
@@ -15,8 +13,7 @@ const STATIC_ROUTES = [
   { path: "/about", priority: 0.5, changeFrequency: "monthly" as const },
   { path: "/faq", priority: 0.4, changeFrequency: "monthly" as const },
   { path: "/contact", priority: 0.3, changeFrequency: "yearly" as const },
-  { path: "/wholesale", priority: 0.4, changeFrequency: "monthly" as const },
-  { path: "/plans", priority: 0.3, changeFrequency: "monthly" as const },
+  { path: "/book", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "/terms", priority: 0.2, changeFrequency: "yearly" as const },
   { path: "/privacy", priority: 0.2, changeFrequency: "yearly" as const },
 ];
@@ -31,13 +28,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.priority,
   }));
 
-  const productEntries: MetadataRoute.Sitemap = getProducts().map((p) => ({
-    url: `${BASE_URL}/shop/${p.slug}`,
-    lastModified: p.batch?.date ? new Date(p.batch.date) : now,
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
-
   const journalEntries: MetadataRoute.Sitemap = getJournalArticles().map((a) => ({
     url: `${BASE_URL}/journal/${a.slug}`,
     lastModified: new Date(a.publishedDate),
@@ -45,5 +35,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticEntries, ...productEntries, ...journalEntries];
+  return [...staticEntries, ...journalEntries];
 }

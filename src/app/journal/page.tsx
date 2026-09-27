@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getJournalArticles } from "@/lib/journal-data";
 
 export const metadata: Metadata = {
-  title: "Journal | evolv",
+  title: "Journal",
   description: "Clear, practical guidance on hormone health, metabolic wellness, longevity, body composition and recovery.",
   alternates: { canonical: "/journal" },
 };
@@ -52,6 +52,11 @@ export default function JournalPage() {
             ))}
           </div>
         </div>
+      </section>
+      <section className="bg-[#D77E5F] px-4 py-16 text-center text-white md:px-8 md:py-20">
+        <h2 className="font-display text-3xl font-semibold md:text-4xl">Keep learning at your own pace.</h2>
+        <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/75">Explore clear guides across peptide science, hormone health, longevity, metabolic wellness, and recovery.</p>
+        <Link href="/shop" className="mt-7 inline-flex rounded-full bg-[#18231E] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white">Browse the Education Library</Link>
       </section>
     </>
   );

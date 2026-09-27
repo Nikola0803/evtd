@@ -10,38 +10,31 @@ import { FaqItem } from "./types";
 
 export const faqItems: FaqItem[] = [
   {
-    question: "What does evolv provide?",
-    answer:
-      "evolv provides peptide and wellness education in plain language. We share research context, learning resources, and questions you can bring to a licensed healthcare professional. We are not a medical provider.",
+    question: "What does the session cost?",
+    answer: "Nothing. Your first 15-minute call is free, with no obligation.",
   },
   {
-    question: "How do I get started?",
-    answer:
-      "Start with a free 15-minute call. We’ll listen to your goals, how you feel today, and the kind of support you want. Then we’ll agree on a simple next step.",
+    question: "Who will I be speaking with?",
+    answer: "One of our peptide education specialists. They work with these topics every day and explain our resources in plain language.",
   },
   {
-    question: "Do I need to be local to work with evolv?",
-    answer:
-      "Yes. Our education platform and sessions are online across the United States.",
+    question: "Do I need to prepare anything?",
+    answer: "No. Come with whatever questions are on your mind. There are no wrong ones.",
   },
   {
-    question: "Is this a substitute for medical care?",
-    answer:
-      "No. evolv provides education only. We are not a clinic or telehealth provider, and we do not diagnose, prescribe, or provide treatment. Personal medical questions belong with a licensed healthcare professional.",
+    question: "Is this medical advice?",
+    answer: "No. EVLV provides education only. We do not provide medical advice, diagnoses, prescriptions, or treatment.",
   },
   {
-    question: "What does a typical program include?",
-    answer:
-      "Start with a short call about what you want to understand. Depending on your membership, you may receive education sessions, access to our resource library, and organized learning guides.",
+    question: "Will you try to sell me something?",
+    answer: "No. The first call is educational. There is no pitch and no obligation.",
   },
   {
-    question: "What is your refund policy?",
-    answer:
-      "Digital programs and completed education sessions are non-refundable. If something is not right, contact us and we will review the situation. Membership plans can be cancelled before the next billing cycle.",
+    question: "What happens to my information?",
+    answer: "It stays with our team. We follow applicable U.S. privacy laws and never sell your details.",
   },
   {
-    question: "Do you offer programs for businesses or spas?",
-    answer:
-      "Yes. We work with spas, wellness centers, and corporate wellness programs to offer branded group plans, staff education, and client-facing wellness protocols. Reach out through the Contact page to discuss a B2B partnership.",
+    question: "Where is EVLV available?",
+    answer: "Online, across the United States. All you need is a phone or computer.",
   },
 ];

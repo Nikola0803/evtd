@@ -19,7 +19,7 @@ export function Logo({
   const src = tone === "ivory" ? "/logo/evlv-logo-light.png" : "/logo/evlv-logo-dark.png";
   return (
     <Link href="/" className={`inline-flex shrink-0 items-center ${className}`}>
-      <Image src={src} alt="evolv" width={2172} height={724} className={imgClassName} priority />
+      <Image src={src} alt="EVLV" width={2172} height={724} className={imgClassName} priority />
     </Link>
   );
 }

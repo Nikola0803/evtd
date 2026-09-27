@@ -1,19 +1,5 @@
-import { Metadata } from "next";
-import { Suspense } from "react";
-import { CoasClient } from "./CoasClient";
-import { getCoaMap } from "@/lib/coa-data";
+import { permanentRedirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Certificates of Analysis",
-  description: "Independent batch verification reports (Certificates of Analysis) for every evolv research peptide, searchable by batch code.",
-  alternates: { canonical: "/coas" },
-};
-
-export default async function CoasPage() {
-  const coaMap = await getCoaMap();
-  return (
-    <Suspense fallback={null}>
-      <CoasClient coaMap={coaMap} />
-    </Suspense>
-  );
+export default function LegacyCoasPage() {
+  permanentRedirect("/peptides");
 }

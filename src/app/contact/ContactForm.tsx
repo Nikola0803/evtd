@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 
-const TOPICS = ["Order Question", "Product Question", "Shipping & Tracking", "COAs", "Other"];
+const TOPICS = ["Education Question", "Membership", "First Call", "Journal", "Other"];
 
 export function ContactForm() {
   const [name, setName] = useState("");

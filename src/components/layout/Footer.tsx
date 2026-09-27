@@ -12,7 +12,6 @@ const COMPANY_NAV = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/faq", label: "FAQ" },
-  { href: "/account", label: "Account" },
 ];
 
 const POLICIES_NAV = [
@@ -22,16 +21,17 @@ const POLICIES_NAV = [
 
 export function Footer() {
   return (
-    <footer className="bg-charcoal pb-10 pt-24 text-white md:pt-36">
+    <footer className="bg-[#141B17] pb-8 pt-20 text-white md:pt-28">
       <div className="mx-auto max-w-[1400px] px-4 md:px-8">
-        <div className="flex flex-wrap items-center justify-between gap-6">
-          <div>
-            <Logo tone="ivory" imgClassName="h-14 w-auto md:h-20" />
-            <p className="mt-4 max-w-md text-sm text-white/50">Warm, practical wellness education built around your goals and how you want to feel.</p>
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <Logo tone="ivory" imgClassName="h-7 w-auto md:h-9" />
+          <div className="max-w-md sm:text-right">
+            <p className="text-sm leading-relaxed text-white/50">Warm, practical wellness education built around your goals and how you want to feel.</p>
+            <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#F2A58C]">U.S.-based · Available online nationwide</p>
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-8 border-t border-white/10 pt-14 md:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-8 border-t border-white/10 pt-12 md:grid-cols-4">
           <FooterColumn title="Learn">
             {RESEARCH_NAV.map((item) => (
               <li key={item.label}>
@@ -69,12 +69,12 @@ export function Footer() {
       <div id="legal-disclaimer" className="mx-auto mt-16 max-w-[1400px] scroll-mt-32 border-t border-white/10 px-4 pt-8 md:px-8">
         <div className="space-y-3 text-xs leading-relaxed text-white/40">
           <p>
-            evolv is an educational service. We explain research and wellness topics in plain language. We do not provide medical care, diagnoses, prescriptions, or treatment plans.
+            EVLV is an educational service. We explain research and wellness topics in plain language. We do not provide medical care, diagnoses, prescriptions, or treatment plans.
           </p>
         </div>
         <div className="mt-6 flex flex-col gap-2 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
-          <span>© evolv {new Date().getFullYear()}. All rights reserved.</span>
-          <span>evolvPEPTIDES.COM</span>
+          <span>© EVLV {new Date().getFullYear()}. All rights reserved.</span>
+          <span>EVLVTODAY.COM</span>
         </div>
       </div>
     </footer>

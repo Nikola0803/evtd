@@ -3,11 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ui/Button";
 import { FinalCta } from "@/components/home/FinalCta";
-import { QuizTrigger } from "./QuizTrigger";
 
 export const metadata: Metadata = {
-  title: "About evolv",
-  description: "evolv is a peptide and wellness education platform with plain-language guides, research context, and learning support.",
+  title: "About",
+  description: "EVLV is a peptide and wellness education platform with plain-language guides, research context, and learning support.",
   alternates: { canonical: "/about" },
 };
 
@@ -16,7 +15,7 @@ const PRINCIPLES = [
   { title: "Context over claims", body: "We explain what research can and cannot tell you, without turning information into personal medical guidance." },
   { title: "Education over dependency", body: "We teach you to understand your own body — so your confidence grows alongside your results." },
   { title: "Clarity over overwhelm", body: "Simple, actionable guidance you can implement immediately, without needing a medical degree to follow it." },
-  { title: "Real answers, not scripts", body: "You'll speak to someone who actually knows your case, not a chatbot or canned-reply queue." },
+  { title: "Real answers, not scripts", body: "You can speak with a real education team member, not a chatbot or canned-reply queue." },
   { title: "Long-term over quick fixes", body: "Sustainable change takes time and intention. We build habits, not just milestones." },
 ];
 
@@ -34,18 +33,18 @@ export default function AboutPage() {
       <section className="bg-ivory-soft py-16 md:py-24">
         <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-10 px-4 md:grid-cols-2 md:px-8">
           <div className="aspect-[4/3] w-full overflow-hidden rounded-lg">
-            <Image src="/images/brand/wellness-consultation.png" alt="evolv wellness consultation" width={800} height={600} className="h-full w-full object-cover" priority />
+            <Image src="/images/brand/wellness-consultation.png" alt="EVLV wellness consultation" width={800} height={600} className="h-full w-full object-cover" priority />
           </div>
           <div>
             <span className="mb-4 inline-block rounded-full border border-stone bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-charcoal/60">
-              About evolv
+              About EVLV
             </span>
             <h1 className="font-display text-4xl font-semibold leading-tight text-charcoal md:text-5xl">
               Peptide and wellness education, without the hype.
             </h1>
             <p className="mt-5 max-w-md text-base leading-relaxed text-soft-gray md:text-lg">
               The wellness industry has grown faster than its integrity. Most programs sell on hype: big promises,
-              vague &ldquo;transformation,&rdquo; and very little you can actually verify. We built evolv to be the
+              vague &ldquo;transformation,&rdquo; and very little you can actually verify. We built EVLV to be the
               opposite.
             </p>
           </div>
@@ -57,12 +56,12 @@ export default function AboutPage() {
           <h2 className="font-display text-3xl font-semibold leading-tight md:text-4xl">
             Why
             <br />
-            evolv
+            EVLV
             <br />
             exists
           </h2>
           <p className="max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
-            People deserve clear education before making sense of wellness claims. evolv turns complex peptide and
+            People deserve clear education before making sense of wellness claims. EVLV turns complex peptide and
             wellness research into plain language, while keeping personal medical decisions with licensed healthcare
             professionals.
           </p>
@@ -108,9 +107,9 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-10 px-4 md:grid-cols-2 md:px-8">
           <div>
-            <h2 className="font-display text-3xl font-semibold text-charcoal md:text-4xl">What evolv is not.</h2>
+            <h2 className="font-display text-3xl font-semibold text-charcoal md:text-4xl">What EVLV is not.</h2>
             <p className="mt-4 max-w-md text-base leading-relaxed text-soft-gray">
-              evolv is an education platform. We are not a clinic, a medical practice, or a telehealth provider. We do
+              EVLV is an education platform. We are not a clinic, a medical practice, or a telehealth provider. We do
               not diagnose, prescribe, or provide treatment. Personal medical decisions belong with a licensed
               healthcare professional.
             </p>
@@ -127,9 +126,7 @@ export default function AboutPage() {
             <h2 className="font-display text-3xl font-semibold md:text-4xl">Built to actually work with your life.</h2>
             <p className="mt-4 max-w-lg text-base leading-relaxed text-white/60">
               Browse education by goal if you know what you want to understand, or start with your free first call if
-              you&apos;re not sure where to begin.{" "}
-              <QuizTrigger>Use the wellness finder</QuizTrigger> to match you with the right program based on your
-              current priorities.
+              you&apos;re not sure where to begin. Use the <Link href="/#goals" className="font-semibold text-[#F2A58C] hover:underline">goal finder</Link> to choose an education path based on your current priorities.
             </p>
           </div>
 
@@ -142,8 +139,7 @@ export default function AboutPage() {
               <Link href="/contact" className="font-semibold text-copper hover:underline">
                 Reach out
               </Link>{" "}
-              and our team typically responds within minutes during business hours. A real person who knows your case,
-              not a script.
+              and our team will respond during business hours. A real person from our education team, not a script.
             </p>
           </div>
         </div>
@@ -155,7 +151,7 @@ export default function AboutPage() {
             Clear education. Careful context. No medical promises.
           </p>
           <p className="mx-auto mt-5 max-w-md text-xs leading-relaxed text-white/40">
-            evolv provides education only. We are not a medical or telehealth provider. Speak with a licensed
+            EVLV provides education only. We are not a medical or telehealth provider. Speak with a licensed
             healthcare professional about personal decisions and care.
           </p>
         </div>

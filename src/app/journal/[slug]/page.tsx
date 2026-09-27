@@ -8,7 +8,7 @@ export function generateStaticParams() {
   return getJournalArticles().map((a) => ({ slug: a.slug }));
 }
 
-const SITE_URL = "https://evolvpeptides.com";
+const SITE_URL = "https://evlvtoday.com";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) return {};
   const url = `${SITE_URL}/journal/${article.slug}`;
   return {
-    title: `${article.title} | evolv Journal`,
+    title: article.title,
     description: article.excerpt,
     alternates: { canonical: `/journal/${article.slug}` },
     openGraph: {
