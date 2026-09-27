@@ -99,7 +99,10 @@ export default function ConceptPage() {
       <section className="relative px-4 pb-10 pt-12 md:px-8 md:pb-16 md:pt-20">
         <div className="mx-auto grid max-w-[1440px] gap-5 lg:grid-cols-[1.32fr_.68fr]">
           <div className="relative min-h-[640px] overflow-hidden rounded-[2rem] bg-[#29362F] md:min-h-[720px]">
-            <Image src="/images/brand/wellness-hero.png" alt="Woman exploring practical wellness education" fill priority sizes="(max-width: 1024px) 100vw, 68vw" className="object-cover object-center" />
+            <picture>
+              <source media="(max-width: 767px)" srcSet="/images/brand/wellness-hero-mobile.png" />
+              <Image src="/images/brand/wellness-hero.png" alt="Woman exploring practical wellness education" fill priority sizes="(max-width: 1024px) 100vw, 68vw" className="object-cover object-center" />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/5" />
             <div className="absolute inset-x-0 bottom-0 p-7 text-white md:p-12 lg:p-14">
               <p className="mb-5 text-lg font-semibold uppercase tracking-[0.18em] text-[#F2A58C] md:text-xl">Evolve. Alter.</p>
