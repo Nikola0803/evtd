@@ -102,7 +102,7 @@ export function CartDrawer() {
                 ))}
               </div>
 
-              {/* Mandatory reconstitution add-on — always included, not removable */}
+              {/* Mandatory reconstitution add-on - always included, not removable */}
               <div className="mt-5 flex items-center gap-3 border-t border-dashed border-stone pt-5">
                 <div className="flex h-20 w-16 shrink-0 items-center justify-center rounded-md bg-sage-deep">
                   <i className="ri-drop-line text-xl text-ivory" />
@@ -147,7 +147,7 @@ export function CartDrawer() {
                   </button>
                 </div>
                 {promoSaved && (
-                  <p className="mt-1.5 text-xs text-sage-deep">Saved — this code will be applied at checkout.</p>
+                  <p className="mt-1.5 text-xs text-sage-deep">Saved - this code will be applied at checkout.</p>
                 )}
               </div>
             ) : (

@@ -13,7 +13,7 @@ export default function PerformanceEnergyPage() {
       eyebrow="Performance & energy"
       title="Understand what supports"
       accent="your capacity."
-      intro="Explore how training, recovery, fuel, and daily rhythms work together—then learn how to question peptide claims without mistaking a mechanism for a result."
+      intro="Explore how training, recovery, fuel, and daily rhythms work together - then learn how to question peptide claims without mistaking a mechanism for a result."
       image="/images/brand/focus-performance-energy.png"
       imageAlt="A woman training with focus in a bright fitness space"
       foundationsTitle="Performance is built across the whole week."

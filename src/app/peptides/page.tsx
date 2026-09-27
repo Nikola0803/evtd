@@ -17,7 +17,7 @@ export default function PeptidesPage() {
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#F2A58C]">Core Education</p>
             <h1 className="font-display text-4xl font-semibold leading-tight md:text-6xl">Peptide Education</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
-            Peptides are one of the most discussed topics in modern wellness — and one of the most misunderstood.
+            Peptides are one of the most discussed topics in modern wellness - and one of the most misunderstood.
             We explain what peptides are, how researchers study them, and how to read common claims with more context.
             </p>
             <p className="mt-4 text-xs uppercase tracking-widest text-white/40">Education only · No prescriptions · No medical care</p>

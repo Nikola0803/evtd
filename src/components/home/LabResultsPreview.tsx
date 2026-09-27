@@ -28,7 +28,7 @@ export function LabResultsPreview() {
             Supported.
           </h2>
           <p className="mt-6 max-w-md text-base leading-relaxed text-white/60 md:text-lg">
-            Track your progress, access your personalized plan, and review your wellness milestones — all in one
+            Track your progress, access your personalized plan, and review your wellness milestones - all in one
             place. Real data, real results.
           </p>
           <ButtonLink href="/contact" variant="secondary" size="lg" className="mt-9 !border-white/40 !text-ivory hover:!border-copper hover:!bg-transparent hover:!text-copper">

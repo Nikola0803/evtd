@@ -123,7 +123,7 @@ export function ShopByCategory() {
  * Each category gets its own visual expression of "transformation" instead
  * of a generic molecular-diagram icon, per the evolv motif system: fragmented
  * lines reconnecting, particle systems, expanding structures, concentric
- * layers — obsidian/charcoal/copper only, no green (green is reserved for
+ * layers - obsidian/charcoal/copper only, no green (green is reserved for
  * brand sections, not decorative category art).
  */
 export function CategoryArt({ variant, className = "" }: { variant: "fragmented" | "particles" | "expanding" | "concentric"; className?: string }) {

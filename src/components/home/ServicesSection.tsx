@@ -78,7 +78,7 @@ export function ServicesSection() {
                 built around your goals.
               </p>
             </div>
-            {/* Nav arrows — decorative, matching EverlifeMD layout */}
+            {/* Nav arrows - decorative, matching EverlifeMD layout */}
             <div className="hidden shrink-0 items-center gap-2 md:flex">
               <button className="flex h-9 w-9 items-center justify-center rounded-full border border-stone bg-ivory-soft text-charcoal/50 transition hover:border-copper/40 hover:text-charcoal">
                 <i className="ri-arrow-left-s-line text-base" />
@@ -107,7 +107,7 @@ export function ServicesSection() {
                     className="object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 via-transparent to-transparent" />
-                  {/* Category chip — top-left inside card */}
+                  {/* Category chip - top-left inside card */}
                   <div className="absolute left-4 top-4 z-10">
                     <span
                       className={`inline-flex items-center rounded-full border px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] ${card.chipClass}`}

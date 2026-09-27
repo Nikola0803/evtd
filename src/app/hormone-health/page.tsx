@@ -13,7 +13,7 @@ export default function HormoneHealthPage() {
       eyebrow="Hormone health"
       title="Learn the language behind"
       accent="the conversation."
-      intro="Build a clearer understanding of hormone signaling, everyday influences, and the limits of research—without turning general information into personal medical advice."
+      intro="Build a clearer understanding of hormone signaling, everyday influences, and the limits of research - without turning general information into personal medical advice."
       image="/images/brand/focus-hormone-balance.png"
       imageAlt="A woman reading in a calm, sunlit room"
       foundationsTitle="Hormones work as part of a system."
@@ -24,7 +24,7 @@ export default function HormoneHealthPage() {
         { number: "03", title: "Everyday context", copy: "Explore how sleep, stress, food, movement, and recovery appear in the wider conversation." },
         { number: "04", title: "Better questions", copy: "Separate what you notice, what research suggests, and what needs individual medical context." },
       ]}
-      peptideTitle="Peptides and hormones can overlap—but the terms are not interchangeable."
+      peptideTitle="Peptides and hormones can overlap - but the terms are not interchangeable."
       peptideParagraphs={[
         "Some hormones are peptides, but not every hormone is a peptide and not every peptide acts as a hormone. Both can take part in signaling, which is why the language often overlaps in research discussions.",
         "Researchers study peptide signals in many biological systems. A finding about a pathway or laboratory marker does not show that a product is appropriate, safe, or effective for an individual.",

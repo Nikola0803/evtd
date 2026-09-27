@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/ui/Reveal";
 
-// Static calendar data — Jan 2026, day 15 selected
+// Static calendar data - Jan 2026, day 15 selected
 const CAL_WEEKS = [
   [null, null, null, 1, 2, 3, 4],
   [5, 6, 7, 8, 9, 10, 11],
@@ -91,7 +91,7 @@ const STEPS = [
   {
     num: "02",
     heading: "Share Your Goals",
-    body: "Pick what you want to optimize. We build your plan around your biology and lifestyle — not a one-size-fits-all template.",
+    body: "Pick what you want to optimize. We build your plan around your biology and lifestyle - not a one-size-fits-all template.",
     visual: (
       <div className="flex h-full flex-col rounded-md border border-stone bg-ivory p-4">
         <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-soft-gray/60">

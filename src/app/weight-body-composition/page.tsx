@@ -13,7 +13,7 @@ export default function WeightBodyCompositionPage() {
       eyebrow="Weight & body composition"
       title="Understand the whole picture,"
       accent="not just the scale."
-      intro="Learn how strength, movement, recovery, and metabolic context fit together—and where peptide research does and does not belong in the conversation."
+      intro="Learn how strength, movement, recovery, and metabolic context fit together - and where peptide research does and does not belong in the conversation."
       image="/images/brand/focus-weight-optimization.png"
       imageAlt="A woman exercising on a stationary bike"
       foundationsTitle="Body composition is more than one number."
@@ -28,7 +28,7 @@ export default function WeightBodyCompositionPage() {
       peptideParagraphs={[
         "Peptides are short chains of amino acids that can act as signals in the body. Researchers study peptide signaling in areas connected with appetite, energy use, glucose regulation, muscle biology, and fat tissue.",
         "A biological mechanism is not proof of a personal outcome. Findings can differ by study design, population, endpoint, and research stage. Results from cells or animals do not establish that the same effect will occur in people.",
-        "Our role is to help you understand the vocabulary, research stage, and limits behind a claim—not to turn early research into a recommendation.",
+        "Our role is to help you understand the vocabulary, research stage, and limits behind a claim - not to turn early research into a recommendation.",
       ]}
       questions={[
         "Was the research done in people, animals, or cells?",

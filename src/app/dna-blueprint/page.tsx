@@ -54,7 +54,7 @@ export default function DnaBlueprintPage() {
           <p className="mt-4 text-sm text-white/60">Order online and your kit ships within 1–2 business days.</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link href="/book" className="rounded-md bg-copper px-7 py-3.5 text-[12px] font-semibold uppercase tracking-[0.2em] text-charcoal transition hover:bg-copper-light">
-              Order — $899
+              Order - $899
             </Link>
             <Link href="/book" className="rounded-md border border-white/25 px-7 py-3.5 text-[12px] font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/10">
               Questions? Book a Call

@@ -47,7 +47,7 @@ export async function Hero() {
         </h1>
 
         <p className="mt-7 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
-          Plain-language peptide and wellness education — careful research context, practical resources,
+          Plain-language peptide and wellness education - careful research context, practical resources,
           education, and expert guidance built around your goals.
         </p>
 

@@ -43,7 +43,7 @@ export function QuickBookSection() {
 
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-start gap-16 px-4 md:grid-cols-2 md:px-8 lg:gap-24">
 
-        {/* Left — education by goal */}
+        {/* Left - education by goal */}
         <Reveal className="md:sticky md:top-32">
           <div className="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-copper">
             <span className="h-px w-8 bg-copper/60" />
@@ -75,7 +75,7 @@ export function QuickBookSection() {
           </p>
         </Reveal>
 
-        {/* Right — quiz card */}
+        {/* Right - quiz card */}
         <Reveal>
           <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.04]">
             {/* Progress bar */}

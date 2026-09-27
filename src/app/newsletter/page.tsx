@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Newsletter | evolv",
-  description: "The evolv newsletter — evidence-based wellness insights, hormone health education, and members-only content delivered to your inbox.",
+  description: "The evolv newsletter - evidence-based wellness insights, hormone health education, and members-only content delivered to your inbox.",
   alternates: { canonical: "/newsletter" },
 };
 
@@ -42,7 +42,7 @@ export default function NewsletterPage() {
             {[
               { issue: "Issue 04", title: "The Cortisol Curve: Why stress is the hidden hormone problem", date: "September 2026" },
               { issue: "Issue 03", title: "Perimenopause starts at 35: What the research actually says", date: "August 2026" },
-              { issue: "Issue 02", title: "Sleep architecture and hormonal recovery — the real connection", date: "August 2026" },
+              { issue: "Issue 02", title: "Sleep architecture and hormonal recovery - the real connection", date: "August 2026" },
               { issue: "Issue 01", title: "Why metabolic health matters more than your weight", date: "July 2026" },
             ].map((item) => (
               <div key={item.issue} className="py-6">

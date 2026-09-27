@@ -22,7 +22,7 @@ const CARDS = [
     eyebrow: "Refer a Friend",
     heading: "Give 15%.",
     headingAccent: "Get $50.",
-    body: "You earn $50 in member credit for every friend who joins evolv — with no cap on how many you can refer. They get 15% off their first month.",
+    body: "You earn $50 in member credit for every friend who joins evolv - with no cap on how many you can refer. They get 15% off their first month.",
     bullets: [
       { bold: "$50", rest: " member credit per referral" },
       { bold: "15% off", rest: " for your friends" },

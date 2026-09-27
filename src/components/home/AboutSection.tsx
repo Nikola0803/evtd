@@ -11,7 +11,7 @@ const STANDARDS = [
   {
     num: "02",
     title: "Custom Wellness Plan",
-    body: "Your personalized roadmap — nutrition, movement, sleep optimization, and hormone health education.",
+    body: "Your personalized roadmap - nutrition, movement, sleep optimization, and hormone health education.",
   },
   {
     num: "03",

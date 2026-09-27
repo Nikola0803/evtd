@@ -48,7 +48,7 @@ export function WholesaleForm() {
       if (!res.ok) {
         throw new Error(
           res.status === 503
-            ? "Wholesale inquiries aren't connected yet — email us directly via Contact in the meantime."
+            ? "Wholesale inquiries aren't connected yet - email us directly via Contact in the meantime."
             : data?.error || "Something went wrong submitting your inquiry."
         );
       }
@@ -112,7 +112,7 @@ export function WholesaleForm() {
           maxLength={500}
           value={form.message}
           onChange={(e) => set("message", e.target.value)}
-          placeholder="What are you looking to build — dropship, white-label, or a fully custom storefront?"
+          placeholder="What are you looking to build - dropship, white-label, or a fully custom storefront?"
           className="w-full resize-none rounded-md border border-white/15 bg-charcoal px-4 py-2.5 text-sm text-white outline-none placeholder:text-white/30 focus:border-copper"
         />
       </div>

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run check:no-em-dash && next build",
+    "check:no-em-dash": "node scripts/check-no-em-dash.mjs",
     "start": "next start",
     "lint": "eslint"
   },

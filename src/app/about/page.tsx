@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const PRINCIPLES = [
   { title: "Evidence over trends", body: "Wellness is full of noise. We cut through it with approaches grounded in research and real-world outcomes." },
   { title: "Context over claims", body: "We explain what research can and cannot tell you, without turning information into personal medical guidance." },
-  { title: "Education over dependency", body: "We teach you to understand your own body — so your confidence grows alongside your results." },
+  { title: "Education over dependency", body: "We teach you to understand your own body - so your confidence grows alongside your results." },
   { title: "Clarity over overwhelm", body: "Simple, actionable guidance you can implement immediately, without needing a medical degree to follow it." },
   { title: "Real answers, not scripts", body: "You can speak with a real education team member, not a chatbot or canned-reply queue." },
   { title: "Long-term over quick fixes", body: "Sustainable change takes time and intention. We build habits, not just milestones." },

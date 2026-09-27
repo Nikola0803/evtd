@@ -245,7 +245,7 @@ export default function ConceptPage() {
                   <div key={row} className={`grid grid-cols-[1.7fr_1fr_1fr] items-center gap-2 px-4 py-4 md:px-5 ${index % 2 === 0 ? "bg-white/[.03]" : "bg-transparent"}`}>
                     <span className="pr-2 text-sm leading-snug text-white/75">{row}</span>
                     <span className="flex justify-center"><span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#D77E5F] text-sm font-semibold text-white" aria-label="Included">✓</span></span>
-                    <span className="flex justify-center"><span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm text-white/35" aria-label="Not consistently available">—</span></span>
+                    <span className="flex justify-center"><span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm text-white/35" aria-label="Not consistently available"> - </span></span>
                   </div>
                 ))}
               </div>
@@ -308,7 +308,7 @@ export default function ConceptPage() {
           <div className="flex flex-col justify-center p-8 text-white md:p-14 lg:p-16">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/60">Your first call is free</p>
             <h2 className="mt-5 font-display text-5xl font-semibold leading-[.98] tracking-[-.04em] md:text-6xl">Start with one honest conversation.</h2>
-            <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/75 md:text-base">Tell us what you want to learn. We’ll explain what EVLV can help you understand—and what belongs with a licensed professional.</p>
+            <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/75 md:text-base">Tell us what you want to learn. We’ll explain what EVLV can help you understand - and what belongs with a licensed professional.</p>
             <Link href="/book" className="mt-8 inline-flex w-fit rounded-full bg-[#1B1D19] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white">Book your first call</Link>
           </div>
           <div className="relative min-h-[360px] lg:min-h-full">

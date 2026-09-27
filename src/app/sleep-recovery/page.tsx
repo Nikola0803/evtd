@@ -13,7 +13,7 @@ export default function SleepRecoveryPage() {
       eyebrow="Sleep & recovery"
       title="Build context for"
       accent="restored days."
-      intro="Learn how sleep timing, daily rhythms, environment, and recovery fit together—and how to read peptide research without treating early findings as answers."
+      intro="Learn how sleep timing, daily rhythms, environment, and recovery fit together - and how to read peptide research without treating early findings as answers."
       image="/images/brand/focus-sleep-recovery.png"
       imageAlt="A woman resting peacefully in a calm bedroom"
       foundationsTitle="Recovery begins before bedtime."

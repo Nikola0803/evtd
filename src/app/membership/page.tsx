@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Membership",
-  description: "EVLV Membership — $199/month. Monthly education sessions, a private resource library, and community access.",
+  description: "EVLV Membership - $199/month. Monthly education sessions, a private resource library, and community access.",
   alternates: { canonical: "/membership" },
 };
 
