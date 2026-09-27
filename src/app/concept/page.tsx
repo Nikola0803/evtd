@@ -13,13 +13,13 @@ const focusAreas = [
     title: "Weight & Body Composition",
     tagline: "Build steady habits around strength, movement, and metabolic wellness.",
     image: "/images/brand/focus-weight-optimization.png",
-    href: "/journal/sustainable-body-recomposition",
+    href: "/weight-body-composition",
   },
   {
     title: "Energy & Longevity",
     tagline: "Understand the foundations of consistent energy and long-term resilience.",
     image: "/images/brand/focus-longevity.png",
-    href: "/journal/longevity-starts-with-capacity",
+    href: "/energy-longevity",
   },
   {
     title: "Hormone Health",
@@ -77,8 +77,8 @@ const comparisonRows = [
 const learningPaths = [
   { label: "Metabolic Wellness", href: "/shop?focus=Metabolic-Assay-Peptides" },
   { label: "Hormone Balance", href: "/shop?focus=Synthetic-Structural-Peptides" },
-  { label: "Weight Optimization", href: "/shop?focus=Copper-Metallopeptides" },
-  { label: "Longevity & Anti-Aging", href: "/shop?focus=Secretagogue-Class-Peptides" },
+  { label: "Weight Optimization", href: "/weight-body-composition" },
+  { label: "Longevity & Anti-Aging", href: "/energy-longevity" },
   { label: "Performance & Energy", href: "/shop?focus=Neuropeptide-Class" },
   { label: "Sleep & Recovery", href: "/shop?focus=Specialty-Research-Peptides" },
 ];

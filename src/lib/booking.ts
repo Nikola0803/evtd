@@ -1,13 +1,13 @@
 export const BOOKING_TIMEZONE = "America/New_York";
 export const BOOKING_DURATION_MINUTES = 15;
 
-export type BookingChannel = "video" | "phone";
+export type BookingChannel = "phone";
 
 export type BookingRequest = {
   firstName: string;
   lastName: string;
   email: string;
-  phone?: string;
+  phone: string;
   interests: string[];
   channel: BookingChannel;
   requestedDate: string;

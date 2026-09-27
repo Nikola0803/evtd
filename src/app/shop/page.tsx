@@ -13,13 +13,13 @@ const TOPICS = [
     title: "Weight Optimization",
     copy: "Explore the habits and research context behind sustainable body composition.",
     image: "/images/brand/focus-weight-optimization.png",
-    href: "/journal/sustainable-body-recomposition",
+    href: "/weight-body-composition",
   },
   {
     title: "Longevity & Anti-Aging",
     copy: "Learn how sleep, movement, recovery, and everyday capacity shape healthy aging.",
     image: "/images/brand/focus-longevity.png",
-    href: "/journal/longevity-starts-with-capacity",
+    href: "/energy-longevity",
   },
   {
     title: "Hormone Balance",

@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { BOOKING_TIMEZONE, type BookingChannel, type BookingRequest } from "@/lib/booking";
+import { BOOKING_TIMEZONE, type BookingRequest } from "@/lib/booking";
 
 type Availability = {
   timezone: string;
@@ -54,7 +54,6 @@ export function BookingFlow() {
   const [step, setStep] = useState(1);
   const [monthIndex, setMonthIndex] = useState(0);
   const [interests, setInterests] = useState<string[]>([]);
-  const [channel, setChannel] = useState<BookingChannel>("video");
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -139,7 +138,7 @@ export function BookingFlow() {
     if (!firstName.trim()) nextErrors.firstName = "First name is required.";
     if (!lastName.trim()) nextErrors.lastName = "Last name is required.";
     if (!/^\S+@\S+\.\S+$/.test(email)) nextErrors.email = "Enter a valid email address.";
-    if (channel === "phone" && !phone.trim()) nextErrors.phone = "Add a phone number for a phone call.";
+    if (!phone.trim()) nextErrors.phone = "Add a phone number for the call.";
     if (!privacyAccepted) nextErrors.privacyAccepted = "Please accept the privacy notice.";
     if (Object.keys(nextErrors).length) {
       setErrors(nextErrors);
@@ -152,7 +151,7 @@ export function BookingFlow() {
       email,
       phone,
       interests,
-      channel,
+      channel: "phone",
       requestedDate: selectedDate,
       requestedTime: selectedTime,
       timezone: availability?.timezone ?? BOOKING_TIMEZONE,
@@ -195,7 +194,7 @@ export function BookingFlow() {
           <div className="grid gap-6 p-7 md:grid-cols-2 md:p-10">
             <SummaryRow icon="ri-calendar-line" label="Date" value={formatLongDate(selectedDate)} />
             <SummaryRow icon="ri-time-line" label="Time" value={`${formatTime(selectedTime)} ET · 15 minutes`} />
-            <SummaryRow icon={channel === "video" ? "ri-video-chat-line" : "ri-phone-line"} label="Format" value={channel === "video" ? "Video call" : "Phone call"} />
+            <SummaryRow icon="ri-phone-line" label="Format" value="Phone call" />
             <SummaryRow icon="ri-book-open-line" label="Topics" value={interests.join(", ")} />
           </div>
           <div className="flex flex-col items-center justify-between gap-3 border-t border-black/8 px-7 py-5 text-xs text-[#62675F] sm:flex-row md:px-10">
@@ -255,17 +254,10 @@ export function BookingFlow() {
               </div>
               {errors.interests && <p className="mt-3 text-sm text-red-600">{errors.interests}</p>}
 
-              <fieldset className="mt-10">
-                <legend className="text-sm font-semibold text-[#1B1D19]">How would you like to connect?</legend>
-                <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                  {(["video", "phone"] as BookingChannel[]).map((option) => (
-                    <button key={option} type="button" onClick={() => setChannel(option)} className={`flex items-center gap-3 rounded-2xl border px-5 py-4 text-left transition ${channel === option ? "border-[#314238] bg-[#314238] text-white" : "border-black/10 hover:border-[#314238]/50"}`}>
-                      <i className={`${option === "video" ? "ri-video-chat-line" : "ri-phone-line"} text-xl`} />
-                      <span><strong className="block text-sm capitalize">{option} call</strong><span className={`mt-0.5 block text-xs ${channel === option ? "text-white/55" : "text-[#62675F]"}`}>{option === "video" ? "A link will be emailed to you" : "We’ll call the number you provide"}</span></span>
-                    </button>
-                  ))}
-                </div>
-              </fieldset>
+              <div className="mt-8 flex items-center gap-3 rounded-2xl bg-[#F9F5EE] px-5 py-4 text-sm text-[#62675F]">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F3DDD3] text-[#B45C42]"><i className="ri-phone-line" /></span>
+                <span><strong className="block text-[#1B1D19]">A simple phone call</strong><span className="mt-0.5 block">We’ll call the number you provide. No video link or app needed.</span></span>
+              </div>
 
               <div className="mt-10 flex justify-end">
                 <button type="button" onClick={continueFromTopics} className="inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#C86B4D]">Choose a time <span aria-hidden>→</span></button>
@@ -337,7 +329,7 @@ export function BookingFlow() {
                 <Field label="First name" error={errors.firstName}><input autoComplete="given-name" value={firstName} onChange={(event) => setFirstName(event.target.value)} className={inputClass(Boolean(errors.firstName))} /></Field>
                 <Field label="Last name" error={errors.lastName}><input autoComplete="family-name" value={lastName} onChange={(event) => setLastName(event.target.value)} className={inputClass(Boolean(errors.lastName))} /></Field>
                 <Field label="Email address" error={errors.email}><input type="email" autoComplete="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@example.com" className={inputClass(Boolean(errors.email))} /></Field>
-                <Field label={channel === "phone" ? "Phone number" : "Phone number (optional)"} error={errors.phone}><input type="tel" autoComplete="tel" value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="(555) 555-0123" className={inputClass(Boolean(errors.phone))} /></Field>
+                <Field label="Phone number" error={errors.phone}><input type="tel" autoComplete="tel" value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="(555) 555-0123" className={inputClass(Boolean(errors.phone))} /></Field>
               </div>
 
               <div className="mt-5">
@@ -349,7 +341,7 @@ export function BookingFlow() {
                 <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#B45C42]">Your call</p>
                 <div className="mt-3 grid gap-3 text-sm sm:grid-cols-3">
                   <span><strong className="block text-[#1B1D19]">{formatLongDate(selectedDate)}</strong><span className="text-[#62675F]">{formatTime(selectedTime)} ET</span></span>
-                  <span><strong className="block capitalize text-[#1B1D19]">{channel} call</strong><span className="text-[#62675F]">15 minutes</span></span>
+                  <span><strong className="block text-[#1B1D19]">Phone call</strong><span className="text-[#62675F]">15 minutes</span></span>
                   <button type="button" onClick={() => setStep(2)} className="self-center text-left text-xs font-semibold uppercase tracking-[0.12em] text-[#B45C42] sm:text-right">Change time</button>
                 </div>
               </div>

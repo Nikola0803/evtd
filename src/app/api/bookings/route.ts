@@ -50,8 +50,8 @@ export async function POST(request: Request) {
   if (!body.interests?.length) errors.interests = "Choose at least one topic.";
   if (!validDate) errors.requestedDate = "Choose an available date.";
   if (!validDate?.slots.includes(body.requestedTime)) errors.requestedTime = "Choose an available time.";
-  if (body.channel !== "video" && body.channel !== "phone") errors.channel = "Choose video or phone.";
-  if (body.channel === "phone" && !body.phone?.trim()) errors.phone = "Add a phone number for a phone call.";
+  if (body.channel !== "phone") errors.channel = "This booking is for a phone call.";
+  if (!body.phone?.trim()) errors.phone = "Add a phone number for the call.";
   if (!body.privacyAccepted) errors.privacyAccepted = "Please accept the privacy notice.";
 
   if (Object.keys(errors).length) {

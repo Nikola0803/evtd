@@ -22,7 +22,7 @@ export default function BookPage() {
             <p className="text-base leading-relaxed text-white/68 md:text-lg">A calm, focused 15-minute call about what you want to understand. No pitch. No medical advice. No obligation.</p>
             <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/55">
               <span className="flex items-center gap-2"><i className="ri-time-line text-[#F2A58C]" />15 minutes</span>
-              <span className="flex items-center gap-2"><i className="ri-video-chat-line text-[#F2A58C]" />Video or phone</span>
+              <span className="flex items-center gap-2"><i className="ri-phone-line text-[#F2A58C]" />Phone call</span>
               <span className="flex items-center gap-2"><i className="ri-map-pin-line text-[#F2A58C]" />Online across the U.S.</span>
             </div>
           </div>
