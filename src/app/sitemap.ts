@@ -11,6 +11,8 @@ const STATIC_ROUTES = [
   { path: "/hormone-health", priority: 0.6, changeFrequency: "weekly" as const },
   { path: "/weight-body-composition", priority: 0.7, changeFrequency: "weekly" as const },
   { path: "/energy-longevity", priority: 0.7, changeFrequency: "weekly" as const },
+  { path: "/performance-energy", priority: 0.7, changeFrequency: "weekly" as const },
+  { path: "/sleep-recovery", priority: 0.7, changeFrequency: "weekly" as const },
   { path: "/membership", priority: 0.6, changeFrequency: "monthly" as const },
   { path: "/about", priority: 0.5, changeFrequency: "monthly" as const },
   { path: "/faq", priority: 0.4, changeFrequency: "monthly" as const },

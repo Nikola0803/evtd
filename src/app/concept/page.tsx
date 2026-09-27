@@ -31,13 +31,13 @@ const focusAreas = [
     title: "Performance & Energy",
     tagline: "Explore how training, recovery, and daily capacity work together.",
     image: "/images/brand/focus-performance-energy.png",
-    href: "/journal/energy-is-information",
+    href: "/performance-energy",
   },
   {
     title: "Sleep & Recovery",
     tagline: "Build better rhythms for rest, recovery, and steadier days.",
     image: "/images/brand/focus-sleep-recovery.png",
-    href: "/journal/sleep-is-a-health-strategy",
+    href: "/sleep-recovery",
   },
 ];
 
@@ -76,11 +76,11 @@ const comparisonRows = [
 
 const learningPaths = [
   { label: "Metabolic Wellness", href: "/shop?focus=Metabolic-Assay-Peptides" },
-  { label: "Hormone Balance", href: "/shop?focus=Synthetic-Structural-Peptides" },
+  { label: "Hormone Balance", href: "/hormone-health" },
   { label: "Weight Optimization", href: "/weight-body-composition" },
   { label: "Longevity & Anti-Aging", href: "/energy-longevity" },
-  { label: "Performance & Energy", href: "/shop?focus=Neuropeptide-Class" },
-  { label: "Sleep & Recovery", href: "/shop?focus=Specialty-Research-Peptides" },
+  { label: "Performance & Energy", href: "/performance-energy" },
+  { label: "Sleep & Recovery", href: "/sleep-recovery" },
 ];
 
 const faqs = [

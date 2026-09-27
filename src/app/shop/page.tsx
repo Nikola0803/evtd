@@ -37,13 +37,13 @@ const TOPICS = [
     title: "Performance & Energy",
     copy: "Explore how training, recovery, and daily rhythms work together.",
     image: "/images/brand/focus-performance-energy.png",
-    href: "/journal/energy-is-information",
+    href: "/performance-energy",
   },
   {
     title: "Sleep & Recovery",
     copy: "Learn the foundations of restorative sleep and more consistent recovery.",
     image: "/images/brand/focus-sleep-recovery.png",
-    href: "/journal/sleep-is-a-health-strategy",
+    href: "/sleep-recovery",
   },
 ];
 
