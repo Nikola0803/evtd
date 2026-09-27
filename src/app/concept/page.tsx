@@ -239,7 +239,7 @@ export default function ConceptPage() {
                 <div className="grid grid-cols-[1.7fr_1fr_1fr] items-center gap-2 bg-white/[.07] px-4 py-4 text-[10px] font-semibold uppercase tracking-[0.12em] md:px-5">
                   <span className="text-white/65">What matters</span>
                   <span className="text-center text-[#F2A58C]">EVLV</span>
-                  <span className="text-center text-white/35">Going it alone</span>
+                  <span className="text-center text-white/35">Doing it alone</span>
                 </div>
                 {comparisonRows.map((row, index) => (
                   <div key={row} className={`grid grid-cols-[1.7fr_1fr_1fr] items-center gap-2 px-4 py-4 md:px-5 ${index % 2 === 0 ? "bg-white/[.03]" : "bg-transparent"}`}>
