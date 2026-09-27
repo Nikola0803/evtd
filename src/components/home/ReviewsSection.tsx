@@ -2,11 +2,11 @@ import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 
 const PHOTOS = [
-  { src: "/images/brand/wellness-consultation.png", alt: "Online wellness education" },
-  { src: "/images/brand/molecular-sculpture.png", alt: "Abstract molecular sculpture" },
-  { src: "/images/brand/wellness-hero.png", alt: "Women's wellness" },
-  { src: "/images/brand/molecular-sculpture.png", alt: "Abstract molecular artwork" },
-  { src: "/images/brand/wellness-consultation.png", alt: "Wellness education resources" },
+  { src: "/images/brand/reviews-member-conversation.png", alt: "Two adults sharing a thoughtful conversation at home" },
+  { src: "/images/brand/reviews-member-movement.png", alt: "Woman enjoying a walk after light exercise" },
+  { src: "/images/brand/reviews-member-learning.png", alt: "Man reading and learning at a bright home desk" },
+  { src: "/images/brand/reviews-member-reflection.png", alt: "Woman pausing with tea after journaling" },
+  { src: "/images/brand/reviews-member-routine.png", alt: "Couple preparing a simple meal together" },
 ];
 
 const REVIEWS = [
@@ -69,17 +69,14 @@ export function ReviewsSection() {
 
         {/* Photo mosaic */}
         <Reveal>
-          <div
-            className="mb-6 overflow-hidden rounded-2xl"
-            style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: "4px", height: "480px" }}
-          >
+          <div className="mb-6 grid h-[700px] grid-rows-[1.05fr_1fr] gap-1 overflow-hidden rounded-2xl sm:h-[480px] sm:grid-cols-[3fr_2fr] sm:grid-rows-1">
             <div className="relative overflow-hidden bg-ivory-soft">
-              <Image src={PHOTOS[0].src} alt={PHOTOS[0].alt} fill unoptimized className="object-cover" />
+              <Image src={PHOTOS[0].src} alt={PHOTOS[0].alt} fill sizes="(max-width: 640px) 100vw, 60vw" className="object-cover" />
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "1fr 1fr", gap: "4px" }}>
+            <div className="grid grid-cols-2 grid-rows-2 gap-1">
               {PHOTOS.slice(1).map((photo, index) => (
                 <div key={`${photo.src}-${index}`} className="relative overflow-hidden bg-ivory-soft">
-                  <Image src={photo.src} alt={photo.alt} fill unoptimized className="object-cover" />
+                  <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 640px) 50vw, 20vw" className="object-cover" />
                 </div>
               ))}
             </div>
