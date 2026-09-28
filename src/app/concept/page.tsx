@@ -46,21 +46,18 @@ const programs = [
     eyebrow: "Core education",
     title: "Peptide Education",
     copy: "Understand the language, research categories, and limits of common peptide claims.",
-    image: "/images/brand/program-peptide-education-v2.png",
     href: "/peptides",
   },
   {
     eyebrow: "Health education",
     title: "Hormone Health",
     copy: "Build useful context around hormone health and learn to assess common claims.",
-    image: "/images/brand/program-hormone-education-v2.png",
     href: "/hormone-health",
   },
   {
     eyebrow: "Ongoing learning",
     title: "Monthly Membership",
     copy: "Education sessions, organized resources, and support for the questions that matter to you.",
-    image: "/images/brand/program-membership-education-v2.png",
     href: "/membership",
   },
 ];
@@ -96,47 +93,38 @@ const faqs = [
 export default function ConceptPage() {
   return (
     <main className="overflow-hidden bg-[#F6F0E7] text-[#1B1D19]">
-      <section className="relative px-4 pb-10 pt-12 md:px-8 md:pb-16 md:pt-20">
-        <div className="mx-auto grid max-w-[1440px] gap-5 lg:grid-cols-[1.32fr_.68fr]">
-          <div className="relative min-h-[640px] overflow-hidden rounded-[2rem] bg-[#29362F] md:min-h-[720px]">
-            <picture>
-              <source media="(max-width: 767px)" srcSet="/images/brand/wellness-hero-mobile.png" />
-              <Image src="/images/brand/wellness-hero.png" alt="Woman exploring practical wellness education" fill priority sizes="(max-width: 1024px) 100vw, 68vw" className="object-cover object-center" />
-            </picture>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/5" />
-            <div className="absolute inset-x-0 bottom-0 p-7 text-white md:p-12 lg:p-14">
-              <p className="mb-5 text-lg font-semibold uppercase tracking-[0.18em] text-[#F2A58C] md:text-xl">Evolve. Alter.</p>
-              <h1 className="max-w-4xl font-display text-5xl font-semibold leading-[.95] tracking-[-.045em] md:text-7xl lg:text-[5.6rem]">
-                Become your <br /><span className="text-[#F2A58C]">ultimate.</span>
-              </h1>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-                Understand peptide science, hormone health, longevity, and everyday wellness. Clear education. No hype and no medical promises.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/book" className="rounded-full bg-[#D77E5F] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#C86B4D]">Book your first call</Link>
-                <Link href="/peptides" className="rounded-full border border-white/35 bg-white/10 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white backdrop-blur transition hover:bg-white/20">Explore peptide education</Link>
-              </div>
+      <section className="relative px-4 pb-16 pt-14 md:px-8 md:pb-24 md:pt-24">
+        <div className="mx-auto max-w-[1280px]">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="inline-flex rounded-full border border-black/10 bg-white/55 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#8D4A38]">U.S.-based wellness education</p>
+            <p className="mt-8 text-lg font-semibold uppercase tracking-[0.2em] text-[#B45C42] md:text-xl">Evolve. Alter.</p>
+            <h1 className="mt-5 font-display text-5xl font-semibold leading-[.96] tracking-[-.05em] md:text-7xl lg:text-[5.7rem]">Become your <span className="italic text-[#D77E5F]">ultimate.</span></h1>
+            <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-[#5F625C] md:text-lg">Understand peptide science, hormone health, longevity, and everyday wellness. Clear education. No hype and no medical promises.</p>
+            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link href="/book" className="rounded-full bg-[#1B1D19] px-8 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#314238]">Book your first call</Link>
+              <Link href="/peptides" className="rounded-full border border-black/15 bg-white/50 px-8 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-[#1B1D19] transition hover:bg-white">Explore peptide education</Link>
             </div>
+            <p className="mt-5 text-xs text-[#777970]">First 15-minute call is free. No obligation.</p>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1 lg:grid-rows-2">
-            <div className="relative min-h-[310px] overflow-hidden rounded-[2rem] bg-[#D7B99D]">
-              <Image src="/images/brand/program-peptide-education.png" alt="Woman studying peptide education materials" fill sizes="(max-width: 1024px) 50vw, 32vw" className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#172019]/90 via-transparent to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-7 text-white">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#F0C9B8]">Start here</p>
-                <h2 className="mt-2 font-display text-3xl font-semibold">Peptide education</h2>
-                <Link href="/peptides" className="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em]">Read the overview <span aria-hidden>→</span></Link>
-              </div>
+          <div className="mt-14 grid overflow-hidden rounded-[2rem] bg-[#1B1D19] shadow-[0_30px_90px_rgba(30,27,22,.12)] lg:grid-cols-[1.05fr_.95fr]">
+            <div className="relative min-h-[420px] md:min-h-[560px]">
+              <picture className="absolute inset-0 block">
+                <source media="(max-width: 767px)" srcSet="/images/brand/wellness-hero-mobile.png" />
+                <Image src="/images/brand/wellness-hero.png" alt="Woman exploring practical wellness education" fill priority sizes="(max-width: 1024px) 100vw, 54vw" className="object-cover object-center" />
+              </picture>
             </div>
-            <div className="flex min-h-[310px] flex-col rounded-[2rem] bg-[#D77E5F] p-7 text-white md:p-9">
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/65">A better first step</p>
-                <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.02]">Bring the questions.<br />We’ll bring context.</h2>
-              </div>
-              <div className="mt-6">
-                <p className="max-w-sm text-sm leading-relaxed text-white/75">Your first call is a free 15-minute conversation about what you want to learn.</p>
-                <Link href="/book" className="mt-5 inline-flex rounded-full bg-[#1B1D19] px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-white">Book an education call</Link>
+            <div className="flex flex-col justify-center p-8 text-white md:p-12 lg:p-14">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#F2A58C]">A clearer place to begin</p>
+              <h2 className="mt-5 font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] md:text-5xl">Bring the questions. We’ll bring context.</h2>
+              <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/70 md:text-base">Start with what you want to understand and how you want to feel. We organize the research into useful, plain-language education.</p>
+              <div className="mt-9 divide-y divide-white/10 border-y border-white/10">
+                {["Plain-language explanations", "Research placed in context", "Clear boundaries around medical care"].map((item, index) => (
+                  <div key={item} className="flex items-center gap-4 py-4">
+                    <span className="text-xs font-semibold text-[#F2A58C]">0{index + 1}</span>
+                    <span className="text-sm text-white/85">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -154,19 +142,24 @@ export default function ConceptPage() {
             <p className="max-w-xs text-sm leading-relaxed text-white/45 lg:text-right">These are learning pathways, not medical care. Personal health questions belong with a licensed healthcare professional.</p>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {focusAreas.map((area) => (
-              <Link key={area.title} href={area.href} className="group relative flex min-h-[360px] flex-col justify-end overflow-hidden rounded-[1.35rem] border border-white/10 bg-[#283229] text-left transition hover:border-[#E8B89F]/60 sm:min-h-[410px] lg:min-h-[440px]">
-                <Image src={area.image} alt={`${area.title} education`} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw" className="object-cover object-center transition duration-700 group-hover:scale-[1.05]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/5" />
-                <div className="relative z-10 p-5 text-white md:p-6">
-                  <span className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-lg transition group-hover:bg-[#D77E5F]" aria-hidden>↗</span>
-                  <h3 className="font-display text-2xl font-semibold leading-tight">{area.title}</h3>
-                  <p className="mt-3 text-[13px] leading-relaxed text-white/72">{area.tagline}</p>
-                  <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#E8B89F]">Explore education <span aria-hidden>→</span></p>
-                </div>
-              </Link>
-            ))}
+          <div className="mt-12 grid gap-6 lg:grid-cols-[.88fr_1.12fr] lg:gap-12">
+            <div className="relative min-h-[420px] overflow-hidden rounded-[1.7rem] lg:min-h-full">
+              <Image src={focusAreas[0].image} alt="Woman exercising as part of a balanced wellness routine" fill sizes="(max-width: 1024px) 100vw, 44vw" className="object-cover object-center" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
+              <p className="absolute inset-x-6 bottom-6 text-xs font-semibold uppercase tracking-[0.16em] text-white">Start with the goal that matters now</p>
+            </div>
+            <div className="overflow-hidden rounded-[1.7rem] border border-white/12">
+              {focusAreas.map((area, index) => (
+                <Link key={area.title} href={area.href} className="group grid grid-cols-[auto_1fr_auto] items-center gap-4 border-b border-white/10 px-5 py-6 transition last:border-b-0 hover:bg-white/[.06] md:px-7">
+                  <span className="text-xs font-semibold text-[#F2A58C]">0{index + 1}</span>
+                  <span>
+                    <span className="block font-display text-xl font-semibold text-white md:text-2xl">{area.title}</span>
+                    <span className="mt-1.5 block text-sm leading-relaxed text-white/55">{area.tagline}</span>
+                  </span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white transition group-hover:border-[#D77E5F] group-hover:bg-[#D77E5F]" aria-hidden>→</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -175,18 +168,16 @@ export default function ConceptPage() {
         <div className="mx-auto max-w-[1440px]">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#8D4A38]">Ways to learn</p>
           <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] md:text-6xl">A clearer path through complex topics.</h2>
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {programs.map((program) => (
-              <article key={program.title} className="overflow-hidden rounded-[1.7rem] bg-[#F9F5EE]">
-                <div className="relative h-64">
-                  <Image src={program.image} alt={`${program.title} learning session`} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover" />
-                </div>
-                <div className="p-7 md:p-8">
+          <div className="mt-12 grid gap-4 lg:grid-cols-3">
+            {programs.map((program, index) => (
+              <article key={program.title} className="flex min-h-[340px] flex-col rounded-[1.7rem] border border-black/10 bg-[#F9F5EE] p-7 md:p-9">
+                <div className="flex items-center justify-between">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#B45C42]">{program.eyebrow}</p>
-                  <h3 className="mt-3 font-display text-3xl font-semibold">{program.title}</h3>
-                  <p className="mt-4 min-h-[66px] text-sm leading-relaxed text-[#62675F]">{program.copy}</p>
-                  <Link href={program.href} className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white">Learn more <span aria-hidden>→</span></Link>
+                  <span className="font-display text-4xl font-semibold text-black/10">0{index + 1}</span>
                 </div>
+                <h3 className="mt-12 max-w-xs font-display text-3xl font-semibold leading-tight">{program.title}</h3>
+                <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#62675F]">{program.copy}</p>
+                <Link href={program.href} className="mt-auto inline-flex items-center gap-2 pt-8 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1B1D19]">Explore education <span aria-hidden>→</span></Link>
               </article>
             ))}
           </div>
@@ -231,7 +222,7 @@ export default function ConceptPage() {
           <div className="mt-12 grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-stretch lg:gap-12">
             <div className="relative min-h-[380px] overflow-hidden rounded-[1.7rem]">
               <Image src="/images/brand/program-membership-education.png" alt="A woman learning in a calm, bright room" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover object-center" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
               <div className="absolute inset-x-5 bottom-5 rounded-2xl bg-[#1B1D19]/75 p-4 backdrop-blur-sm">
                 <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#F2A58C]"><span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#D77E5F] text-white" aria-hidden>✓</span>A clear place to learn, without the hype</p>
               </div>

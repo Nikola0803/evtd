@@ -1,13 +1,10 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 
-const PHOTOS = [
-  { src: "/images/brand/reviews-member-conversation.png", alt: "Two adults sharing a thoughtful conversation at home" },
-  { src: "/images/brand/reviews-member-movement.png", alt: "Woman enjoying a walk after light exercise" },
-  { src: "/images/brand/reviews-member-learning.png", alt: "Man reading and learning at a bright home desk" },
-  { src: "/images/brand/reviews-member-reflection.png", alt: "Woman pausing with tea after journaling" },
-  { src: "/images/brand/reviews-member-routine.png", alt: "Couple preparing a simple meal together" },
-];
+const FEATURE_PHOTO = {
+  src: "/images/brand/reviews-member-conversation.png",
+  alt: "Two adults sharing a thoughtful conversation at home",
+};
 
 const REVIEWS = [
   {
@@ -44,46 +41,29 @@ export function ReviewsSection() {
     <section className="bg-ivory py-16 md:py-24">
       <div className="mx-auto max-w-[1400px] px-4 md:px-8">
 
-        {/* Trust header */}
         <Reveal>
-          <div className="mb-10 flex flex-col items-center text-center">
-            {/* Star badge */}
-            <div className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-stone bg-white px-4 py-2 shadow-sm">
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <i key={i} className="ri-star-fill text-sm text-[#00b67a]" />
-                ))}
-              </div>
-              <span className="font-semibold text-[13px] text-charcoal">4.9</span>
-              <span className="text-stone/80">·</span>
-              <span className="text-[12px] font-medium text-soft-gray">Excellent</span>
-              <span className="text-stone/80">·</span>
-              <span className="text-[11px] text-soft-gray/70">1,200+ reviews</span>
-            </div>
-            <h2 className="font-display text-4xl font-semibold text-charcoal md:text-5xl">
-              Trusted by our{" "}
-              <em className="font-accent not-italic text-copper">members.</em>
-            </h2>
-          </div>
-        </Reveal>
-
-        {/* Photo mosaic */}
-        <Reveal>
-          <div className="mb-6 grid h-[700px] grid-rows-[1.05fr_1fr] gap-1 overflow-hidden rounded-2xl sm:h-[480px] sm:grid-cols-[3fr_2fr] sm:grid-rows-1">
-            <div className="relative overflow-hidden bg-ivory-soft">
-              <Image src={PHOTOS[0].src} alt={PHOTOS[0].alt} fill sizes="(max-width: 640px) 100vw, 60vw" className="object-cover" />
-            </div>
-            <div className="grid grid-cols-2 grid-rows-2 gap-1">
-              {PHOTOS.slice(1).map((photo, index) => (
-                <div key={`${photo.src}-${index}`} className="relative overflow-hidden bg-ivory-soft">
-                  <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 640px) 50vw, 20vw" className="object-cover" />
+          <div className="mb-8 grid overflow-hidden rounded-[1.8rem] bg-charcoal md:grid-cols-[.9fr_1.1fr]">
+            <div className="flex flex-col justify-center p-8 text-white md:p-12 lg:p-14">
+              <div className="mb-6 inline-flex w-fit items-center gap-2.5 rounded-full border border-white/10 bg-white/[.06] px-4 py-2">
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <i key={i} className="ri-star-fill text-sm text-[#69C7A4]" />
+                  ))}
                 </div>
-              ))}
+                <span className="text-[13px] font-semibold">4.9</span>
+                <span className="text-white/30">·</span>
+                <span className="text-[11px] text-white/60">1,200+ reviews</span>
+              </div>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-light">Member perspective</p>
+              <h2 className="mt-4 max-w-lg font-display text-4xl font-semibold leading-[1.02] md:text-5xl">Trusted for making complex topics feel clearer.</h2>
+              <p className="mt-5 max-w-md text-sm leading-relaxed text-white/60">Thoughtful education. Plain language. Clear limits on what belongs with a licensed healthcare professional.</p>
+            </div>
+            <div className="relative min-h-[360px] md:min-h-[520px]">
+              <Image src={FEATURE_PHOTO.src} alt={FEATURE_PHOTO.alt} fill sizes="(max-width: 768px) 100vw, 55vw" className="object-cover" />
             </div>
           </div>
         </Reveal>
 
-        {/* Review cards */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {REVIEWS.map((r) => (
             <Reveal key={r.name}>
