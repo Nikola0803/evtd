@@ -1,33 +1,98 @@
-/**
- * Placeholder for the future headless WooCommerce connection.
- *
- * Once the WordPress + WooCommerce site is live, replace the mock reads in
- * lib/products.ts with calls through here. Two supported paths:
- *
- * 1. WooCommerce REST API (simplest, no extra plugin):
- *    GET {WP_URL}/wp-json/wc/v3/products
- *    Auth via consumer key/secret (server-side only, never exposed to the client).
- *
- * 2. WPGraphQL + WooGraphQL (richer querying, better for App Router RSC/ISR):
- *    POST {WP_URL}/graphql
- *
- * Env vars to add when ready (see .env.example):
- *   WORDPRESS_URL=
- *   WOOCOMMERCE_CONSUMER_KEY=
- *   WOOCOMMERCE_CONSUMER_SECRET=
- *
- * The `Product` shape in lib/types.ts was modeled after the WooCommerce
- * product resource (id, slug, sku, price, stock_status, categories,
- * meta_data) specifically so that mapping a real API response onto it is a
- * thin adapter function, not a rewrite of every component that consumes it.
- */
+import "server-only";
 
-const WORDPRESS_URL = process.env.WORDPRESS_URL;
+const WC_URL = process.env.WORDPRESS_URL?.replace(/\/$/, "");
+const WC_KEY = process.env.WOOCOMMERCE_CONSUMER_KEY;
+const WC_SECRET = process.env.WOOCOMMERCE_CONSUMER_SECRET;
 
 export function isWooCommerceConfigured() {
-  return Boolean(WORDPRESS_URL && process.env.WOOCOMMERCE_CONSUMER_KEY && process.env.WOOCOMMERCE_CONSUMER_SECRET);
+  return Boolean(WC_URL && WC_KEY && WC_SECRET);
 }
 
-// TODO: implement once credentials are available.
-// export async function fetchWooProducts(): Promise<Product[]> { ... }
-// export async function fetchWooProductBySlug(slug: string): Promise<Product | null> { ... }
+function wcAuth() {
+  return "Basic " + Buffer.from(`${WC_KEY}:${WC_SECRET}`).toString("base64");
+}
+
+async function wcFetch(path: string, options: RequestInit = {}) {
+  const res = await fetch(`${WC_URL}/wp-json/wc/v3${path}`, {
+    ...options,
+    headers: {
+      Authorization: wcAuth(),
+      "Content-Type": "application/json",
+      ...(options.headers ?? {}),
+    },
+  });
+  const data = await res.json().catch(() => null);
+  return { ok: res.ok, status: res.status, data };
+}
+
+export interface WooProduct {
+  id: number;
+  name: string;
+  slug: string;
+  sku: string;
+  price: string;
+  regular_price: string;
+  stock_status: "instock" | "outofstock";
+  short_description: string;
+  categories: { id: number; name: string }[];
+}
+
+export async function searchWooProducts(query: string): Promise<WooProduct[]> {
+  const params = new URLSearchParams({ per_page: "20", status: "publish" });
+  if (query) params.set("search", query);
+  const { ok, data } = await wcFetch(`/products?${params}`);
+  return ok && Array.isArray(data) ? data : [];
+}
+
+export interface WooOrderLine {
+  product_id: number;
+  quantity: number;
+  /** optional: for variable products */
+  variation_id?: number;
+}
+
+export interface WooOrderInput {
+  billing: {
+    first_name: string;
+    last_name: string;
+    email: string;
+    phone?: string;
+    address_1?: string;
+    city?: string;
+    state?: string;
+    postcode?: string;
+    country?: string;
+  };
+  line_items: WooOrderLine[];
+  payment_method: string;
+  payment_method_title: string;
+  /** "pending" leaves the order unpaid so the pay link works */
+  status?: "pending" | "processing" | "on-hold";
+  customer_note?: string;
+  meta_data?: { key: string; value: string }[];
+}
+
+export interface WooOrderResult {
+  id: number;
+  number: string;
+  order_key: string;
+  payment_url: string;
+  status: string;
+  total: string;
+  currency: string;
+}
+
+export async function createWooOrder(input: WooOrderInput): Promise<{ ok: boolean; order?: WooOrderResult; error?: string }> {
+  const body: WooOrderInput = { status: "pending", ...input };
+  const { ok, data } = await wcFetch("/orders", {
+    method: "POST",
+    body: JSON.stringify(body),
+  });
+  if (!ok) return { ok: false, error: data?.message ?? "WooCommerce order creation failed" };
+  return { ok: true, order: data as WooOrderResult };
+}
+
+export async function getWooOrder(orderId: number): Promise<WooOrderResult | null> {
+  const { ok, data } = await wcFetch(`/orders/${orderId}`);
+  return ok ? (data as WooOrderResult) : null;
+}
