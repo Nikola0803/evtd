@@ -338,7 +338,7 @@ export function PosOrderClient({ staff }: { staff: Staff }) {
                       {linkCopied ? "✓ Copied!" : "Copy payment link"}
                     </button>
                     <p className="mt-2 text-[11px] text-[var(--color-sage)]">
-                      Share via SMS or email — link expires on payment.
+                      Share via SMS or email - link expires on payment.
                     </p>
                   </div>
                 )}
@@ -579,7 +579,7 @@ export function PosOrderClient({ staff }: { staff: Staff }) {
 
                 {paymentMode === "manual" && (
                   <div>
-                    <p className="text-xs text-[var(--color-sage)] mb-3">Payment already collected — how was it received?</p>
+                    <p className="text-xs text-[var(--color-sage)] mb-3">Payment already collected - how was it received?</p>
                     <div className="flex flex-wrap gap-2">
                       {(["cc", "etransfer", "cashapp", "zelle", "venmo"] as ManualMethod[]).map((m) => (
                         <button
@@ -625,8 +625,8 @@ export function PosOrderClient({ staff }: { staff: Staff }) {
                 {submitting
                   ? "Creating order…"
                   : paymentMode === "paylink"
-                  ? `Create order & get payment link — $${total.toFixed(2)}`
-                  : `Record order — $${total.toFixed(2)}`}
+                  ? `Create order & get payment link - $${total.toFixed(2)}`
+                  : `Record order - $${total.toFixed(2)}`}
               </button>
             </div>
           </div>

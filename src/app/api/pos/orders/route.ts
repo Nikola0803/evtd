@@ -112,7 +112,7 @@ export async function POST(req: Request) {
     const crmPayload = {
       items: body.items.map((i) => ({ slug: i.slug ?? i.name, quantity: i.quantity })),
       paymentMethod: body.payment_mode === "manual" ? (body.payment_method ?? "other") : "pending_link",
-      paymentMemo: `POS order — closer: ${staff.name}`,
+      paymentMemo: `POS order - closer: ${staff.name}`,
       billing: {
         firstName: body.customer.first_name,
         lastName: body.customer.last_name,
