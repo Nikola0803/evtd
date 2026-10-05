@@ -9,10 +9,11 @@ export function isWooCommerceConfigured() {
 }
 
 function wcAuth() {
-  return "Basic " + Buffer.from(`${WC_KEY}:${WC_SECRET}`).toString("base64");
+  return "Basic " + Buffer.from(`${WC_KEY ?? ""}:${WC_SECRET ?? ""}`).toString("base64");
 }
 
 async function wcFetch(path: string, options: RequestInit = {}) {
+  if (!WC_URL) throw new Error("WORDPRESS_URL not configured");
   const res = await fetch(`${WC_URL}/wp-json/wc/v3${path}`, {
     ...options,
     headers: {

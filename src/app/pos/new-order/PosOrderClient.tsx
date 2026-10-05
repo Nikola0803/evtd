@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import type { StaffRole } from "@/lib/pos-auth";
+type StaffRole = "setter" | "closer" | "admin";
 
 interface Staff {
   name: string;

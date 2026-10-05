@@ -28,7 +28,7 @@ export function getStaffList(): StaffMember[] {
       if (!code || !name || !role) return null;
       return { code, name, role: role as StaffRole };
     })
-    .filter(Boolean) as StaffMember[];
+    .filter((x): x is StaffMember => x !== null);
 }
 
 export function authenticateStaff(code: string): StaffMember | null {

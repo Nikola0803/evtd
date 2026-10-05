@@ -33,7 +33,7 @@ export interface GhlContact {
 }
 
 export async function searchGhlContacts(query: string): Promise<GhlContact[]> {
-  if (!query || query.length < 2) return [];
+  if (!query || query.length < 2 || !GHL_LOCATION_ID) return [];
   const params = new URLSearchParams({
     locationId: GHL_LOCATION_ID,
     query,
