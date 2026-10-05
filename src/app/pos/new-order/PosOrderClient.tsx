@@ -53,7 +53,7 @@ export function PosOrderClient({ staff }: { staff: Staff }) {
   const [products, setProducts] = useState<Product[]>([]);
   const [productSource, setProductSource] = useState<"woocommerce" | "local" | "">("");
   const [loadingProducts, setLoadingProducts] = useState(false);
-  const productSearchTimer = useRef<ReturnType<typeof setTimeout>>();
+  const productSearchTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   // Customer
   const [contactQuery, setContactQuery] = useState("");
@@ -63,7 +63,7 @@ export function PosOrderClient({ staff }: { staff: Staff }) {
     first_name: "", last_name: "", email: "", phone: "",
   });
   const [showContactDropdown, setShowContactDropdown] = useState(false);
-  const contactTimer = useRef<ReturnType<typeof setTimeout>>();
+  const contactTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   // Cart
   const [cart, setCart] = useState<CartItem[]>([]);
