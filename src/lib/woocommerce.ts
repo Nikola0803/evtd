@@ -97,3 +97,28 @@ export async function getWooOrder(orderId: number): Promise<WooOrderResult | nul
   const { ok, data } = await wcFetch(`/orders/${orderId}`);
   return ok ? (data as WooOrderResult) : null;
 }
+
+export interface WooCustomerInput {
+  email: string;
+  first_name: string;
+  last_name: string;
+  username?: string;
+}
+
+/**
+ * Creates a WooCommerce customer account. Returns the customer ID or null.
+ * Silently ignores "already exists" errors (code: registration-error-email-exists).
+ */
+export async function createWooCustomer(input: WooCustomerInput): Promise<number | null> {
+  const body = {
+    email: input.email,
+    first_name: input.first_name,
+    last_name: input.last_name,
+    username: input.username ?? input.email,
+  };
+  const { ok, data } = await wcFetch("/customers", { method: "POST", body: JSON.stringify(body) });
+  if (ok) return (data as { id: number }).id;
+  // email already registered - not a real error for us
+  if (data?.code === "registration-error-email-exists") return null;
+  return null;
+}
