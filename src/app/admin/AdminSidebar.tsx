@@ -9,6 +9,7 @@ const NAV = [
   { href: "/admin/customers", label: "Customers", icon: "ri-group-line" },
   { href: "/admin/staff", label: "Staff", icon: "ri-user-settings-line" },
   { href: "/admin/import", label: "Import", icon: "ri-upload-cloud-line" },
+  { href: "/admin/settings", label: "Settings", icon: "ri-settings-3-line" },
 ];
 
 export function AdminSidebar({ staffName, staffRole }: { staffName: string; staffRole: string }) {
