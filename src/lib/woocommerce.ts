@@ -109,6 +109,70 @@ export interface WooCustomerInput {
  * Creates a WooCommerce customer account. Returns the customer ID or null.
  * Silently ignores "already exists" errors (code: registration-error-email-exists).
  */
+// ---------- paginated list helpers ----------
+
+async function wcFetchPaged(path: string) {
+  if (!WC_URL) throw new Error("WORDPRESS_URL not configured");
+  const res = await fetch(`${WC_URL}/wp-json/wc/v3${path}`, {
+    headers: { Authorization: wcAuth(), "Content-Type": "application/json" },
+    cache: "no-store",
+  });
+  const total = parseInt(res.headers.get("X-WP-Total") ?? "0");
+  const totalPages = parseInt(res.headers.get("X-WP-TotalPages") ?? "1");
+  const data = await res.json().catch(() => []);
+  return { ok: res.ok, data, total, totalPages };
+}
+
+export interface WooOrderFull {
+  id: number; number: string; status: string; date_created: string;
+  total: string; currency: string;
+  billing: { first_name: string; last_name: string; email: string; phone: string };
+  line_items: { id: number; name: string; quantity: number; total: string }[];
+  meta_data: { key: string; value: string }[];
+  payment_url: string;
+}
+
+export interface WooCustomerFull {
+  id: number; email: string; first_name: string; last_name: string;
+  date_created: string; orders_count: number; total_spent: string;
+  meta_data: { key: string; value: string }[];
+  billing: { phone: string };
+}
+
+export async function listWooOrders(params: {
+  page?: number; per_page?: number; status?: string; search?: string;
+} = {}): Promise<{ orders: WooOrderFull[]; total: number; totalPages: number }> {
+  const p = new URLSearchParams({ per_page: String(params.per_page ?? 25), page: String(params.page ?? 1) });
+  if (params.status && params.status !== "any") p.set("status", params.status);
+  if (params.search) p.set("search", params.search);
+  const { ok, data, total, totalPages } = await wcFetchPaged(`/orders?${p}`);
+  return { orders: ok && Array.isArray(data) ? data : [], total, totalPages };
+}
+
+export async function listWooCustomers(params: {
+  page?: number; per_page?: number; search?: string;
+} = {}): Promise<{ customers: WooCustomerFull[]; total: number; totalPages: number }> {
+  const p = new URLSearchParams({ per_page: String(params.per_page ?? 25), page: String(params.page ?? 1) });
+  if (params.search) p.set("search", params.search);
+  const { ok, data, total, totalPages } = await wcFetchPaged(`/customers?${p}`);
+  return { customers: ok && Array.isArray(data) ? data : [], total, totalPages };
+}
+
+export async function getWooStats(): Promise<{ total_orders: number; total_revenue: string }> {
+  const p = new URLSearchParams({ per_page: "1", page: "1" });
+  const ordersRes = await wcFetchPaged(`/orders?${p}`);
+  const salesRes = await fetch(`${WC_URL}/wp-json/wc/v3/reports/sales`, {
+    headers: { Authorization: wcAuth(), "Content-Type": "application/json" },
+    cache: "no-store",
+  });
+  const salesData = await salesRes.json().catch(() => [{}]);
+  const sales = Array.isArray(salesData) ? salesData[0] : salesData;
+  return {
+    total_orders: ordersRes.total,
+    total_revenue: sales?.total_sales ?? "0",
+  };
+}
+
 export async function createWooCustomer(input: WooCustomerInput): Promise<number | null> {
   const body = {
     email: input.email,
