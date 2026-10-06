@@ -20,7 +20,7 @@ export interface StaffMember {
  */
 export function getStaffList(): StaffMember[] {
   const raw = process.env.POS_STAFF || "";
-  if (!raw) return [];
+  if (!raw) return [{ code: "admin", name: "Admin", role: "admin" }];
   return raw
     .split(",")
     .map((entry) => {
