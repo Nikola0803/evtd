@@ -35,20 +35,25 @@ export function PosLoginForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-3">
-      <input
-        type="password"
-        autoComplete="off"
-        value={code}
-        onChange={(e) => setCode(e.target.value)}
-        placeholder="Staff code"
-        className="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:border-zinc-600 focus:outline-none"
-        autoFocus
-      />
-      {error && <p className="text-sm text-red-400">{error}</p>}
+      <div>
+        <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-charcoal/50">
+          Staff Code
+        </label>
+        <input
+          type="password"
+          autoComplete="off"
+          value={code}
+          onChange={(e) => setCode(e.target.value)}
+          placeholder="Enter your staff code"
+          className="w-full rounded-lg border border-stone bg-ivory px-4 py-3 text-sm text-charcoal placeholder:text-charcoal/30 focus:border-copper focus:outline-none transition-colors"
+          autoFocus
+        />
+      </div>
+      {error && <p className="text-sm text-red-600">{error}</p>}
       <button
         type="submit"
         disabled={loading || !code}
-        className="w-full rounded-lg bg-white px-4 py-3 text-sm font-semibold text-black transition hover:bg-zinc-100 disabled:opacity-40"
+        className="w-full rounded-lg bg-charcoal px-4 py-3 text-sm font-semibold text-ivory transition hover:bg-sage-deep disabled:opacity-40"
       >
         {loading ? "Signing in..." : "Sign in"}
       </button>

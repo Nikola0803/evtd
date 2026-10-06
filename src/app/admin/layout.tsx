@@ -8,7 +8,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   if (staff.role === "setter") redirect("/pos/new-order");
 
   return (
-    <div className="flex h-screen overflow-hidden bg-zinc-950 text-white antialiased">
+    <div className="flex h-screen overflow-hidden bg-ivory-soft text-charcoal antialiased">
       <AdminSidebar staffName={staff.name} staffRole={staff.role} />
       <main className="flex flex-1 flex-col overflow-hidden">{children}</main>
     </div>

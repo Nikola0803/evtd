@@ -6,6 +6,8 @@ interface ParsedRow { first_name: string; last_name: string; email: string; phon
 
 const CSV_TEMPLATE = "first_name,last_name,email,phone\nJohn,Smith,john@example.com,+1-555-0100\nJane,Doe,jane@example.com,+1-555-0200";
 
+const INPUT = "w-full rounded-md border border-stone bg-white px-3 py-2 text-sm text-charcoal placeholder:text-charcoal/30 focus:border-copper focus:outline-none transition-colors";
+
 function parseCSV(text: string): ParsedRow[] {
   const lines = text.trim().split("\n");
   if (lines.length < 2) return [];
@@ -31,7 +33,6 @@ export function ImportClient() {
   const [error, setError] = useState("");
   const fileRef = useRef<HTMLInputElement>(null);
 
-  // Manual entry
   const [manual, setManual] = useState({ first_name: "", last_name: "", email: "", phone: "" });
 
   function handleFile(f: File) {
@@ -89,8 +90,8 @@ export function ImportClient() {
       <div className="flex gap-2">
         {(["csv", "manual"] as const).map((t) => (
           <button key={t} onClick={() => setTab(t)}
-            className={`rounded-md border px-4 py-2 text-sm font-medium transition-colors ${
-              tab === t ? "border-white bg-white text-black" : "border-zinc-800 text-zinc-500 hover:border-zinc-600 hover:text-white"
+            className={`rounded-lg border px-4 py-2 text-sm font-medium transition-colors ${
+              tab === t ? "border-charcoal bg-charcoal text-ivory" : "border-stone text-charcoal/50 hover:border-charcoal/40 hover:text-charcoal"
             }`}>
             {t === "csv" ? "CSV / Excel import" : "Add single customer"}
           </button>
@@ -98,15 +99,15 @@ export function ImportClient() {
       </div>
 
       {result && (
-        <div className="rounded-lg border border-green-900/50 bg-green-950/30 px-4 py-3">
-          <p className="text-sm font-semibold text-green-400">Import complete</p>
-          <p className="mt-0.5 text-xs text-zinc-400">
+        <div className="rounded-xl border border-sage-deep/20 bg-sage-deep/5 px-4 py-3">
+          <p className="text-sm font-semibold text-sage-deep">Import complete</p>
+          <p className="mt-0.5 text-xs text-charcoal/60">
             {result.created} created, {result.failed} failed of {result.total} records
           </p>
         </div>
       )}
       {error && (
-        <div className="rounded-lg border border-red-900/50 bg-red-950/30 px-4 py-2.5 text-sm text-red-400">{error}</div>
+        <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-2.5 text-sm text-red-600">{error}</div>
       )}
 
       {/* CSV tab */}
@@ -114,10 +115,11 @@ export function ImportClient() {
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <button onClick={downloadTemplate}
-              className="rounded-md border border-zinc-800 px-3 py-2 text-xs font-medium text-zinc-400 hover:border-zinc-600 hover:text-white transition-colors">
+              className="rounded-lg border border-stone bg-white px-3 py-2 text-xs font-medium text-charcoal/60 hover:border-charcoal/40 hover:text-charcoal transition-colors">
+              <i className="ri-download-line mr-1.5" />
               Download template CSV
             </button>
-            <span className="text-xs text-zinc-600">or drag and drop a CSV/Excel file below</span>
+            <span className="text-xs text-charcoal/40">or drag and drop a CSV file below</span>
           </div>
 
           {/* Drop zone */}
@@ -125,13 +127,13 @@ export function ImportClient() {
             onDrop={onDrop}
             onDragOver={(e) => e.preventDefault()}
             onClick={() => fileRef.current?.click()}
-            className="cursor-pointer rounded-lg border-2 border-dashed border-zinc-800 bg-zinc-900/50 px-6 py-10 text-center transition-colors hover:border-zinc-600 hover:bg-zinc-900"
+            className="cursor-pointer rounded-xl border-2 border-dashed border-stone bg-white px-6 py-10 text-center transition-colors hover:border-copper/50 hover:bg-ivory"
           >
-            <i className="ri-upload-cloud-2-line text-3xl text-zinc-700" />
-            <p className="mt-2 text-sm text-zinc-500">
+            <i className="ri-upload-cloud-2-line text-3xl text-charcoal/20" />
+            <p className="mt-2 text-sm text-charcoal/50">
               {filename ? filename : "Click or drag a .csv file here"}
             </p>
-            <p className="mt-1 text-xs text-zinc-700">Columns: first_name, last_name, email, phone</p>
+            <p className="mt-1 text-xs text-charcoal/30">Columns: first_name, last_name, email, phone</p>
             <input ref={fileRef} type="file" accept=".csv,.txt" className="hidden"
               onChange={(e) => { const f = e.target.files?.[0]; if (f) handleFile(f); }} />
           </div>
@@ -139,10 +141,10 @@ export function ImportClient() {
           {/* Preview */}
           {rows.length > 0 && (
             <div>
-              <div className="mb-2 flex items-center justify-between">
-                <p className="text-sm text-zinc-400">
-                  <span className="text-white font-semibold">{validRows.length}</span> valid,{" "}
-                  <span className={rows.length - validRows.length > 0 ? "text-red-400" : "text-zinc-600"}>
+              <div className="mb-3 flex items-center justify-between">
+                <p className="text-sm text-charcoal/60">
+                  <span className="font-semibold text-charcoal">{validRows.length}</span> valid,{" "}
+                  <span className={rows.length - validRows.length > 0 ? "text-red-600" : "text-charcoal/30"}>
                     {rows.length - validRows.length} invalid
                   </span>
                   {" "}rows
@@ -150,30 +152,30 @@ export function ImportClient() {
                 <button
                   onClick={() => doImport(validRows)}
                   disabled={importing || validRows.length === 0}
-                  className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-black transition hover:bg-zinc-100 disabled:opacity-30"
+                  className="rounded-lg bg-charcoal px-4 py-2 text-sm font-semibold text-ivory transition hover:bg-sage-deep disabled:opacity-30"
                 >
                   {importing ? "Importing..." : `Import ${validRows.length} customers`}
                 </button>
               </div>
-              <div className="overflow-hidden rounded-lg border border-zinc-800 max-h-64 overflow-y-auto">
+              <div className="overflow-hidden rounded-xl border border-stone max-h-64 overflow-y-auto bg-white">
                 <table className="w-full text-xs">
-                  <thead className="sticky top-0 bg-zinc-900 border-b border-zinc-800">
+                  <thead className="sticky top-0 bg-ivory border-b border-stone">
                     <tr>
                       {["First", "Last", "Email", "Phone", ""].map((h) => (
-                        <th key={h} className="px-3 py-2 text-left text-[10px] font-semibold uppercase tracking-widest text-zinc-600">{h}</th>
+                        <th key={h} className="px-3 py-2 text-left text-[10px] font-semibold uppercase tracking-widest text-charcoal/40">{h}</th>
                       ))}
                     </tr>
                   </thead>
                   <tbody>
                     {rows.map((r, i) => (
-                      <tr key={i} className={`border-b border-zinc-900 ${!r.valid ? "opacity-40" : ""}`}>
-                        <td className="px-3 py-1.5 text-zinc-300">{r.first_name}</td>
-                        <td className="px-3 py-1.5 text-zinc-300">{r.last_name}</td>
-                        <td className="px-3 py-1.5 text-zinc-300">{r.email}</td>
-                        <td className="px-3 py-1.5 text-zinc-500">{r.phone}</td>
+                      <tr key={i} className={`border-b border-stone/50 last:border-0 ${!r.valid ? "opacity-40" : ""}`}>
+                        <td className="px-3 py-1.5 text-charcoal">{r.first_name}</td>
+                        <td className="px-3 py-1.5 text-charcoal">{r.last_name}</td>
+                        <td className="px-3 py-1.5 text-charcoal">{r.email}</td>
+                        <td className="px-3 py-1.5 text-charcoal/50">{r.phone}</td>
                         <td className="px-3 py-1.5">
                           {r.valid
-                            ? <i className="ri-check-line text-green-500" />
+                            ? <i className="ri-check-line text-sage-deep" />
                             : <span className="text-red-500 text-[10px]">missing email/name</span>}
                         </td>
                       </tr>
@@ -202,15 +204,13 @@ export function ImportClient() {
           <button
             onClick={() => doImport([manual])}
             disabled={importing || !manual.email || !manual.first_name}
-            className="w-full rounded-md bg-white py-2.5 text-sm font-semibold text-black transition hover:bg-zinc-100 disabled:opacity-30"
+            className="w-full rounded-lg bg-charcoal py-2.5 text-sm font-semibold text-ivory transition hover:bg-sage-deep disabled:opacity-30"
           >
             {importing ? "Adding..." : "Add customer"}
           </button>
-          <p className="text-xs text-zinc-600">Creates in WooCommerce + GHL if configured</p>
+          <p className="text-xs text-charcoal/40">Creates in WooCommerce + GHL if configured</p>
         </div>
       )}
     </div>
   );
 }
-
-const INPUT = "w-full rounded-md border border-zinc-800 bg-zinc-900 px-3 py-2 text-sm text-white placeholder:text-zinc-600 focus:border-zinc-600 focus:outline-none";
