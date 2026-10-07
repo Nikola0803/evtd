@@ -5,7 +5,7 @@ export const programDetails = {
     whatItIs:
       'Sermorelin Care is a prescription program designed for adults interested in sleep quality, overnight recovery and natural growth-hormone signaling. Treatment is considered only after a licensed clinician reviews your goals, health history and current medications.',
     howItMayWork:
-      'Sermorelin is a growth-hormone-releasing peptide. It may support the body\u2019s own growth-hormone signaling, which is involved in recovery and sleep regulation. Responses differ widely between individuals, and your clinician will determine whether it is appropriate for you.',
+      'Sermorelin is a growth-hormone-releasing peptide. It may support the body’s own growth-hormone signaling, which is involved in recovery and sleep regulation. Responses differ widely between individuals, and your clinician will determine whether it is appropriate for you.',
     eligibility: [
       'Adults 18 and over in a supported state',
       'A clear clinical history reviewed by a licensed clinician',
@@ -59,7 +59,7 @@ export const programDetails = {
         id: 'sermorelin-when',
         question: 'How quickly will I notice anything?',
         answer:
-          'Experiences vary. Many patients are asked to follow their clinician\u2019s directions consistently and check in over time. No outcome is guaranteed.',
+          'Experiences vary. Many patients are asked to follow their clinician’s directions consistently and check in over time. No outcome is guaranteed.',
       },
       {
         id: 'sermorelin-labs',
@@ -172,7 +172,7 @@ export const programDetails = {
     whatItIs:
       'Skin Renewal Care is a prescription topical program that may support skin renewal and healthier-looking hair as part of a simple daily routine. It is considered after a licensed clinician reviews your information.',
     howItMayWork:
-      'Copper peptides are studied for their role in skin and hair biology. Applied topically, they may support the skin\u2019s natural renewal processes. Results differ between individuals, and your clinician will determine whether it is appropriate for you.',
+      'Copper peptides are studied for their role in skin and hair biology. Applied topically, they may support the skin’s natural renewal processes. Results differ between individuals, and your clinician will determine whether it is appropriate for you.',
     eligibility: [
       'Adults 18 and over in a supported state',
       'No contraindications identified during clinical review',
@@ -286,7 +286,7 @@ export const programDetails = {
     ],
     formats: ['Personalized by clinician', 'Format confirmed after review', 'Monthly supply where prescribed'],
     pricing: [
-      { name: 'Personalized plan', price: 'View options', note: 'Your clinician\u2019s decision determines what, if anything, is prescribed.' },
+      { name: 'Personalized plan', price: 'View options', note: 'Your clinician’s decision determines what, if anything, is prescribed.' },
       { name: 'Renewal review', price: 'Included', note: 'Your plan is reviewed before each renewal.' },
       { name: 'If not prescribed', price: 'No treatment charge', note: 'You are not charged for treatment if you are declined.' },
     ],
@@ -301,7 +301,7 @@ export const programDetails = {
     faqs: [
       {
         id: 'metabolic-options',
-        question: 'Why does the price say \u201cview options\u201d?',
+        question: 'Why does the price say “view options”?',
         answer:
           'Metabolic care is personalized, so pricing depends on what your clinician determines is appropriate. Options and totals are shown before you authorize payment.',
       },
@@ -316,7 +316,7 @@ export const programDetails = {
       'Compounded medications are not FDA-approved.',
       'A licensed clinician determines whether a prescribed treatment is appropriate for each patient.',
       'Never use a prescription that was not written for you.',
-      'Follow your clinician\u2019s monitoring instructions carefully.',
+      'Follow your clinician’s monitoring instructions carefully.',
     ],
     references: [
       'Obesity and metabolic health: clinical guidance — peer-reviewed summary (placeholder).',
