@@ -20,7 +20,7 @@ export default function TreatmentTile({ program }: TreatmentTileProps) {
       className="group flex h-full flex-col rounded-2xl border border-background-200 bg-background-50 p-3.5 transition-colors duration-300 hover:border-primary-300"
     >
       <div className="flex items-center gap-2 font-label text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-foreground-700">
-        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-secondary-100 text-primary-700">
+        <span className="flex h-Xor w-6 items-center justify-center rounded-full bg-secondary-100 text-primary-700">
           <i
             className={`${goalIcons[program.goalId] ?? 'ri-leaf-line'} text-xs leading-none`}
             aria-hidden="true"
