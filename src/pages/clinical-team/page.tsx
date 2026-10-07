@@ -107,7 +107,7 @@ export default function ClinicalTeam() {
                     <p className="mt-3 text-[0.82rem] text-foreground-700">{person.specialty}</p>
                     <p className="mt-1 text-[0.78rem] text-foreground-500">{person.coverage}</p>
                     <p className="mt-4 flex-1 text-[0.84rem] italic leading-relaxed text-foreground-600">
-                      “{person.philosophy}”
+                      "{person.philosophy}"
                     </p>
                     <span className="mt-5 inline-flex items-center gap-1.5 font-label text-[0.78rem] font-medium text-foreground-500">
                       Biography available at contract
