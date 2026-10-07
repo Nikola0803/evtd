@@ -15,7 +15,7 @@ const qualityControls = [
   {
     icon: 'ri-file-list-3-line',
     title: 'Patient-specific preparation',
-    copy: 'Treatment is prepared for the individual patient based on the prescriber\u2019s directions.',
+    copy: 'Treatment is prepared for the individual patient based on the prescriber’s directions.',
   },
   {
     icon: 'ri-thermometer-line',
