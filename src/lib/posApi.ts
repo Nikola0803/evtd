@@ -1,4 +1,4 @@
-const BASE = (import.meta.env.VITE_API_BASE ?? "").replace(/\/$/, "");
+const BASE = (import.meta.env.VITE_API_BASE ?? "").replace(/\/$/,  "");
 const ENDPOINT = `${BASE}/wp-json/evolv-pos/v1`;
 
 function authHeaders(): HeadersInit {
