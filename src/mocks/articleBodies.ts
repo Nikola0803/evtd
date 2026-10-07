@@ -75,7 +75,7 @@ export const articleBodies = {
         heading: 'What compounding means',
         paragraphs: [
           'Compounding is the preparation of a medication for an individual patient when a prescriber determines an individualized preparation is appropriate. It is regulated by state boards of pharmacy and applicable federal requirements.',
-          'Because compounded medications are not FDA-approved, the clinician\u2019s judgment and the pharmacy\u2019s licensing both matter a great deal.',
+          'Because compounded medications are not FDA-approved, the clinician’s judgment and the pharmacy’s licensing both matter a great deal.',
         ],
       },
       {
