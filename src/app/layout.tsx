@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins, Inter, Newsreader } from "next/font/google";
 import "./globals.css";
-import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { ReferralCapture } from "@/components/layout/ReferralCapture";
 import { VerificationSync } from "@/components/layout/VerificationSync";
 import { AgeGate } from "@/components/layout/AgeGate";
-import { CartProvider } from "@/lib/cart-context";
-import { CurrencyProvider } from "@/lib/currency-context";
 import Script from "next/script";
 import { GoogleAnalytics } from "@/components/layout/GoogleAnalytics";
 import { GoogleTagManagerHead, GoogleTagManagerBody } from "@/components/layout/GoogleTagManager";
@@ -29,8 +24,6 @@ const inter = Inter({
   weight: ["300", "400", "500", "600"],
 });
 
-// Editorial serif used only for the single-product page's headline, to
-// mirror the reference PDP's premium serif title treatment.
 const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
@@ -54,9 +47,7 @@ export const metadata: Metadata = {
     "wellness education",
     "women's health programs",
   ],
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: SITE_URL,
@@ -71,10 +62,7 @@ export const metadata: Metadata = {
     description: "Plain-language peptide and wellness education, research guides, and resources for better provider conversations.",
     images: ["/images/brand/wellness-hero.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 const ORGANIZATION_JSON_LD = {
@@ -98,7 +86,7 @@ const WEBSITE_JSON_LD = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable} ${newsreader.variable} h-full antialiased`}>
       <head>
@@ -117,14 +105,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <GoogleAnalytics />
         <ReferralCapture />
         <VerificationSync />
-        <CurrencyProvider>
-          <CartProvider>
-                <AnnouncementBar />
-              <Header />
-              <main className="flex-1 pt-[90px] md:pt-[100px]">{children}</main>
-              <Footer />
-          </CartProvider>
-        </CurrencyProvider>
+        {children}
       </body>
     </html>
   );
