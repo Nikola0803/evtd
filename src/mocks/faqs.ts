@@ -39,7 +39,7 @@ export const faqs = [
     id: 'hsa-fsa-eligible',
     question: 'Are plans HSA/FSA eligible?',
     answer:
-      'Some prescription treatments may qualify for HSA or FSA reimbursement depending on your plan and your provider’s documentation. EVOLV Today does not provide tax or benefits advice, so please confirm eligibility with your plan administrator.',
+      'Some prescription treatments may qualify for HSA or FSA reimbursement depending on your plan and your provider\'s documentation. EVOLV Today does not provide tax or benefits advice, so please confirm eligibility with your plan administrator.',
   },
   {
     id: 'which-states-are-supported',
