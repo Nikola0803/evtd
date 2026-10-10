@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { BOOKING_TIMEZONE, type BookingRequest } from "@/lib/booking";
 
 type Availability = {
@@ -49,11 +50,18 @@ function inputClass(hasError = false) {
 }
 
 export function BookingFlow() {
+  const searchParams = useSearchParams();
+
   const [availability, setAvailability] = useState<Availability | null>(null);
   const [availabilityError, setAvailabilityError] = useState("");
   const [step, setStep] = useState(1);
   const [monthIndex, setMonthIndex] = useState(0);
-  const [interests, setInterests] = useState<string[]>([]);
+  const [interests, setInterests] = useState<string[]>(() => {
+    const raw = searchParams.get("interests");
+    if (!raw) return [];
+    const topics = raw.split(",").map((t) => t.trim()).filter(Boolean);
+    return topics;
+  });
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [firstName, setFirstName] = useState("");
