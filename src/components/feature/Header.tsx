@@ -29,17 +29,18 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b border-background-300/70 bg-background-50/92 backdrop-blur-md ${
-        menuOpen ? 'bg-background-50' : ''
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-shadow duration-300 ${
+        menuOpen ? 'bg-foreground-900' : 'bg-foreground-950'
+      } ${scrolled ? 'shadow-lg shadow-black/20' : ''}`}
     >
+      {/* Announcement bar */}
       <div
-        className={`overflow-hidden border-b border-primary-700/40 bg-primary-600 text-background-50 transition-all duration-300 ${
+        className={`overflow-hidden border-b border-background-50/10 bg-foreground-900 transition-all duration-300 ${
           scrolled ? 'max-h-0 opacity-0' : 'max-h-14 opacity-100'
         }`}
       >
         <div className="mx-auto flex w-full max-w-8xl items-center justify-between gap-4 px-5 py-2.5 md:px-8">
-          <p className="font-label text-[0.7rem] tracking-[0.02em] text-background-50/85">
+          <p className="font-label text-[0.7rem] tracking-[0.02em] text-background-200/85">
             <span className="font-semibold text-background-50">New</span>
             <span className="hidden sm:inline"> — physician-guided longevity programs now available</span>
             <span className="sm:hidden"> — new programs available</span>
@@ -47,7 +48,7 @@ export default function Header() {
           <div className="flex shrink-0 items-center gap-5 font-label text-[0.7rem]">
             <Link
               to="/pharmacy-standards"
-              className="hidden items-center gap-1.5 text-background-50/85 transition-colors duration-200 hover:text-background-50 sm:inline-flex"
+              className="hidden items-center gap-1.5 text-background-200/85 transition-colors duration-200 hover:text-background-50 sm:inline-flex"
             >
               <i className="ri-shield-check-line text-sm leading-none" aria-hidden="true"></i>
               Our standards
@@ -63,9 +64,10 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Main header row */}
       <div className="mx-auto flex h-16 w-full max-w-8xl items-center justify-between px-5 md:h-[4.5rem] md:px-8">
         <div className="flex items-center gap-3">
-          <Logo tone="dark" />
+          <Logo tone="light" />
         </div>
 
         <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
@@ -73,8 +75,8 @@ export default function Header() {
             <Link
               key={link.to}
               to={link.to}
-              className={`font-label text-[0.82rem] font-medium tracking-tight text-foreground-800 transition-colors duration-200 hover:text-primary-700 ${
-                pathname === link.to ? 'text-primary-600' : ''
+              className={`font-label text-[0.82rem] font-medium tracking-tight transition-colors duration-200 hover:text-background-50 ${
+                pathname === link.to ? 'text-primary-300' : 'text-background-200'
               }`}
             >
               {link.label}
@@ -85,7 +87,7 @@ export default function Header() {
         <div className="hidden items-center gap-5 lg:flex">
           <Link
             to="/portal"
-            className="font-label text-[0.82rem] font-medium text-foreground-800 transition-colors duration-200 hover:text-primary-700"
+            className="font-label text-[0.82rem] font-medium text-background-200 transition-colors duration-200 hover:text-background-50"
           >
             Sign In
           </Link>
@@ -95,7 +97,7 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-3 lg:hidden">
-          <Link to="/portal" className="font-label text-[0.8rem] font-medium text-foreground-800">
+          <Link to="/portal" className="font-label text-[0.8rem] font-medium text-background-200">
             Sign In
           </Link>
           <button
@@ -103,32 +105,33 @@ export default function Header() {
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center rounded-md border border-foreground-950/12 text-foreground-950 transition-colors duration-200 cursor-pointer"
+            className="flex h-10 w-10 items-center justify-center rounded-md border border-background-50/20 text-background-50 transition-colors duration-200 cursor-pointer"
           >
             <i className={`${menuOpen ? 'ri-close-line' : 'ri-menu-line'} text-xl leading-none`} aria-hidden="true"></i>
           </button>
         </div>
       </div>
 
+      {/* Mobile menu */}
       {menuOpen ? (
-        <div className="border-t border-background-300/70 bg-background-50 lg:hidden">
+        <div className="border-t border-background-50/10 bg-foreground-900 lg:hidden">
           <nav aria-label="Mobile" className="flex flex-col px-5 py-3">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className="border-b border-background-200 py-3.5 font-label text-sm text-foreground-900 last:border-b-0"
+                className="border-b border-background-50/10 py-3.5 font-label text-sm text-background-100 last:border-b-0"
               >
                 {link.label}
               </Link>
             ))}
-            <Link to="/pricing" className="border-b border-background-200 py-3.5 font-label text-sm text-foreground-900">
+            <Link to="/pricing" className="border-b border-background-50/10 py-3.5 font-label text-sm text-background-100">
               Pricing
             </Link>
-            <Link to="/faq" className="border-b border-background-200 py-3.5 font-label text-sm text-foreground-900">
+            <Link to="/faq" className="border-b border-background-50/10 py-3.5 font-label text-sm text-background-100 last:border-b-0">
               FAQ
             </Link>
-            <div className="pt-4">
+            <div className="pt-4 pb-2">
               <Button to="/assessment" variant="primary" size="md" fullWidth>
                 Take the Assessment
               </Button>

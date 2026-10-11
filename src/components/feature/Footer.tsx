@@ -113,21 +113,21 @@ export default function Footer() {
               guarantee a prescription.
             </p>
             <p>
-              EVOLV Today is a telehealth platform, not a pharmacy. Prescriptions are prepared and dispensed
-              by licensed US pharmacy partners. EVOLV Support assists with accounts, billing and delivery;
+              EVLV Today is a telehealth platform, not a pharmacy. Prescriptions are prepared and dispensed
+              by licensed US pharmacy partners. EVLV Support assists with accounts, billing and delivery;
               licensed clinicians handle medical questions and treatment decisions.
             </p>
           </div>
           <div className="space-y-3 text-[0.78rem] leading-relaxed text-secondary-300 lg:text-right">
             <p className="text-secondary-200">
-              <span className="font-semibold text-background-50">EVOLV Today, Inc.</span>
+              <span className="font-semibold text-background-50">EVLV Today, Inc.</span>
               <br />
               1201 Congress Avenue, Suite 240
               <br />
               Austin, TX 78701
             </p>
             <p>
-              EVOLV Support: <span className="text-background-50">support@evolvtoday.com</span>
+              Support: <span className="text-background-50">support@evlvtoday.com</span>
               <br />
               Mon–Fri, 8am–8pm CT · Sat, 9am–3pm CT
             </p>
@@ -135,7 +135,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-4 border-t border-background-50/12 pt-6 text-[0.75rem] text-secondary-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} EVOLV Today, Inc. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} EVLV Today, Inc. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link to="/portal" className="transition-colors duration-200 hover:text-background-50">
               Sign In
@@ -154,8 +154,8 @@ export default function Footer() {
       </Container>
 
       <div className="mt-12 overflow-hidden" aria-hidden="true">
-        <p className="select-none whitespace-nowrap px-5 text-center font-heading font-semibold leading-[0.85] tracking-[-0.03em] text-background-50/[0.08] text-[14vw] md:px-8">
-          EVOLV TODAY
+        <p className="select-none whitespace-nowrap px-5 text-center font-heading font-semibold leading-[0.85] tracking-[-0.03em] text-background-50/[0.06] text-[14vw] md:px-8">
+          EVLV TODAY
         </p>
       </div>
     </footer>
