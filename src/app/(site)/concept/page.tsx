@@ -30,64 +30,72 @@ export default function ConceptPage() {
     <main className="overflow-hidden bg-[#FAF2E4] text-[#1B1D19]">
 
       {/* ============================================================
-          HERO -- full height, editorial split
+          HERO -- centered, typography-first
       ============================================================ */}
-      <section className="relative min-h-[92vh] px-5 pb-16 pt-10 md:px-10 lg:flex lg:items-center lg:pb-0 lg:pt-0">
-        <div className="mx-auto grid w-full max-w-[1400px] gap-12 lg:grid-cols-[1fr_1fr] lg:gap-0 lg:items-stretch">
+      <section className="flex min-h-[88vh] flex-col items-center justify-center px-5 pb-12 pt-20 text-center md:px-10 md:pb-16 md:pt-28">
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#D9C3A0] bg-[#F5EDD8] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8D4A38]">
+          <i className="ri-shield-check-line text-xs" aria-hidden /> Peptide &amp; wellness education, US-wide
+        </span>
 
-          {/* Left -- text */}
-          <div className="flex flex-col justify-center py-16 lg:pr-16 lg:py-24">
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[#D9C3A0] bg-[#F5EDD8] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8D4A38]">
-              Wellness education
-            </span>
+        <h1 className="mt-8 max-w-4xl font-display text-[3.2rem] font-semibold leading-[.93] tracking-[-0.05em] md:text-[5rem] lg:text-[6rem]">
+          Start with how you feel.<br />
+          Build knowledge around<br />
+          <span className="text-[#D77E5F]">your goals.</span>
+        </h1>
 
-            <h1 className="mt-8 font-display text-[3.6rem] font-semibold leading-[.92] tracking-[-0.05em] md:text-[5rem] lg:text-[4.6rem] xl:text-[5.5rem]">
-              Understand your body.<br />
-              <span className="text-[#D77E5F]">Actually.</span>
-            </h1>
+        <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-[#5A5550] md:text-lg">
+          EVLV is a peptide and wellness education platform. We translate the research into plain language -- peptide science, hormone health, longevity, and how it all connects to you.
+        </p>
 
-            <p className="mt-8 max-w-md text-base leading-relaxed text-[#5A5550] md:text-lg">
-              EVLV is a peptide and wellness education platform. We translate the research into plain language -- peptide science, hormone health, longevity, and how it all connects to your goals.
-            </p>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <Link href="/book" className="inline-flex items-center gap-2.5 rounded-full bg-[#D77E5F] px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#C86B4D]">
+            Book your free pep talk <span aria-hidden>--&gt;</span>
+          </Link>
+          <Link href="/peptides" className="inline-flex items-center gap-2.5 rounded-full border border-[#1B1D19]/20 bg-white/60 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#1B1D19] transition hover:bg-white">
+            Browse our topics
+          </Link>
+        </div>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Link href="/book" className="inline-flex items-center gap-2.5 rounded-full bg-[#1B1D19] px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#2A2C27]">
-                Book a free pep talk
-              </Link>
-              <Link href="/peptides" className="text-sm font-semibold text-[#1B1D19]/60 underline underline-offset-4 transition hover:text-[#1B1D19]">
-                Explore topics
-              </Link>
+        <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#1B1D19]/30">
+          Free &middot; 15 minutes &middot; By phone &middot; Anywhere in the US
+        </p>
+
+        {/* Feature cards below hero */}
+        <div className="mt-16 grid w-full max-w-[1100px] gap-4 text-left sm:grid-cols-2">
+          {/* Membership card */}
+          <div className="relative overflow-hidden rounded-2xl bg-[#1B1D19] p-7 text-white md:p-9">
+            <div className="absolute right-5 top-5 rounded-full bg-[#D77E5F] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-white">Most popular</div>
+            <div className="relative mb-4 h-40 overflow-hidden rounded-xl">
+              <Image src="/images/brand/wellness-hero.png" alt="Wellness membership" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
             </div>
-
-            <div className="mt-12 grid grid-cols-3 gap-6 border-t border-[#1B1D19]/8 pt-10">
-              {[
-                ["First call", "Always free"],
-                ["Education only", "No medical claims"],
-                ["US-based", "Wellness experts"],
-              ].map(([label, value]) => (
-                <div key={label}>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#B45C42]">{label}</p>
-                  <p className="mt-1 text-sm font-medium text-[#1B1D19]/70">{value}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right -- editorial photo */}
-          <div className="relative hidden overflow-hidden lg:block">
-            <div className="absolute inset-0">
-              <Image
-                src="/images/brand/wellness-hero.png"
-                alt="Premium wellness education"
-                fill
-                priority
-                sizes="50vw"
-                className="object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FAF2E4] via-transparent to-transparent" style={{ width: "30%" }} />
+            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Membership</p>
+            <h3 className="mt-2 font-display text-2xl font-semibold">Monthly Wellness Plan</h3>
+            <p className="mt-3 text-sm leading-relaxed text-white/55">Ongoing peptide education, a personal learning guide, and monthly 1-on-1 sessions with an EVLV wellness expert.</p>
+            <div className="mt-6 flex items-center gap-4">
+              <Link href="/membership" className="inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#C86B4D]">See if I qualify</Link>
+              <Link href="/membership" className="text-[11px] font-semibold text-white/50 transition hover:text-white">Learn more --&gt;</Link>
             </div>
           </div>
 
+          {/* Free pep talk card */}
+          <div className="relative overflow-hidden rounded-2xl bg-[#1B1D19] p-7 text-white md:p-9">
+            <div className="absolute right-5 top-5 rounded-full bg-[#F5EDD8] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-[#8D4A38]">Start here</div>
+            <div className="relative mb-4 h-40 overflow-hidden rounded-xl">
+              <Image src="/images/brand/wellness-consultation.png" alt="Free pep talk" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
+            </div>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Free session</p>
+            <h3 className="mt-2 font-display text-2xl font-semibold">Your free pep talk</h3>
+            <p className="mt-3 text-sm leading-relaxed text-white/55">15 minutes with a wellness expert. Bring whatever questions are on your mind -- no prep, no pitch, no commitment.</p>
+            <div className="mt-6">
+              <Link href="/book" className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-white/20">Book free call --&gt;</Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Disclaimer strip */}
+        <div className="mt-6 flex w-full max-w-[1100px] items-center justify-center gap-2 rounded-xl border border-[#1B1D19]/8 bg-white/40 px-5 py-3">
+          <i className="ri-shield-line text-sm text-[#C4724A]" aria-hidden />
+          <p className="text-[11px] text-[#1B1D19]/40">Education only. EVLV does not diagnose, prescribe, or provide medical advice. Consult a licensed healthcare professional for personal health decisions.</p>
         </div>
       </section>
 
