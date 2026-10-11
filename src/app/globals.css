@@ -1,37 +1,38 @@
 @import "tailwindcss";
 
 /*
- * evolv design tokens. Two layers:
- *  1. Spec-exact palette (evolv Brand Identity System, section 04/05) - the
- *     single source of truth for every hex value used on the site.
- *  2. Semantic aliases - the names components actually reference in
- *     className (e.g. `bg-sage-deep`), each pointed at the correct
- *     spec color for its role. Never hardcode a hex in a component; add
- *     an alias here instead.
+ * evolv design tokens — US site (evlvtoday.com).
+ * Two layers:
+ *  1. Spec-exact palette — the single source of truth for every hex.
+ *  2. Semantic aliases — the names components reference in className.
  *
- * Alias -> spec color map:
- *   charcoal     -> evolv Obsidian      #0E1113 (primary dark bg/text)
- *   sage-forest  -> evolv Charcoal      #1C2224 (secondary dark)
- *   sage-deep    -> evolv Deep Mineral  #203A37 (brand green, CTAs, hover)
- *   sage-light   -> evolv Mineral       #314743 (lighter green accent)
- *   sage         -> evolv Slate         #6B7370 (secondary text/UI/borders)
- *   soft-gray    -> evolv Slate         #6B7370 (muted body text)
- *   stone        -> evolv Warm Ivory    #D8D3C7 (borders, product bg)
- *   ivory        -> evolv Soft Ivory    #E7E3DA (primary page background)
- *   ivory-soft   -> evolv Porcelain     #F1EEE7 (lightest panels/cards)
- *   sage-mist    -> evolv Porcelain     #F1EEE7 (active/selected tint)
- *   copper       -> evolv Copper        #B8875A (accent, ~5% of the UI, never a primary CTA color)
+ * Palette is honey-cream ↔ warm obsidian/charcoal, copper/terracotta
+ * accent. NO greens — that distinguishes evlvtoday.com from the original
+ * evolv spec (evolvtoday.ca uses the green palette; this US variant does not).
+ *
+ * Alias -> color map:
+ *   charcoal     -> Obsidian     #0E1113  (primary dark bg / text)
+ *   sage-forest  -> Charcoal     #1C2224  (secondary dark — kept for legacy)
+ *   sage-deep    -> Warm dark    #1B1D19  (was Deep Mineral green — removed)
+ *   sage-light   -> Warm mid     #2A2C27  (was Mineral green — removed)
+ *   sage         -> Warm slate   #6B6560  (secondary text / UI / borders)
+ *   soft-gray    -> Warm slate   #6B6560  (muted body text)
+ *   stone        -> Warm ivory   #D9C8AF  (borders, product bg)
+ *   ivory        -> Soft ivory   #EDE3CE  (primary page background)
+ *   ivory-soft   -> Porcelain    #F5EEDF  (lightest panels / cards)
+ *   sage-mist    -> Porcelain    #F5EEDF  (active / selected tint)
+ *   copper       -> Copper       #B8875A  (accent, ~5% of UI max)
  */
 :root {
   --color-obsidian: #0e1113;
   --color-charcoal-spec: #1c2224;
-  --color-deep-mineral: #203a37;
-  --color-mineral: #314743;
-  --color-slate: #6b7370;
+  --color-deep-mineral: #1b1d19;   /* warm near-black — replaces forest green */
+  --color-mineral: #2a2c27;        /* warm charcoal — replaces mineral green */
+  --color-slate: #6b6560;          /* warm slate */
   --color-stone-spec: #a7a297;
-  --color-warm-ivory: #d8d3c7;
-  --color-soft-ivory: #e7e3da;
-  --color-porcelain: #f1eee7;
+  --color-warm-ivory: #d9c8af;
+  --color-soft-ivory: #ede3ce;
+  --color-porcelain: #f5eedf;
   --color-copper-light: #c9a77f;
   --color-copper-dark: #8f6847;
 
@@ -148,40 +149,11 @@ body {
 }
 
 .hero-glow-a {
-  animation: hero-glow-drift 14s ease-in-out infinite;
+  animation: hero-glow-drift 8s ease-in-out infinite;
 }
 
 .hero-glow-b {
-  animation: hero-glow-drift-alt 18s ease-in-out infinite;
-}
-
-@keyframes droplet-twinkle {
-  0%, 100% { opacity: 0.15; }
-  50% { opacity: 0.5; }
-}
-
-.droplet-field circle {
-  animation: droplet-twinkle 6s ease-in-out infinite;
-}
-
-@keyframes hero-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.hero-float {
-  animation: hero-float 6s ease-in-out infinite;
-}
-
-@keyframes hero-bubble-rise {
-  0% { transform: translateY(0); opacity: 0; }
-  15% { opacity: 1; }
-  85% { opacity: 1; }
-  100% { transform: translateY(-40px); opacity: 0; }
-}
-
-.hero-bubble {
-  animation: hero-bubble-rise 9s ease-in-out infinite;
+  animation: hero-glow-drift-alt 10s ease-in-out infinite;
 }
 
 @keyframes hero-spin {
@@ -190,32 +162,9 @@ body {
 }
 
 .hero-spin {
-  animation: hero-spin 8s linear infinite !important;
+  animation: hero-spin 30s linear infinite;
 }
 
-@keyframes hero-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-.hero-pulse {
-  animation: hero-pulse 4s ease-in-out infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-glow-a,
-  .hero-glow-b,
-  .hero-float,
-  .hero-bubble,
-  .hero-pulse,
-  .droplet-field circle {
-    animation: none !important;
-  }
-}
-
-/* Scroll reveal (brief section 21): opacity 0->1, translateY 16px->0, 650ms.
-   .reveal-stagger cascades its direct children via transition-delay instead
-   of observing each one individually. */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -256,17 +205,12 @@ body {
     transform: none;
     transition: none;
   }
+  .hero-glow-a,
+  .hero-glow-b {
+    animation: none !important;
+  }
 }
 
-/*
- * Sitewide visible focus state (brief section 23). Many inputs/buttons use
- * Tailwind's `outline-none` with only a subtle focus:border-color as a
- * replacement, which doesn't meet WCAG 2.4.7 for keyboard users. Rather
- * than touching every component, this element-selector rule sits after
- * Tailwind's utilities in the cascade and wins on source order at equal
- * specificity, restoring a real focus ring everywhere without removing
- * `outline-none`'s other utility behavior.
- */
 :focus-visible {
   outline: 2px solid var(--color-copper);
   outline-offset: 2px;
@@ -287,10 +231,6 @@ body {
   }
 }
 
-/* ProofSection asymmetric photo grid -- plain CSS instead of a Tailwind
-   arbitrary-value class because decimal fr values (1.4fr) in bracket
-   notation were silently failing to compile under the project's Tailwind
-   JIT setup, leaving the section stacked at every width. */
 .proof-photo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

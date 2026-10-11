@@ -21,7 +21,7 @@ const POLICIES_NAV = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#141B17] pb-8 pt-20 text-white md:pt-28">
+    <footer className="bg-[#0E1113] pb-8 pt-20 text-white md:pt-28">
       <div className="mx-auto max-w-[1400px] px-4 md:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <Logo tone="ivory" imgClassName="h-7 w-auto md:h-9" />
@@ -31,7 +31,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-8 border-t border-white/10 pt-12 sm:grid-cols-3 md:grid-cols-5">
+        <div className="mt-12 grid grid-cols-2 gap-8 border-t border-white/10 pt-12 md:grid-cols-4">
           <FooterColumn title="Learn">
             {RESEARCH_NAV.map((item) => (
               <li key={item.label}>
@@ -60,24 +60,6 @@ export function Footer() {
                 </Link>
               </li>
             ))}
-          </FooterColumn>
-
-          <FooterColumn title="Support">
-            <li>
-              <a href="tel:+15417095434" className="text-sm text-white/60 transition hover:text-white">
-                (541) 709-5434
-              </a>
-            </li>
-            <li>
-              <a href="mailto:office@evlvpeptides.com" className="text-sm text-white/60 transition hover:text-white">
-                office@evlvpeptides.com
-              </a>
-            </li>
-            <li>
-              <a href="mailto:orders@evlvpeptides.com" className="text-sm text-white/60 transition hover:text-white">
-                orders@evlvpeptides.com
-              </a>
-            </li>
           </FooterColumn>
 
           <NewsletterForm />
