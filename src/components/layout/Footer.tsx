@@ -31,7 +31,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-8 border-t border-white/10 pt-12 md:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-8 border-t border-white/10 pt-12 sm:grid-cols-3 md:grid-cols-5">
           <FooterColumn title="Learn">
             {RESEARCH_NAV.map((item) => (
               <li key={item.label}>
@@ -60,6 +60,24 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+          </FooterColumn>
+
+          <FooterColumn title="Support">
+            <li>
+              <a href="tel:+15417095434" className="text-sm text-white/60 transition hover:text-white">
+                (541) 709-5434
+              </a>
+            </li>
+            <li>
+              <a href="mailto:office@evlvpeptides.com" className="text-sm text-white/60 transition hover:text-white">
+                office@evlvpeptides.com
+              </a>
+            </li>
+            <li>
+              <a href="mailto:orders@evlvpeptides.com" className="text-sm text-white/60 transition hover:text-white">
+                orders@evlvpeptides.com
+              </a>
+            </li>
           </FooterColumn>
 
           <NewsletterForm />

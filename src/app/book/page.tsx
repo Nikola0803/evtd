@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { BookingFlow } from "./BookingFlow";
 
 export const metadata: Metadata = {
@@ -29,7 +30,9 @@ export default function BookPage() {
         </div>
       </section>
 
-      <BookingFlow />
+      <Suspense>
+        <BookingFlow />
+      </Suspense>
     </>
   );
 }
