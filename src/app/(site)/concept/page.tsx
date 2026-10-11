@@ -136,12 +136,12 @@ export default function ConceptPage() {
             <div className="flex flex-col justify-center p-8 text-white md:p-12 lg:p-14">
               <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#F2A58C]">Your free pep talk starts here</p>
               <h2 className="mt-5 font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] md:text-5xl">Bring the questions. We&apos;ll bring context.</h2>
-              <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/70 md:text-base">Tell us what you want to understand and how you want to feel. We organize the research into clear, plain-language education — no pitch, no prescription.</p>
+              <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/70 md:text-base">Tell us what you want to understand and how you want to feel. We organize the research into clear, plain-language education -- no pitch, no prescription.</p>
               <div className="mt-9 divide-y divide-white/10 border-y border-white/10">
                 {[
                   ["ri-chat-smile-2-line", "Free 15-minute call with a wellness expert"],
                   ["ri-microscope-line", "Peptide literacy and research context"],
-                  ["ri-shield-check-line", "Education only — not medical advice"],
+                  ["ri-shield-check-line", "Education only -- not medical advice"],
                 ].map(([icon, item]) => (
                   <div key={item} className="flex items-center gap-4 py-4">
                     <i className={`${icon} shrink-0 text-base leading-none text-[#F2A58C]`} aria-hidden />

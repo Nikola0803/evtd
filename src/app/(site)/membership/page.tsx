@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Membership",
-  description: "EVLV Membership — monthly wellness education, a private resource library, and ongoing expert support.",
+  description: "EVLV Membership -- monthly wellness education, a private resource library, and ongoing expert support.",
   alternates: { canonical: "/membership" },
 };
 

@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 /*
- * evolv design tokens — US site (evlvtoday.com).
+ * evolv design tokens -- US site (evlvtoday.com).
  * Two layers:
- *  1. Spec-exact palette — the single source of truth for every hex.
- *  2. Semantic aliases — the names components reference in className.
+ *  1. Spec-exact palette -- the single source of truth for every hex.
+ *  2. Semantic aliases -- the names components reference in className.
  *
  * Palette is honey-cream ↔ warm obsidian/charcoal, copper/terracotta
- * accent. NO greens — that distinguishes evlvtoday.com from the original
+ * accent. NO greens -- that distinguishes evlvtoday.com from the original
  * evolv spec (evolvtoday.ca uses the green palette; this US variant does not).
  *
  * Alias -> color map:
  *   charcoal     -> Obsidian     #0E1113  (primary dark bg / text)
- *   sage-forest  -> Charcoal     #1C2224  (secondary dark — kept for legacy)
- *   sage-deep    -> Warm dark    #1B1D19  (was Deep Mineral green — removed)
- *   sage-light   -> Warm mid     #2A2C27  (was Mineral green — removed)
+ *   sage-forest  -> Charcoal     #1C2224  (secondary dark -- kept for legacy)
+ *   sage-deep    -> Warm dark    #1B1D19  (was Deep Mineral green -- removed)
+ *   sage-light   -> Warm mid     #2A2C27  (was Mineral green -- removed)
  *   sage         -> Warm slate   #6B6560  (secondary text / UI / borders)
  *   soft-gray    -> Warm slate   #6B6560  (muted body text)
  *   stone        -> Warm ivory   #D9C8AF  (borders, product bg)
@@ -26,9 +26,9 @@
 :root {
   --color-obsidian: #0e1113;
   --color-charcoal-spec: #1c2224;
-  --color-deep-mineral: #1b1d19;   /* warm near-black — replaces forest green */
-  --color-mineral: #2a2c27;        /* warm charcoal — replaces mineral green */
-  --color-slate: #6b6560;          /* warm slate — slightly less green */
+  --color-deep-mineral: #1b1d19;   /* warm near-black -- replaces forest green */
+  --color-mineral: #2a2c27;        /* warm charcoal -- replaces mineral green */
+  --color-slate: #6b6560;          /* warm slate -- slightly less green */
   --color-stone-spec: #a7a297;
   --color-warm-ivory: #d9c8af;
   --color-soft-ivory: #ede3ce;
