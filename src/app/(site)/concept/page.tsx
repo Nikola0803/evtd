@@ -104,7 +104,7 @@ export default function ConceptPage() {
             </div>
           </div>
 
-          {/* Dark feature card */}
+          {/* Feature card - dark, rounded, contained */}
           <div className="mt-14 grid overflow-hidden rounded-[2rem] bg-[#1B1D19] shadow-[0_30px_90px_rgba(30,27,22,.12)] lg:grid-cols-[1.05fr_.95fr]">
             <div className="relative min-h-[420px] md:min-h-[560px]">
               <picture className="absolute inset-0 block">
@@ -133,31 +133,31 @@ export default function ConceptPage() {
         </div>
       </section>
 
-      {/* ── Goals ── */}
-      <section id="goals" className="scroll-mt-28 bg-[#1B1D19] px-4 py-20 text-[#FAF2E4] md:px-8 md:py-28">
-        <div className="mx-auto max-w-[1440px]">
+      {/* ── Goals - cream section, dark card inside ── */}
+      <section id="goals" className="scroll-mt-28 bg-[#FAF2E4] px-4 pb-8 pt-8 md:px-8">
+        <div className="mx-auto max-w-[1440px] overflow-hidden rounded-[2rem] bg-[#1E2019] px-6 py-14 shadow-[0_20px_60px_rgba(27,29,25,.13)] md:px-12 md:py-20">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E8B89F]">Start with how you want to feel</p>
-              <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] md:text-6xl">Explore by goal.</h2>
+              <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] text-white md:text-6xl">Explore by goal.</h2>
               <p className="mt-5 max-w-2xl text-sm leading-relaxed text-white/60 md:text-base">Pick the topic that matters most right now. We&apos;ll surface useful education and research context for that area.</p>
             </div>
-            <p className="max-w-xs text-sm leading-relaxed text-white/45 lg:text-right">These are learning pathways, not medical care. Personal health questions belong with a licensed healthcare professional.</p>
+            <p className="max-w-xs text-sm leading-relaxed text-white/40 lg:text-right">These are learning pathways, not medical care. Personal health questions belong with a licensed healthcare professional.</p>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-[.88fr_1.12fr] lg:gap-12">
-            <div className="relative min-h-[420px] overflow-hidden rounded-[1.7rem] lg:min-h-full">
+            <div className="relative min-h-[420px] overflow-hidden rounded-[1.4rem] lg:min-h-full">
               <Image src={focusAreas[0].image} alt="Woman exercising as part of a balanced wellness routine" fill sizes="(max-width: 1024px) 100vw, 44vw" className="object-cover object-center" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
               <p className="absolute inset-x-6 bottom-6 text-xs font-semibold uppercase tracking-[0.16em] text-white">Start with the goal that matters now</p>
             </div>
-            <div className="overflow-hidden rounded-[1.7rem] border border-white/12">
+            <div className="overflow-hidden rounded-[1.4rem] border border-white/10">
               {focusAreas.map((area, index) => (
-                <Link key={area.title} href={area.href} className="group grid grid-cols-[auto_1fr_auto] items-center gap-4 border-b border-white/10 px-5 py-6 transition last:border-b-0 hover:bg-white/[.06] md:px-7">
+                <Link key={area.title} href={area.href} className="group grid grid-cols-[auto_1fr_auto] items-center gap-4 border-b border-white/8 px-5 py-6 transition last:border-b-0 hover:bg-white/[.06] md:px-7">
                   <span className="text-xs font-semibold text-[#F2A58C]">0{index + 1}</span>
                   <span>
                     <span className="block font-display text-xl font-semibold text-white md:text-2xl">{area.title}</span>
-                    <span className="mt-1.5 block text-sm leading-relaxed text-white/55">{area.tagline}</span>
+                    <span className="mt-1.5 block text-sm leading-relaxed text-white/50">{area.tagline}</span>
                   </span>
                   <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white transition group-hover:border-[#D77E5F] group-hover:bg-[#D77E5F]" aria-hidden>→</span>
                 </Link>
@@ -168,7 +168,7 @@ export default function ConceptPage() {
       </section>
 
       {/* ── Programs ── */}
-      <section className="bg-[#FAF2E4] px-4 py-20 md:px-8 md:py-28">
+      <section className="bg-[#FAF2E4] px-4 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
@@ -180,7 +180,7 @@ export default function ConceptPage() {
 
           <div className="mt-12 grid gap-4 lg:grid-cols-4">
             {/* Pack 1: Free pep talk */}
-            <article className="flex flex-col rounded-[1.7rem] border border-black/8 bg-[#1B1D19] p-7 text-white md:p-8">
+            <article className="flex flex-col rounded-2xl border border-[#1B1D19]/12 bg-[#1B1D19] p-7 text-white md:p-8">
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#F2A58C]">Start here</p>
               <h3 className="mt-8 font-display text-2xl font-semibold leading-tight">Free Pep Talk</h3>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-white/60">A 15-minute call with a wellness expert. Bring whatever questions are on your mind -- no prep, no pitch, no commitment.</p>
@@ -193,11 +193,11 @@ export default function ConceptPage() {
             </article>
 
             {/* Pack 2: Education sessions */}
-            <article className="flex flex-col rounded-[1.7rem] border border-black/8 bg-[#FCF3E5] p-7 md:p-8">
+            <article className="flex flex-col rounded-2xl border border-[#1B1D19]/10 bg-[#F5EDD8] p-7 md:p-8">
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#B45C42]">Education sessions</p>
               <h3 className="mt-8 font-display text-2xl font-semibold leading-tight text-[#1B1D19]">Topic Deep Dives</h3>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-[#62675F]">Focused education sessions on peptide science, hormone health, longevity, and everyday wellness. Practical context, not medical advice.</p>
-              <ul className="mt-6 space-y-2.5 border-t border-black/10 pt-6">
+              <ul className="mt-6 space-y-2.5 border-t border-black/8 pt-6">
                 {["Peptide education", "Hormone health", "Energy & longevity"].map((b) => (
                   <li key={b} className="flex items-start gap-2.5 text-[12px] text-[#62675F]"><span className="mt-1 text-[#B45C42]">--</span>{b}</li>
                 ))}
@@ -206,14 +206,14 @@ export default function ConceptPage() {
             </article>
 
             {/* Pack 3: Monthly membership */}
-            <article className="flex flex-col rounded-[1.7rem] border-2 border-[#D77E5F] bg-[#FCF3E5] p-7 md:p-8">
+            <article className="flex flex-col rounded-2xl border-2 border-[#D77E5F] bg-[#F5EDD8] p-7 md:p-8">
               <div className="flex items-center justify-between">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#B45C42]">Most popular</p>
                 <span className="rounded-full bg-[#D77E5F] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-white">Membership</span>
               </div>
               <h3 className="mt-8 font-display text-2xl font-semibold leading-tight text-[#1B1D19]">Monthly Membership</h3>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-[#62675F]">Ongoing education, a personal learning guide, and monthly 1-on-1 sessions with an EVLV wellness expert. Built around your goals.</p>
-              <ul className="mt-6 space-y-2.5 border-t border-black/10 pt-6">
+              <ul className="mt-6 space-y-2.5 border-t border-black/8 pt-6">
                 {["Monthly 1-on-1 session", "Private resource library", "Community + education support"].map((b) => (
                   <li key={b} className="flex items-start gap-2.5 text-[12px] text-[#62675F]"><span className="mt-1 text-[#D77E5F]">--</span>{b}</li>
                 ))}
@@ -222,11 +222,11 @@ export default function ConceptPage() {
             </article>
 
             {/* Pack 4: DNA Blueprint */}
-            <article className="flex flex-col rounded-[1.7rem] border border-black/8 bg-[#FCF3E5] p-7 md:p-8">
+            <article className="flex flex-col rounded-2xl border border-[#1B1D19]/10 bg-[#F5EDD8] p-7 md:p-8">
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#B45C42]">Members only</p>
               <h3 className="mt-8 font-display text-2xl font-semibold leading-tight text-[#1B1D19]">DNA Blueprint</h3>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-[#62675F]">A home collection kit, a comprehensive genetic wellness report, and a private 60-minute consultation on what your DNA means for your health.</p>
-              <ul className="mt-6 space-y-2.5 border-t border-black/10 pt-6">
+              <ul className="mt-6 space-y-2.5 border-t border-black/8 pt-6">
                 {["Home DNA collection kit", "Full genetic wellness report", "Private 60-min consult"].map((b) => (
                   <li key={b} className="flex items-start gap-2.5 text-[12px] text-[#62675F]"><span className="mt-1 text-[#B45C42]">--</span>{b}</li>
                 ))}
@@ -237,70 +237,72 @@ export default function ConceptPage() {
         </div>
       </section>
 
-      {/* ── How it works ── */}
-      <section className="bg-[#1B1D19] px-4 pt-20 pb-0 text-white md:px-8 md:pt-28">
-        <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E8B89F]">How it works</p>
-            <h2 className="mt-4 font-display text-5xl font-semibold leading-[1] tracking-[-.04em] md:text-6xl">Learn without being sold a medical promise.</h2>
-            <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/65 md:text-base">We keep the boundary simple: EVLV explains research and organizes resources. Licensed healthcare professionals handle personal medical care.</p>
-          </div>
-          <div className="grid gap-px overflow-hidden rounded-[1.7rem] bg-white/10 md:grid-cols-3">
-            {[
-              ["01", "Ask anything", "Start with what you want to understand. No prep needed &mdash; bring your questions as they are."],
-              ["02", "Build real context", "Use clear guides and education sessions to make sense of the research and what it actually means."],
-              ["03", "Move forward with confidence", "Take what you&apos;ve learned into your wellness journey &mdash; better informed, without the hype."],
-            ].map(([num, title, copy]) => (
-              <div key={num} className="bg-[#1B1D19] p-7 md:min-h-[280px] md:p-8">
-                <p className="text-xs font-semibold tracking-[0.2em] text-[#E8B89F]">{num}</p>
-                <h3 className="mt-10 font-display text-2xl font-semibold">{title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-white/55" dangerouslySetInnerHTML={{ __html: copy }} />
-              </div>
-            ))}
+      {/* ── How it works - warm section, dark card inside ── */}
+      <section className="bg-[#EDE3CE] px-4 py-8 md:px-8">
+        <div className="mx-auto max-w-[1440px] overflow-hidden rounded-[2rem] bg-[#1E2019] shadow-[0_20px_60px_rgba(27,29,25,.13)]">
+          <div className="grid gap-12 px-6 py-14 md:px-12 md:py-20 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+            <div className="text-white">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E8B89F]">How it works</p>
+              <h2 className="mt-4 font-display text-5xl font-semibold leading-[1] tracking-[-.04em] md:text-6xl">Learn without being sold a medical promise.</h2>
+              <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/60 md:text-base">We keep the boundary simple: EVLV explains research and organizes resources. Licensed healthcare professionals handle personal medical care.</p>
+            </div>
+            <div className="grid gap-px overflow-hidden rounded-[1.4rem] bg-white/10 md:grid-cols-3">
+              {[
+                ["01", "Ask anything", "Start with what you want to understand. No prep needed -- bring your questions as they are."],
+                ["02", "Build real context", "Use clear guides and education sessions to make sense of the research and what it actually means."],
+                ["03", "Move forward with confidence", "Take what you've learned into your wellness journey -- better informed, without the hype."],
+              ].map(([num, title, copy]) => (
+                <div key={num} className="bg-[#1E2019] p-7 md:min-h-[260px] md:p-8">
+                  <p className="text-xs font-semibold tracking-[0.2em] text-[#E8B89F]">{num}</p>
+                  <h3 className="mt-10 font-display text-2xl font-semibold text-white">{title}</h3>
+                  <p className="mt-4 text-sm leading-relaxed text-white/55">{copy}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Comparison ── */}
-      <section className="bg-[#1B1D19] px-4 py-20 text-[#FAF2E4] md:px-8 md:py-28">
+      {/* ── Comparison - warm mid-tone, no full-bleed black ── */}
+      <section className="bg-[#EDE3CE] px-4 pb-16 pt-8 md:px-8 md:pb-24">
         <div className="mx-auto max-w-[1440px]">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
-              <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F2A58C]">
-                <span className="h-px w-7 bg-[#F2A58C]" />A different kind of wellness resource
+              <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#8D4A38]">
+                <span className="h-px w-7 bg-[#B45C42]" />A different kind of wellness resource
               </p>
-              <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] md:text-6xl">EVLV vs. scattered online claims.</h2>
+              <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] text-[#1B1D19] md:text-6xl">EVLV vs. scattered online claims.</h2>
             </div>
-            <p className="max-w-md text-sm leading-relaxed text-white/55 lg:text-right md:text-base">The difference is not hype. It is having a clear place to understand the research, its limits, and what it may mean for your goals.</p>
+            <p className="max-w-md text-sm leading-relaxed text-[#62675F] lg:text-right md:text-base">The difference is not hype. It is having a clear place to understand the research, its limits, and what it may mean for your goals.</p>
           </div>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-stretch lg:gap-12">
-            <div className="relative min-h-[380px] overflow-hidden rounded-[1.7rem]">
+            <div className="relative min-h-[380px] overflow-hidden rounded-[1.4rem]">
               <Image src="/images/brand/program-membership-education.png" alt="A woman learning in a calm, bright room" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover object-center" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-              <div className="absolute inset-x-5 bottom-5 rounded-2xl bg-[#1B1D19]/75 p-4 backdrop-blur-sm">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+              <div className="absolute inset-x-5 bottom-5 rounded-xl bg-[#1B1D19]/80 p-4 backdrop-blur-sm">
                 <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#F2A58C]"><span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#D77E5F] text-white" aria-hidden>✓</span>Pep talks with purpose. Clarity without the hype.</p>
               </div>
             </div>
 
             <div>
-              <div className="overflow-hidden rounded-[1.35rem] border border-white/12">
-                <div className="grid grid-cols-[1.7fr_1fr_1fr] items-center gap-2 bg-white/[.07] px-4 py-4 text-[10px] font-semibold uppercase tracking-[0.12em] md:px-5">
-                  <span className="text-white/65">What matters</span>
-                  <span className="text-center text-[#F2A58C]">EVLV</span>
-                  <span className="text-center text-white/35">Doing it alone</span>
+              <div className="overflow-hidden rounded-[1.35rem] border border-[#1B1D19]/12 bg-white/70">
+                <div className="grid grid-cols-[1.7fr_1fr_1fr] items-center gap-2 bg-[#1B1D19]/6 px-4 py-4 text-[10px] font-semibold uppercase tracking-[0.12em] md:px-5">
+                  <span className="text-[#62675F]">What matters</span>
+                  <span className="text-center text-[#B45C42]">EVLV</span>
+                  <span className="text-center text-[#1B1D19]/30">Doing it alone</span>
                 </div>
                 {comparisonRows.map((row, index) => (
-                  <div key={row} className={`grid grid-cols-[1.7fr_1fr_1fr] items-center gap-2 px-4 py-4 md:px-5 ${index % 2 === 0 ? "bg-white/[.03]" : "bg-transparent"}`}>
-                    <span className="pr-2 text-sm leading-snug text-white/75">{row}</span>
+                  <div key={row} className={`grid grid-cols-[1.7fr_1fr_1fr] items-center gap-2 px-4 py-4 md:px-5 ${index % 2 === 0 ? "bg-[#1B1D19]/[.03]" : "bg-transparent"}`}>
+                    <span className="pr-2 text-sm leading-snug text-[#1B1D19]/75">{row}</span>
                     <span className="flex justify-center"><span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#D77E5F] text-sm font-semibold text-white" aria-label="Included">✓</span></span>
-                    <span className="flex justify-center"><span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm text-white/35" aria-label="Not consistently available"> - </span></span>
+                    <span className="flex justify-center"><span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1B1D19]/8 text-sm text-[#1B1D19]/30" aria-label="Not consistently available"> - </span></span>
                   </div>
                 ))}
               </div>
 
-              <p className="mt-5 max-w-2xl text-xs leading-relaxed text-white/40">This comparison is general. EVLV provides education only. We do not diagnose, prescribe, recommend doses, or provide medical treatment.</p>
-              <Link href="/book" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#C86B4D]">Book a free pep talk <span aria-hidden>→</span></Link>
+              <p className="mt-5 max-w-2xl text-xs leading-relaxed text-[#62675F]/60">This comparison is general. EVLV provides education only. We do not diagnose, prescribe, recommend doses, or provide medical treatment.</p>
+              <Link href="/book" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#D77E5F]">Book a free pep talk <span aria-hidden>→</span></Link>
             </div>
           </div>
         </div>
@@ -309,8 +311,8 @@ export default function ConceptPage() {
       <ReviewsSection />
 
       {/* ── Learning paths ── */}
-      <section className="bg-[#D9C3A0] px-4 py-20 md:px-8 md:py-28">
-        <div className="mx-auto max-w-[1180px] rounded-[2rem] bg-[#FCF3E5] p-7 shadow-[0_24px_80px_rgba(34,31,25,.08)] md:p-12 lg:p-16">
+      <section className="bg-[#FAF2E4] px-4 py-16 md:px-8 md:py-24">
+        <div className="mx-auto max-w-[1180px] rounded-[2rem] bg-[#F5EDD8] p-7 shadow-[0_24px_80px_rgba(34,31,25,.07)] md:p-12 lg:p-16">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#B45C42]">Find your path</p>
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] md:text-6xl">Not sure where to <span className="italic text-[#D77E5F]">begin?</span></h2>
@@ -319,14 +321,14 @@ export default function ConceptPage() {
 
           <div className="mt-10 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {learningPaths.map((path) => (
-              <Link key={path.label} href={path.href} className="group flex min-h-[82px] items-center justify-between rounded-2xl border border-black/10 bg-[#FBF5EB] px-5 py-4 text-left transition hover:-translate-y-0.5 hover:border-[#D77E5F] hover:shadow-[0_12px_30px_rgba(34,31,25,.08)]">
+              <Link key={path.label} href={path.href} className="group flex min-h-[82px] items-center justify-between rounded-2xl border border-black/8 bg-white/60 px-5 py-4 text-left transition hover:-translate-y-0.5 hover:border-[#D77E5F] hover:shadow-[0_12px_30px_rgba(34,31,25,.07)]">
                 <span className="font-display text-xl font-semibold text-[#1B1D19]">{path.label}</span>
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#F3DDD3] text-[#B45C42] transition group-hover:bg-[#D77E5F] group-hover:text-white" aria-hidden>→</span>
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#ECD9C5] text-[#B45C42] transition group-hover:bg-[#D77E5F] group-hover:text-white" aria-hidden>→</span>
               </Link>
             ))}
           </div>
 
-          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-black/10 pt-8 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-black/8 pt-8 sm:flex-row">
             <Link href="/shop" className="inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#2A2C27]">Browse the Education Library <span aria-hidden>→</span></Link>
             <p className="text-sm text-[#62675F]">Explore each topic at your own pace.</p>
           </div>
@@ -334,14 +336,14 @@ export default function ConceptPage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="bg-[#FAF2E4] px-4 py-20 md:px-8 md:py-28">
+      <section className="bg-[#FAF2E4] px-4 pb-20 pt-4 md:px-8 md:pb-28">
         <div className="mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[.8fr_1.2fr]">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#B45C42]">Common questions</p>
             <h2 className="mt-4 font-display text-4xl font-semibold tracking-[-.035em] md:text-5xl">Straight answers.</h2>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-[#62675F]">Warm, plain language. No inflated claims and no hidden medical service.</p>
           </div>
-          <div className="divide-y divide-black/10 border-y border-black/10">
+          <div className="divide-y divide-black/8 border-y border-black/8">
             {faqs.map(([question, answer]) => (
               <details key={question} className="group py-6">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-5 font-display text-xl font-semibold md:text-2xl">
@@ -354,16 +356,16 @@ export default function ConceptPage() {
         </div>
       </section>
 
-      {/* ── Final CTA ── */}
-      <section className="px-4 pb-8 md:px-8">
-        <div className="mx-auto grid min-h-[520px] max-w-[1440px] overflow-hidden rounded-[2rem] bg-[#D77E5F] lg:grid-cols-2">
+      {/* ── Final CTA - dark, contained, not terracotta full-bleed ── */}
+      <section className="px-4 pb-10 md:px-8">
+        <div className="mx-auto grid min-h-[480px] max-w-[1440px] overflow-hidden rounded-[2rem] bg-[#1B1D19] lg:grid-cols-2">
           <div className="flex flex-col justify-center p-8 text-white md:p-14 lg:p-16">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/60">Your first call is free</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E8B89F]">Your first call is free</p>
             <h2 className="mt-5 font-display text-5xl font-semibold leading-[.98] tracking-[-.04em] md:text-6xl">Start with one honest conversation.</h2>
-            <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/75 md:text-base">Tell us what you want to learn. We&apos;ll explain what EVLV can help you understand &mdash; and what belongs with a licensed professional.</p>
+            <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/65 md:text-base">Tell us what you want to learn. We&apos;ll explain what EVLV can help you understand -- and what belongs with a licensed professional.</p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link href="/book" className="inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#2A2C27]">Book your free pep talk</Link>
-              <span className="text-[11px] text-white/55">Education only &middot; No commitment</span>
+              <Link href="/book" className="inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#C86B4D]">Book your free pep talk</Link>
+              <span className="text-[11px] text-white/45">Education only &middot; No commitment</span>
             </div>
           </div>
           <div className="relative min-h-[360px] lg:min-h-full">
