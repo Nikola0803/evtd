@@ -74,7 +74,7 @@ const GUIDES = [
 export default function EducationLibraryPage() {
   return (
     <>
-      <section className="bg-[#18231E] px-4 py-14 text-white md:px-8 md:py-24">
+      <section className="bg-[#1B1D19] px-4 py-14 text-white md:px-8 md:py-24">
         <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F2A58C]">Education library</p>
@@ -126,7 +126,7 @@ export default function EducationLibraryPage() {
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#B45C42]">{guide.eyebrow}</p>
                   <h3 className="mt-3 font-display text-3xl font-semibold">{guide.title}</h3>
                   <p className="mt-4 text-sm leading-relaxed text-[#62675F]">{guide.copy}</p>
-                  <Link href={guide.href} className="mt-7 inline-flex rounded-full bg-[#18231E] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white">Open guide</Link>
+                  <Link href={guide.href} className="mt-7 inline-flex rounded-full bg-[#1B1D19] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white">Open guide</Link>
                 </div>
               </article>
             ))}
@@ -137,7 +137,7 @@ export default function EducationLibraryPage() {
       <section className="bg-[#D77E5F] px-4 py-16 text-center text-white md:px-8 md:py-20">
         <h2 className="font-display text-4xl font-semibold">Want help choosing where to begin?</h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/75">Your first 15-minute education call is free. Bring the questions already on your mind.</p>
-        <Link href="/book" className="mt-7 inline-flex rounded-full bg-[#18231E] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white">Book your first call</Link>
+        <Link href="/book" className="mt-7 inline-flex rounded-full bg-[#1B1D19] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white">Book your first call</Link>
       </section>
     </>
   );

@@ -21,7 +21,7 @@ export default function MembershipPage() {
   return (
     <>
       <section className="bg-[#F6F0E7] px-4 py-8 md:px-8 md:py-14">
-        <div className="mx-auto grid max-w-[1400px] overflow-hidden rounded-[2rem] bg-[#314238] lg:grid-cols-[1fr_1.05fr]">
+        <div className="mx-auto grid max-w-[1400px] overflow-hidden rounded-[2rem] bg-[#1B1D19] lg:grid-cols-[1fr_1.05fr]">
           <div className="flex flex-col justify-center p-8 text-white md:p-14 lg:p-16">
           <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#F2A58C]">Monthly Membership</p>
           <h1 className="font-display text-4xl font-semibold leading-tight md:text-6xl">
