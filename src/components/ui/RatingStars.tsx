@@ -2,7 +2,7 @@ export function RatingStars({ rating, reviewCount, size = "sm" }: { rating: numb
   const textSize = size === "md" ? "text-sm" : "text-xs";
   return (
     <div className={`flex items-center gap-1.5 ${textSize} text-charcoal/70`}>
-      <span className="flex items-center gap-0.5 text-sage-deep">
+      <span className="flex items-center gap-0.5 text-[#D77E5F]">
         {Array.from({ length: 5 }).map((_, i) => {
           const filled = i < Math.round(rating);
           return (
