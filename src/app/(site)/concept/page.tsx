@@ -38,9 +38,9 @@ export default function ConceptPage() {
         </span>
 
         <h1 className="mt-8 max-w-3xl font-display text-[2.6rem] font-semibold leading-[.95] tracking-[-0.04em] md:text-[3.8rem] lg:text-[4.6rem]">
-          Curious about peptides?<br />
-          We help you understand them.<br />
-          <span className="text-[#D77E5F]">Your doctor prescribes them.</span>
+          Peptide science,<br />
+          explained properly.<br />
+          <span className="text-[#D77E5F]">Optimize your wellness with it.</span>
         </h1>
 
         <p className="mx-auto mt-7 max-w-lg text-base leading-relaxed text-[#5A5550]">
