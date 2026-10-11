@@ -21,7 +21,7 @@ const POLICIES_NAV = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#141B17] pb-8 pt-20 text-white md:pt-28">
+    <footer className="bg-[#0E1113] pb-8 pt-20 text-white md:pt-28">
       <div className="mx-auto max-w-[1400px] px-4 md:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <Logo tone="ivory" imgClassName="h-7 w-auto md:h-9" />

@@ -110,7 +110,7 @@ export default function ConceptPage() {
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[.96] tracking-[-.05em] md:text-7xl lg:text-[5.7rem]">Become your <span className="italic text-[#D77E5F]">ultimate.</span></h1>
             <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-[#5F625C] md:text-lg">Understand peptide science, hormone health, longevity, and everyday wellness. Clear education. No hype and no medical promises.</p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/book" className="rounded-full bg-[#1B1D19] px-8 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#314238]">Book your free pep talk</Link>
+              <Link href="/book" className="rounded-full bg-[#1B1D19] px-8 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#2A2C27]">Book your free pep talk</Link>
               <Link href="/peptides" className="rounded-full border border-black/15 bg-white/50 px-8 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-[#1B1D19] transition hover:bg-white">Explore peptide education</Link>
             </div>
 
@@ -210,20 +210,20 @@ export default function ConceptPage() {
       </section>
 
       {/* ── How it works ── */}
-      <section className="bg-[#2E3B32] px-4 py-20 text-white md:px-8 md:py-28">
+      <section className="bg-[#1B1D19] px-4 py-20 text-white md:px-8 md:py-28">
         <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E8B89F]">How it works</p>
             <h2 className="mt-4 font-display text-5xl font-semibold leading-[1] tracking-[-.04em] md:text-6xl">Learn without being sold a medical promise.</h2>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/65 md:text-base">We keep the boundary simple: EVLV explains research and organizes resources. Licensed healthcare professionals handle personal medical care.</p>
           </div>
-          <div className="grid gap-px overflow-hidden rounded-[1.7rem] bg-white/15 md:grid-cols-3">
+          <div className="grid gap-px overflow-hidden rounded-[1.7rem] bg-white/10 md:grid-cols-3">
             {[
-              ["01", "Ask anything", "Start with what you want to understand. No prep needed — bring your questions as they are."],
+              ["01", "Ask anything", "Start with what you want to understand. No prep needed &mdash; bring your questions as they are."],
               ["02", "Build real context", "Use clear guides and education sessions to make sense of the research and what it actually means."],
-              ["03", "Move forward with confidence", "Take what you&apos;ve learned into your wellness journey — better informed, without the hype."],
+              ["03", "Move forward with confidence", "Take what you&apos;ve learned into your wellness journey &mdash; better informed, without the hype."],
             ].map(([num, title, copy]) => (
-              <div key={num} className="bg-[#2E3B32] p-7 md:min-h-[280px] md:p-8">
+              <div key={num} className="bg-[#1B1D19] p-7 md:min-h-[280px] md:p-8">
                 <p className="text-xs font-semibold tracking-[0.2em] text-[#E8B89F]">{num}</p>
                 <h3 className="mt-10 font-display text-2xl font-semibold">{title}</h3>
                 <p className="mt-4 text-sm leading-relaxed text-white/55" dangerouslySetInnerHTML={{ __html: copy }} />
@@ -299,7 +299,7 @@ export default function ConceptPage() {
           </div>
 
           <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-black/10 pt-8 sm:flex-row">
-            <Link href="/shop" className="inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#314238]">Browse the Education Library <span aria-hidden>→</span></Link>
+            <Link href="/shop" className="inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#2A2C27]">Browse the Education Library <span aria-hidden>→</span></Link>
             <p className="text-sm text-[#62675F]">Explore each topic at your own pace.</p>
           </div>
         </div>
@@ -334,7 +334,7 @@ export default function ConceptPage() {
             <h2 className="mt-5 font-display text-5xl font-semibold leading-[.98] tracking-[-.04em] md:text-6xl">Start with one honest conversation.</h2>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/75 md:text-base">Tell us what you want to learn. We&apos;ll explain what EVLV can help you understand &mdash; and what belongs with a licensed professional.</p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link href="/book" className="inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#2E3B32]">Book your free pep talk</Link>
+              <Link href="/book" className="inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#2A2C27]">Book your free pep talk</Link>
               <span className="text-[11px] text-white/55">Education only &middot; No commitment</span>
             </div>
           </div>

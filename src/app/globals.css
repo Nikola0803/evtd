@@ -1,33 +1,34 @@
 @import "tailwindcss";
 
 /*
- * evolv design tokens. Two layers:
- *  1. Spec-exact palette (evolv Brand Identity System, section 04/05) - the
- *     single source of truth for every hex value used on the site.
- *  2. Semantic aliases - the names components actually reference in
- *     className (e.g. `bg-sage-deep`), each pointed at the correct
- *     spec color for its role. Never hardcode a hex in a component; add
- *     an alias here instead.
+ * evolv design tokens — US site (evlvtoday.com).
+ * Two layers:
+ *  1. Spec-exact palette — the single source of truth for every hex.
+ *  2. Semantic aliases — the names components reference in className.
  *
- * Alias -> spec color map:
- *   charcoal     -> evolv Obsidian      #0E1113 (primary dark bg/text)
- *   sage-forest  -> evolv Charcoal      #1C2224 (secondary dark)
- *   sage-deep    -> evolv Deep Mineral  #203A37 (brand green, CTAs, hover)
- *   sage-light   -> evolv Mineral       #314743 (lighter green accent)
- *   sage         -> evolv Slate         #6B7370 (secondary text/UI/borders)
- *   soft-gray    -> evolv Slate         #6B7370 (muted body text)
- *   stone        -> evolv Warm Ivory    #D9C8AF (borders, product bg) [warmed]
- *   ivory        -> evolv Soft Ivory    #EDE3CE (primary page background) [warmed]
- *   ivory-soft   -> evolv Porcelain     #F5EEDF (lightest panels/cards) [warmed]
- *   sage-mist    -> evolv Porcelain     #F5EEDF (active/selected tint) [warmed]
- *   copper       -> evolv Copper        #B8875A (accent, ~5% of the UI, never a primary CTA color)
+ * Palette is honey-cream ↔ warm obsidian/charcoal, copper/terracotta
+ * accent. NO greens — that distinguishes evlvtoday.com from the original
+ * evolv spec (evolvtoday.ca uses the green palette; this US variant does not).
+ *
+ * Alias -> color map:
+ *   charcoal     -> Obsidian     #0E1113  (primary dark bg / text)
+ *   sage-forest  -> Charcoal     #1C2224  (secondary dark — kept for legacy)
+ *   sage-deep    -> Warm dark    #1B1D19  (was Deep Mineral green — removed)
+ *   sage-light   -> Warm mid     #2A2C27  (was Mineral green — removed)
+ *   sage         -> Warm slate   #6B6560  (secondary text / UI / borders)
+ *   soft-gray    -> Warm slate   #6B6560  (muted body text)
+ *   stone        -> Warm ivory   #D9C8AF  (borders, product bg)
+ *   ivory        -> Soft ivory   #EDE3CE  (primary page background)
+ *   ivory-soft   -> Porcelain    #F5EEDF  (lightest panels / cards)
+ *   sage-mist    -> Porcelain    #F5EEDF  (active / selected tint)
+ *   copper       -> Copper       #B8875A  (accent, ~5% of UI max)
  */
 :root {
   --color-obsidian: #0e1113;
   --color-charcoal-spec: #1c2224;
-  --color-deep-mineral: #203a37;
-  --color-mineral: #314743;
-  --color-slate: #6b7370;
+  --color-deep-mineral: #1b1d19;   /* warm near-black — replaces forest green */
+  --color-mineral: #2a2c27;        /* warm charcoal — replaces mineral green */
+  --color-slate: #6b6560;          /* warm slate — slightly less green */
   --color-stone-spec: #a7a297;
   --color-warm-ivory: #d9c8af;
   --color-soft-ivory: #ede3ce;
@@ -162,4 +163,83 @@ body {
 
 .hero-spin {
   animation: hero-spin 30s linear infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 650ms ease-out, transform 650ms ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > * {
+  transition-delay: inherit;
+}
+
+.reveal-stagger.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 650ms ease-out, transform 650ms ease-out;
+}
+
+.reveal-stagger > *:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger > *:nth-child(2) { transition-delay: 90ms; }
+.reveal-stagger > *:nth-child(3) { transition-delay: 180ms; }
+.reveal-stagger > *:nth-child(4) { transition-delay: 270ms; }
+.reveal-stagger > *:nth-child(5) { transition-delay: 360ms; }
+.reveal-stagger > *:nth-child(6) { transition-delay: 450ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-glow-a,
+  .hero-glow-b {
+    animation: none !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 2px;
+}
+
+.container-altr {
+  max-width: 1360px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-altr {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.proof-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .proof-photo-grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
 }
