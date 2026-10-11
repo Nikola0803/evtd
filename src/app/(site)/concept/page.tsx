@@ -34,30 +34,29 @@ export default function ConceptPage() {
       ============================================================ */}
       <section className="flex min-h-[88vh] flex-col items-center justify-center px-5 pb-12 pt-20 text-center md:px-10 md:pb-16 md:pt-28">
         <span className="inline-flex items-center gap-2 rounded-full border border-[#D9C3A0] bg-[#F5EDD8] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8D4A38]">
-          <i className="ri-shield-check-line text-xs" aria-hidden /> Wellness optimization &amp; peptide education, US-wide
+          U.S.-based wellness education
         </span>
 
         <h1 className="mt-8 max-w-3xl font-display text-[2.6rem] font-semibold leading-[.95] tracking-[-0.04em] md:text-[3.8rem] lg:text-[4.6rem]">
-          Peptide science,<br />
-          explained properly.<br />
-          <span className="text-[#D77E5F]">Optimize your wellness with it.</span>
+          Evolve. Alter.<br />
+          <span className="text-[#D77E5F]">Become your ultimate.</span>
         </h1>
 
-        <p className="mx-auto mt-7 max-w-lg text-base leading-relaxed text-[#5A5550]">
-          EVLV is a US-based wellness education platform. Our experts break down peptide science, hormone health, and longevity research so you arrive at your next appointment informed, confident, and knowing exactly what to ask.
+        <p className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-[#5A5550]">
+          Understand peptide science, hormone health, longevity, and everyday wellness. Clear education, no hype, and no medical promises.
         </p>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <Link href="/book" className="inline-flex items-center gap-2.5 rounded-full bg-[#D77E5F] px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#C86B4D]">
-            Book a free education call <span aria-hidden>--&gt;</span>
+            Book your first call
           </Link>
           <Link href="/peptides" className="inline-flex items-center gap-2.5 rounded-full border border-[#1B1D19]/20 bg-white/60 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#1B1D19] transition hover:bg-white">
-            Browse our services
+            Explore peptide education
           </Link>
         </div>
 
         <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#1B1D19]/30">
-          Free &middot; 15 minutes &middot; By phone &middot; Anywhere in the US
+          First 15-minute call is free &middot; No obligation
         </p>
 
         {/* Feature cards below hero */}
@@ -175,7 +174,7 @@ export default function ConceptPage() {
               <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Start here</p>
               <h3 className="mt-2 font-display text-2xl font-semibold">Free Education Call</h3>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-white/55">15 minutes with a wellness expert. We break down the peptides relevant to your goals and help you build the right questions for your prescribing doctor. No prep needed.</p>
-              <Link href="/book" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#C86B4D]">Book free call <span aria-hidden>--&gt;</span></Link>
+              <Link href="/book" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#C86B4D]">Book your first call <span aria-hidden>--&gt;</span></Link>
             </article>
 
             {/* Topic deep dives */}
@@ -255,7 +254,7 @@ export default function ConceptPage() {
             </div>
 
             <Link href="/book" className="mt-12 inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#2A2C27]">
-              Book your free education call
+              Book your first call
             </Link>
           </div>
         </div>
@@ -309,7 +308,7 @@ export default function ConceptPage() {
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-5">
               <Link href="/book" className="inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#C86B4D]">
-                Book your free education call
+                Book your first call
               </Link>
               <span className="text-[11px] text-white/35">Education only &middot; No commitment &middot; Always free</span>
             </div>
