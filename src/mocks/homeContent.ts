@@ -1,150 +1,147 @@
 export const trustRow = [
-  { label: 'Licensed US clinicians', icon: 'ri-shield-check-line' },
-  { label: 'Licensed US pharmacy fulfillment', icon: 'ri-truck-line' },
-  { label: 'Transparent monthly pricing', icon: 'ri-price-tag-3-line' },
+  { label: 'Wellness experts on every call', icon: 'ri-user-heart-line' },
+  { label: 'Evidence-aware education', icon: 'ri-microscope-line' },
+  { label: 'Transparent monthly membership', icon: 'ri-price-tag-3-line' },
   { label: 'Secure and private', icon: 'ri-lock-2-line' },
-  { label: 'Ongoing support', icon: 'ri-customer-service-2-line' },
+  { label: 'Ongoing expert support', icon: 'ri-customer-service-2-line' },
 ];
 
 export const standardStats = [
-  { value: '40+', label: 'US states where network clinicians are licensed' },
-  { value: '100%', label: 'Prescription decisions made by a licensed clinician' },
-  { value: 'Free', label: '15-minute intro consultation — no commitment required' },
-  { value: '~3 min', label: 'Average time to complete an assessment' },
+  { value: 'Free', label: '15-minute pep talk — no commitment, no account required' },
+  { value: '5', label: 'Wellness goals covered: sleep, energy, body, skin & sexual health' },
+  { value: 'Education', label: 'Only — not medical advice, diagnosis or treatment' },
+  { value: '~3 min', label: 'Average time to book your first pep talk' },
 ];
 
 export const standards = [
   {
-    title: 'Free intro consultation',
-    copy: 'Start with a free 15-minute call. A licensed clinician listens to your goals before anything else.',
-    icon: 'ri-calendar-check-line',
+    title: 'Free pep talk',
+    copy: 'Start with a free 15-minute call. A wellness expert listens to your goals and answers your questions honestly.',
+    icon: 'ri-chat-smile-2-line',
   },
   {
-    title: 'Licensed clinical review',
-    copy: 'A provider licensed to care for you in your state reviews your information independently.',
-    icon: 'ri-stethoscope-line',
+    title: 'Peptide literacy',
+    copy: 'We explain the research — how peptides work, what the evidence says, and what questions to ask.',
+    icon: 'ri-microscope-line',
   },
   {
-    title: 'Patient-specific prescriptions',
-    copy: 'Prescriptions are written for you — never a one-size-fits-all order.',
+    title: 'Personalised wellness plan',
+    copy: 'Based on your goals, we build a guided monthly optimisation programme around sleep, energy, metabolic health and more.',
     icon: 'ri-file-list-3-line',
   },
   {
-    title: 'Licensed US pharmacy fulfillment',
-    copy: 'Prepared and dispensed by licensed US pharmacy partners, not a research-product warehouse.',
-    icon: 'ri-building-2-line',
+    title: 'Monthly optimisation',
+    copy: 'Track your progress, refine your approach and stay connected with your wellness coach each month.',
+    icon: 'ri-line-chart-line',
   },
   {
-    title: 'Transparent plan pricing',
-    copy: 'Starting prices are shown up front, with inclusions and totals before you authorize payment.',
+    title: 'Transparent pricing',
+    copy: 'Membership pricing is shown clearly up front. No hidden fees, no auto-escalating tiers.',
     icon: 'ri-price-tag-3-line',
   },
   {
-    title: 'Ongoing clinician access',
-    copy: 'Check-ins, follow-up questions and renewal reviews keep care moving with you.',
-    icon: 'ri-chat-check-line',
+    title: 'Secure and private',
+    copy: 'Your conversations and wellness data are protected with strong privacy practices.',
+    icon: 'ri-lock-2-line',
   },
 ];
 
 export const comparison = {
   evlv: [
-    'Free 15-minute intro consultation',
-    'Licensed provider evaluation',
-    'Individual prescription when appropriate',
-    'Pharmacy-dispensed treatment',
-    'Personalized directions',
-    'Ongoing clinical support',
-    'Traceable fulfillment',
+    'Free 15-minute pep talk',
+    'Evidence-aware education',
+    'Personalised wellness plan',
+    'Monthly optimisation coaching',
+    'Peptide literacy guidance',
+    'Ongoing expert support',
   ],
   research: [
-    'No patient evaluation',
-    'No prescription',
-    'No clinician responsible for care',
-    'Not intended for human use',
-    'No personalized medical oversight',
+    'No personalised guidance',
+    'No expert on the call',
+    'No wellness plan',
+    'No ongoing support',
+    'No accountability',
   ],
 };
 
 export const comparisonRows = [
-  { label: 'Free 15-minute intro consultation', evlv: true, research: false },
-  { label: 'Licensed provider evaluation', evlv: true, research: false },
-  { label: 'Individual prescription when appropriate', evlv: true, research: false },
-  { label: 'Pharmacy-dispensed treatment', evlv: true, research: false },
-  { label: 'Personalized directions', evlv: true, research: false },
-  { label: 'Ongoing clinical support', evlv: true, research: false },
-  { label: 'Traceable fulfillment', evlv: true, research: false },
+  { label: 'Free pep talk with a wellness expert', evlv: true, research: false },
+  { label: 'Evidence-aware education', evlv: true, research: false },
+  { label: 'Personalised wellness plan', evlv: true, research: false },
+  { label: 'Monthly optimisation coaching', evlv: true, research: false },
+  { label: 'Peptide literacy guidance', evlv: true, research: false },
+  { label: 'Ongoing expert support', evlv: true, research: false },
 ];
 
 export const steps = [
   {
     number: '01',
-    title: 'Book your free consultation',
-    copy: 'Schedule a free 15-minute call with a licensed clinician. Talk through your goals, questions and health history at your own pace — no commitment required.',
+    title: 'Book your free pep talk',
+    copy: 'A free 15-minute call with a wellness expert. Tell us your goals — sleep, energy, metabolic health, skin, or sexual wellness. We listen, we educate, we guide. No account required.',
     image:
       'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&h=620&q=80',
   },
   {
     number: '02',
-    title: 'A clinician reviews your information',
-    copy: 'A licensed provider independently determines whether treatment is safe and appropriate. They may request more information, laboratory testing or a follow-up visit.',
+    title: 'Get your personalised wellness plan',
+    copy: 'Based on your goals, we build a guided monthly optimisation programme. Peptide literacy, lifestyle protocols, sleep strategies and metabolic health — all evidence-aware, all explained clearly.',
     image:
-      'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=900&h=620&q=80',
+      'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&h=620&q=80',
   },
   {
     number: '03',
-    title: 'Your treatment is delivered',
-    copy: 'If prescribed, your licensed pharmacy prepares and ships your treatment. Care continues through check-ins and renewal reviews.',
+    title: 'Track, learn and optimise',
+    copy: 'Check in monthly with your wellness coach, track your progress in your portal and refine your approach over time. Education only — we help you understand, you decide what to do.',
     image:
-      'https://images.unsplash.com/photo-1586015555751-63bb77f4322a?auto=format&fit=crop&w=900&h=620&q=80',
+      'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&h=620&q=80',
   },
 ];
 
 export const inclusions = [
-  { label: 'Free 15-minute intro consultation', icon: 'ri-calendar-check-line' },
-  { label: 'Licensed clinician review', icon: 'ri-stethoscope-line' },
-  { label: 'Individual prescription when appropriate', icon: 'ri-file-list-3-line' },
-  { label: 'Pharmacy preparation and dispensing', icon: 'ri-flask-line' },
-  { label: 'Required administration supplies where applicable', icon: 'ri-hand-sanitizer-line' },
-  { label: 'Shipping', icon: 'ri-truck-line' },
-  { label: 'Secure clinician messaging', icon: 'ri-chat-3-line' },
-  { label: 'Progress check-ins', icon: 'ri-line-chart-line' },
-  { label: 'Renewal review', icon: 'ri-refresh-line' },
-  { label: 'Pause or cancellation controls', icon: 'ri-pause-circle-line' },
+  { label: 'Free 15-minute pep talk', icon: 'ri-chat-smile-2-line' },
+  { label: 'Personalised wellness plan', icon: 'ri-file-list-3-line' },
+  { label: 'Monthly coaching check-in', icon: 'ri-calendar-check-line' },
+  { label: 'Peptide literacy education', icon: 'ri-microscope-line' },
+  { label: 'Sleep & recovery guidance', icon: 'ri-moon-clear-line' },
+  { label: 'Metabolic health education', icon: 'ri-body-scan-line' },
+  { label: 'Secure expert messaging', icon: 'ri-chat-3-line' },
+  { label: 'Progress tracking portal', icon: 'ri-line-chart-line' },
+  { label: 'Pause or cancel anytime', icon: 'ri-pause-circle-line' },
 ];
 
 export const pathway = [
-  { label: 'Free consultation', icon: 'ri-calendar-check-line' },
-  { label: 'Clinical review', icon: 'ri-stethoscope-line' },
-  { label: 'Prescription', icon: 'ri-file-list-3-line' },
-  { label: 'Pharmacy preparation', icon: 'ri-flask-line' },
-  { label: 'Patient delivery', icon: 'ri-truck-line' },
+  { label: 'Free pep talk', icon: 'ri-chat-smile-2-line' },
+  { label: 'Wellness assessment', icon: 'ri-file-list-3-line' },
+  { label: 'Personalised plan', icon: 'ri-map-pin-user-line' },
+  { label: 'Monthly coaching', icon: 'ri-calendar-check-line' },
+  { label: 'Track & optimise', icon: 'ri-line-chart-line' },
 ];
 
 export const supportTeams = [
   {
     title: 'EVLV Support',
-    copy: 'Real people to help with the practical side of your care.',
+    copy: 'Real people to help with accounts, billing and general questions.',
     icon: 'ri-customer-service-2-line',
-    items: ['Account access', 'Billing', 'Subscription changes', 'Delivery tracking', 'General assistance'],
+    items: ['Account access', 'Billing', 'Membership changes', 'General assistance'],
   },
   {
-    title: 'Clinical Care Team',
-    copy: 'Licensed clinicians handle anything medical.',
-    icon: 'ri-stethoscope-line',
+    title: 'Wellness Coaches',
+    copy: 'Your wellness experts for education, goal-setting and ongoing optimisation.',
+    icon: 'ri-user-heart-line',
     items: [
-      'Treatment questions',
-      'Side effects',
-      'Prescription directions',
-      'Treatment changes',
-      'Follow-up care',
+      'Pep talk calls',
+      'Wellness plan guidance',
+      'Peptide literacy questions',
+      'Progress check-ins',
+      'Goal refinement',
     ],
   },
 ];
 
 export const heroTracker = {
-  eyebrow: 'Your patient portal',
+  eyebrow: 'Your wellness portal',
   title: 'Progress tracked in one place',
-  copy: 'Clinical-review status, shipment tracking, renewal dates and secure messages — all in your portal.',
+  copy: 'Your wellness plan, check-in schedule, expert messages and monthly progress — all in your portal.',
   image:
     'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&h=760&q=80',
 };

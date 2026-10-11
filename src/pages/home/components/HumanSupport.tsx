@@ -9,8 +9,8 @@ export default function HumanSupport() {
         <div className="relative min-h-[22rem] w-full lg:min-h-[40rem]">
           <img
             src={supportImage}
-            alt="A friendly EVLV support specialist assisting at a bright minimal desk"
-            title="EVLV Today patient support"
+            alt="A friendly EVLV wellness expert on a call"
+            title="EVLV Today wellness support"
             className="h-full w-full object-cover object-top"
           />
           <div className="absolute inset-x-5 bottom-5 max-w-sm rounded-2xl bg-background-50/95 p-5 backdrop-blur-sm md:inset-x-8 md:bottom-8">
@@ -19,7 +19,7 @@ export default function HumanSupport() {
               EVLV Support
             </p>
             <p className="mt-2 text-[0.86rem] leading-relaxed text-foreground-700">
-              Real people, no account required. We can help with accounts, billing and delivery.
+              Real people, no account required. We can help with accounts, billing and general questions.
             </p>
           </div>
         </div>
@@ -31,11 +31,12 @@ export default function HumanSupport() {
               Human support
             </div>
             <h2 className="font-heading text-[1.85rem] leading-[1.1] tracking-[-0.02em] text-foreground-950 md:text-[2.8rem]">
-              Technology makes it convenient. People make it care.
+              Technology makes it easy. People make it personal.
             </h2>
             <p className="mt-5 text-[0.95rem] leading-relaxed text-foreground-700">
-              Real people support you throughout the experience. EVLV Support assists with accounts, billing
-              and delivery. Licensed clinicians handle medical questions and treatment decisions.
+              Real people support you throughout your wellness journey. EVLV Support handles accounts and
+              billing. Your wellness coaches guide your education, answer questions about peptides and
+              keep your optimisation programme on track.
             </p>
 
             <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -67,7 +68,7 @@ export default function HumanSupport() {
               to="/how-it-works"
               className="mt-8 inline-flex items-center gap-2 whitespace-nowrap font-label text-sm font-medium text-primary-700 transition-colors duration-200 hover:text-primary-600"
             >
-              See how ongoing care works
+              See how your wellness journey works
               <i className="ri-arrow-right-line text-base leading-none" aria-hidden="true"></i>
             </Link>
           </div>

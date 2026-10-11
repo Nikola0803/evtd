@@ -12,8 +12,8 @@ export default function HowItWorksSection() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="How it works"
-            title="Care without the waiting room."
-            description="Three steps, with a licensed clinician in the middle of every decision."
+            title="Simple. Guided. Expert-led."
+            description="Three steps, with a wellness expert by your side at every stage."
           />
           <Button to="/assessment" variant="primary" size="lg" iconAfter="ri-arrow-right-line">
             {CTA_SHORT}
@@ -28,7 +28,7 @@ export default function HowItWorksSection() {
                   <img
                     src={step.image}
                     alt={step.title}
-                    title={`${step.title} — EVOLV Today`}
+                    title={`${step.title} — EVLV Today`}
                     className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground-950/55 to-transparent"></div>
@@ -45,15 +45,15 @@ export default function HowItWorksSection() {
           ))}
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-3xl bg-primary-500 md:mt-14">
+        <div className="mt-12 overflow-hidden rounded-3xl bg-primary-600 md:mt-14">
           <div className="flex flex-col items-start gap-6 p-8 md:flex-row md:items-center md:justify-between md:p-10">
             <div>
               <p className="font-heading text-xl leading-snug text-background-50 md:text-2xl">
-                Usually takes about three minutes.
+                Takes about three minutes to book.
               </p>
               <p className="mt-2 max-w-xl text-[0.88rem] leading-relaxed text-background-50/85">
-                You are not charged unless a licensed clinician determines treatment is appropriate and a
-                prescription is issued.
+                Your free pep talk is just a conversation — education only, no commitment, no prescription required.
+                A clinical pathway is coming soon for members who want that option.
               </p>
             </div>
             <Button to="/assessment" variant="light" size="lg" iconAfter="ri-arrow-right-line">

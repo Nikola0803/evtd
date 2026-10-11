@@ -1,4 +1,4 @@
-export const CTA_LABEL = 'Take the 3-Minute Assessment';
-export const CTA_SHORT = 'Start My Assessment';
-export const CTA_MICROCOPY = 'Free clinical review · Pay only if prescribed · No insurance needed';
-export const BRAND_LINE = 'Modern care for a longer, stronger life.';
+export const CTA_LABEL = 'Book Your Free Pep Talk';
+export const CTA_SHORT = 'Book Free Pep Talk';
+export const CTA_MICROCOPY = '15-minute call · Wellness experts · Education only, not medical advice';
+export const BRAND_LINE = 'Evidence-aware wellness, guided by experts.';

@@ -13,35 +13,35 @@ export default function Hero() {
       ></div>
 
       <Container className="relative z-10">
-        {/* centered statement */}
+        {/* centred statement */}
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-primary-50 px-3.5 py-1.5 font-label text-[0.66rem] font-semibold uppercase tracking-[0.16em] text-primary-700">
-            <i className="ri-calendar-check-line text-sm leading-none" aria-hidden="true"></i>
-            Free 15-minute consultation
+            <i className="ri-chat-smile-2-line text-sm leading-none" aria-hidden="true"></i>
+            Free pep talk &nbsp;&middot;&nbsp; 15 minutes
           </span>
 
           <h1 className="mt-6 font-heading text-[2.5rem] leading-[1.03] tracking-[-0.03em] text-foreground-950 sm:text-[3.4rem] md:text-[4.1rem]">
             Wellness optimisation,
             <br />
-            guided by real clinicians.
+            guided by experts.
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-[1rem] leading-relaxed text-foreground-700 md:text-[1.08rem]">
-            Speak with a licensed provider about your health goals — sleep, energy, body composition,
-            skin or sexual wellness. No account required. No commitment.
+            Book a free 15-minute pep talk with a wellness expert. We cover peptide literacy, sleep,
+            metabolic health, energy and more — education only, not medical advice.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button to="/assessment" variant="primary" size="lg" iconAfter="ri-arrow-right-line">
-              Book free consultation
+              Book your free pep talk
             </Button>
             <Button to="/treatments" variant="outline" size="lg">
-              Explore treatment options
+              Explore wellness goals
             </Button>
           </div>
 
           <p className="mt-5 font-label text-[0.72rem] uppercase tracking-[0.1em] text-foreground-600">
-            15-minute call &nbsp;·&nbsp; Licensed clinicians &nbsp;·&nbsp; No commitment required
+            15-minute call &nbsp;·&nbsp; Wellness experts &nbsp;·&nbsp; Education only &nbsp;·&nbsp; No commitment
           </p>
         </div>
 
@@ -70,7 +70,7 @@ export default function Hero() {
                   </h3>
                   <p className="mt-1 text-[0.74rem] leading-relaxed text-foreground-600">{goal.tagline}</p>
                   <p className="mt-3 inline-flex items-center gap-1.5 font-label text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-primary-700">
-                    Explore options
+                    Explore
                     <i className="ri-arrow-right-line text-xs leading-none" aria-hidden="true"></i>
                   </p>
                 </div>
@@ -81,10 +81,10 @@ export default function Hero() {
 
         {/* compliance note */}
         <div className="mt-6 flex flex-col items-center gap-2 rounded-2xl border border-foreground-950/10 bg-background-100 px-5 py-4 text-center sm:flex-row sm:justify-center sm:gap-3">
-          <i className="ri-lock-2-line text-base leading-none text-primary-600" aria-hidden="true"></i>
+          <i className="ri-information-line text-base leading-none text-primary-600" aria-hidden="true"></i>
           <p className="text-[0.82rem] leading-relaxed text-foreground-700">
-            A licensed clinician independently decides whether treatment is appropriate. Completing a
-            consultation or assessment never guarantees a prescription.
+            EVLV Today provides wellness education only — not medical advice, diagnosis or treatment.
+            A clinical prescription pathway is coming soon for members who want to explore that route.
           </p>
         </div>
       </Container>
