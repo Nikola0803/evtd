@@ -4,10 +4,10 @@ export const director = {
   credentials: 'MD — Medical Director',
   specialty: 'Internal medicine & longevity',
   message:
-    'Every prescription decision at EVOLV Today is made independently by a licensed clinician. Our job is to make advanced care understandable, safe and supported — never to promise an outcome.',
+    'Every prescription decision at EVLV Today is made independently by a licensed clinician. Our job is to make advanced care understandable, safe and supported — never to promise an outcome.',
   placeholder: true,
   image:
-    'https://readdy.ai/api/search-image?query=Editorial%20portrait%20of%20a%20distinguished%20physician%20in%20a%20light%20neutral%20coat%20standing%20calmly%20against%20a%20deep%20charcoal%20studio%20backdrop%2C%20soft%20directional%20light%2C%20dignified%20confident%20expression%2C%20premium%20documentary%20photography%2C%20muted%20sage%20accent%20tones&width=900&height=900&seq=evlv-medical-director-01&orientation=squarish',
+    'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&h=900&crop=faces&q=80',
 };
 
 export const clinicians = [
@@ -20,7 +20,7 @@ export const clinicians = [
     philosophy: 'Care should be explained clearly enough that you can make your own informed decision.',
     placeholder: true,
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20editorial%20portrait%20of%20a%20calm%20confident%20physician%20in%20soft%20neutral%20clothing%20against%20a%20warm%20stone%20backdrop%2C%20natural%20window%20light%2C%20unposed%20documentary%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20trustworthy%20premium%20mood&width=700&height=800&seq=evlv-clinician-01&orientation=portrait',
+      'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=700&h=900&crop=top&q=80',
   },
   {
     id: 'clinician-2',
@@ -31,7 +31,7 @@ export const clinicians = [
     philosophy: 'Small, sustainable changes guided by a clinician often outperform dramatic promises.',
     placeholder: true,
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20editorial%20portrait%20of%20an%20approachable%20female%20physician%20in%20light%20neutral%20attire%20against%20a%20warm%20ivory%20backdrop%2C%20soft%20natural%20light%2C%20unposed%20documentary%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20mood&width=700&height=800&seq=evlv-clinician-02&orientation=portrait',
+      'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=700&h=900&crop=top&q=80',
   },
   {
     id: 'clinician-3',
@@ -42,7 +42,7 @@ export const clinicians = [
     philosophy: 'Privacy and honesty matter as much as the prescription itself.',
     placeholder: true,
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20editorial%20portrait%20of%20a%20warm%20composed%20nurse%20practitioner%20in%20simple%20neutral%20clothing%20against%20a%20soft%20stone%20backdrop%2C%20gentle%20window%20light%2C%20documentary%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20mood&width=700&height=800&seq=evlv-clinician-03&orientation=portrait',
+      'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=700&h=900&crop=top&q=80',
   },
   {
     id: 'clinician-4',
@@ -53,7 +53,7 @@ export const clinicians = [
     philosophy: 'Good care starts with listening, not with a prescription pad.',
     placeholder: true,
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20editorial%20portrait%20of%20a%20thoughtful%20male%20physician%20in%20a%20soft%20neutral%20shirt%20against%20a%20warm%20greige%20backdrop%2C%20natural%20directional%20light%2C%20unposed%20documentary%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20mood&width=700&height=800&seq=evlv-clinician-04&orientation=portrait',
+      'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&h=900&crop=top&q=80',
   },
   {
     id: 'clinician-5',
@@ -64,7 +64,7 @@ export const clinicians = [
     philosophy: 'Transparent pricing and clear expectations are part of responsible care.',
     placeholder: true,
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20editorial%20portrait%20of%20a%20friendly%20female%20physician%20assistant%20in%20light%20neutral%20clothing%20against%20a%20soft%20warm%20backdrop%2C%20gentle%20window%20light%2C%20documentary%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20mood&width=700&height=800&seq=evlv-clinician-05&orientation=portrait',
+      'https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=700&h=900&crop=top&q=80',
   },
   {
     id: 'clinician-6',
@@ -75,7 +75,7 @@ export const clinicians = [
     philosophy: 'Every patient deserves a plain-language explanation before any decision.',
     placeholder: true,
     image:
-      'https://readdy.ai/api/search-image?query=Professional%20editorial%20portrait%20of%20a%20calm%20older%20physician%20in%20simple%20neutral%20attire%20against%20a%20muted%20stone%20backdrop%2C%20soft%20natural%20light%2C%20unposed%20documentary%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20trustworthy%20premium%20mood&width=700&height=800&seq=evlv-clinician-06&orientation=portrait',
+      'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=700&h=900&crop=top&q=80',
   },
 ];
 

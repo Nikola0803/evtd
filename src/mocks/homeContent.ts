@@ -79,21 +79,21 @@ export const steps = [
     title: 'Tell us about yourself',
     copy: 'Complete a secure assessment covering your goals, health history, medications and preferences.',
     image:
-      'https://readdy.ai/api/search-image?query=Editorial%20lifestyle%20photograph%20of%20an%20adult%20sitting%20calmly%20on%20a%20sofa%20completing%20a%20private%20online%20form%20on%20a%20tablet%2C%20warm%20natural%20window%20light%2C%20soft%20neutral%20interior%2C%20muted%20sage%20and%20stone%20palette%2C%20authentic%20unposed%20premium%20wellness%20mood&width=900&height=620&seq=evlv-step-assess-01&orientation=landscape',
+      'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&h=620&q=80',
   },
   {
     number: '02',
     title: 'A clinician reviews your information',
     copy: 'A licensed provider independently determines whether treatment is safe and appropriate. They may request more information, laboratory testing or a video visit.',
     image:
-      'https://readdy.ai/api/search-image?query=Editorial%20photograph%20of%20a%20physician%20reviewing%20notes%20on%20a%20laptop%20at%20a%20tidy%20minimal%20desk%2C%20soft%20daylight%2C%20calm%20professional%20atmosphere%2C%20muted%20sage%20and%20stone%20palette%2C%20unposed%20documentary%20style%2C%20trustworthy%20premium%20mood&width=900&height=620&seq=evlv-step-review-01&orientation=landscape',
+      'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=900&h=620&q=80',
   },
   {
     number: '03',
     title: 'Your treatment is delivered',
     copy: 'If prescribed, your licensed pharmacy prepares and ships your treatment. Care continues through check-ins and renewal reviews.',
     image:
-      'https://readdy.ai/api/search-image?query=Editorial%20photograph%20of%20a%20plain%20discreet%20parcel%20resting%20at%20a%20bright%20front%20door%20in%20morning%20light%2C%20minimal%20lifestyle%20still%20life%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20quiet%20premium%20mood%2C%20generous%20negative%20space&width=900&height=620&seq=evlv-step-delivery-01&orientation=landscape',
+      'https://images.unsplash.com/photo-1586015555751-63bb77f4322a?auto=format&fit=crop&w=900&h=620&q=80',
   },
 ];
 
@@ -119,7 +119,7 @@ export const pathway = [
 
 export const supportTeams = [
   {
-    title: 'EVOLV Support',
+    title: 'EVLV Support',
     copy: 'Real people to help with the practical side of your care.',
     icon: 'ri-customer-service-2-line',
     items: ['Account access', 'Billing', 'Subscription changes', 'Delivery tracking', 'General assistance'],
@@ -148,7 +148,7 @@ export const heroPanel = {
   note: 'Free clinical review · Pay only if prescribed',
   slug: 'sermorelin',
   image:
-    'https://readdy.ai/api/search-image?query=Premium%20clinical%20still%20life%20of%20a%20single%20glass%20vial%20and%20slim%20neutral%20packaging%20on%20a%20soft%20stone%20pedestal%2C%20warm%20directional%20light%2C%20deep%20charcoal%20and%20sage%20background%2C%20editorial%20pharmaceutical%20product%20photography%2C%20calm%20luxurious%20mood%2C%20clean%20minimal%20composition&width=1000&height=760&seq=evlv-hero-feature-card-01&orientation=landscape',
+    'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1000&h=760&q=80',
 };
 
 export const heroTracker = {
@@ -156,23 +156,23 @@ export const heroTracker = {
   title: 'Progress tracked in one place',
   copy: 'Clinical-review status, shipment tracking, renewal dates and secure messages — all in your portal.',
   image:
-    'https://readdy.ai/api/search-image?query=Editorial%20lifestyle%20photograph%20of%20an%20adult%20checking%20a%20health%20tracking%20app%20on%20a%20smartphone%20while%20standing%20near%20a%20bright%20window%2C%20warm%20morning%20light%2C%20neutral%20modern%20interior%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20lifestyle%20mood&width=900&height=760&seq=evlv-hero-tracker-card-01&orientation=landscape',
+    'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&h=760&q=80',
 };
 
 export const comparisonImage =
-  'https://readdy.ai/api/search-image?query=Premium%20editorial%20portrait%20of%20a%20calm%20confident%20adult%20in%20simple%20neutral%20clothing%20standing%20in%20a%20bright%20minimal%20room%2C%20soft%20natural%20window%20light%2C%20unposed%20documentary%20lifestyle%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20quiet%20aspirational%20mood%2C%20generous%20negative%20space&width=900&height=1100&seq=evlv-comparison-portrait-01&orientation=portrait';
+  'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&h=1100&q=80';
 
 export const faqImage =
-  'https://readdy.ai/api/search-image?query=Warm%20editorial%20photograph%20of%20an%20adult%20relaxed%20in%20a%20bright%20minimal%20room%20reading%20on%20a%20tablet%2C%20soft%20natural%20light%2C%20neutral%20linen%20and%20sage%20tones%2C%20calm%20lifestyle%20photography%2C%20quiet%20premium%20mood%2C%20generous%20negative%20space&width=900&height=1000&seq=evlv-faq-portrait-01&orientation=portrait';
+  'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=900&h=1000&crop=top&q=80';
 
 export const heroImage =
-  'https://readdy.ai/api/search-image?query=Abstract%20editorial%20photograph%20of%20soft%20morning%20light%20falling%20across%20a%20textured%20plaster%20wall%20in%20warm%20ivory%20and%20deep%20sage%20tones%2C%20gentle%20organic%20gradients%2C%20calm%20premium%20atmosphere%2C%20no%20people%2C%20subtle%20film%20grain%2C%20cinematic%20minimal%20composition%2C%20quiet%20luxury%20mood&width=1920&height=1080&seq=evlv-hero-main-01&orientation=landscape';
+  'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&h=1080&q=80';
 
 export const pharmacyImage =
-  'https://readdy.ai/api/search-image?query=Minimal%20editorial%20still%20life%20of%20matte%20neutral%20pharmaceutical%20packaging%20and%20glass%20vials%20on%20a%20clean%20stone%20surface%2C%20soft%20warm%20daylight%2C%20premium%20medical%20product%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20uncluttered%20background&width=1200&height=900&seq=evlv-pharmacy-still-01&orientation=landscape';
+  'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&h=900&q=80';
 
 export const supportImage =
-  'https://readdy.ai/api/search-image?query=Warm%20editorial%20photograph%20of%20a%20friendly%20support%20specialist%20with%20a%20headset%20smiling%20at%20a%20bright%20minimal%20desk%2C%20natural%20window%20light%2C%20authentic%20unposed%20lifestyle%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20caring%20premium%20mood&width=1200&height=1000&seq=evlv-support-human-01&orientation=portrait';
+  'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&h=1000&crop=top&q=80';
 
 export const finalCtaImage =
-  'https://readdy.ai/api/search-image?query=Abstract%20editorial%20photograph%20of%20calm%20morning%20mist%20over%20a%20quiet%20landscape%20in%20deep%20sage%20and%20warm%20stone%20tones%2C%20soft%20light%20gradients%2C%20no%20people%2C%20serene%20premium%20atmosphere%2C%20subtle%20film%20grain%2C%20cinematic%20minimal%20composition&width=1920&height=1000&seq=evlv-final-cta-01&orientation=landscape';
+  'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&h=1000&q=80';

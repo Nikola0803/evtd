@@ -29,18 +29,18 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-shadow duration-300 ${
-        menuOpen ? 'bg-foreground-900' : 'bg-foreground-950'
-      } ${scrolled ? 'shadow-lg shadow-black/20' : ''}`}
+      className={`fixed inset-x-0 top-0 z-50 bg-background-50 transition-shadow duration-300 ${
+        scrolled ? 'border-b border-background-200 shadow-sm shadow-foreground-950/5' : 'border-b border-background-100'
+      }`}
     >
-      {/* Announcement bar */}
+      {/* Announcement bar — deep sage band */}
       <div
-        className={`overflow-hidden border-b border-background-50/10 bg-foreground-900 transition-all duration-300 ${
+        className={`overflow-hidden bg-primary-900 transition-all duration-300 ${
           scrolled ? 'max-h-0 opacity-0' : 'max-h-14 opacity-100'
         }`}
       >
         <div className="mx-auto flex w-full max-w-8xl items-center justify-between gap-4 px-5 py-2.5 md:px-8">
-          <p className="font-label text-[0.7rem] tracking-[0.02em] text-background-200/85">
+          <p className="font-label text-[0.7rem] tracking-[0.02em] text-primary-100/90">
             <span className="font-semibold text-background-50">New</span>
             <span className="hidden sm:inline"> — physician-guided longevity programs now available</span>
             <span className="sm:hidden"> — new programs available</span>
@@ -48,7 +48,7 @@ export default function Header() {
           <div className="flex shrink-0 items-center gap-5 font-label text-[0.7rem]">
             <Link
               to="/pharmacy-standards"
-              className="hidden items-center gap-1.5 text-background-200/85 transition-colors duration-200 hover:text-background-50 sm:inline-flex"
+              className="hidden items-center gap-1.5 text-primary-200/90 transition-colors duration-200 hover:text-background-50 sm:inline-flex"
             >
               <i className="ri-shield-check-line text-sm leading-none" aria-hidden="true"></i>
               Our standards
@@ -67,7 +67,7 @@ export default function Header() {
       {/* Main header row */}
       <div className="mx-auto flex h-16 w-full max-w-8xl items-center justify-between px-5 md:h-[4.5rem] md:px-8">
         <div className="flex items-center gap-3">
-          <Logo tone="light" />
+          <Logo tone="dark" />
         </div>
 
         <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
@@ -75,8 +75,8 @@ export default function Header() {
             <Link
               key={link.to}
               to={link.to}
-              className={`font-label text-[0.82rem] font-medium tracking-tight transition-colors duration-200 hover:text-background-50 ${
-                pathname === link.to ? 'text-primary-300' : 'text-background-200'
+              className={`font-label text-[0.82rem] font-medium tracking-tight transition-colors duration-200 hover:text-foreground-950 ${
+                pathname === link.to ? 'text-primary-700' : 'text-foreground-600'
               }`}
             >
               {link.label}
@@ -87,7 +87,7 @@ export default function Header() {
         <div className="hidden items-center gap-5 lg:flex">
           <Link
             to="/portal"
-            className="font-label text-[0.82rem] font-medium text-background-200 transition-colors duration-200 hover:text-background-50"
+            className="font-label text-[0.82rem] font-medium text-foreground-600 transition-colors duration-200 hover:text-foreground-950"
           >
             Sign In
           </Link>
@@ -97,7 +97,7 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-3 lg:hidden">
-          <Link to="/portal" className="font-label text-[0.8rem] font-medium text-background-200">
+          <Link to="/portal" className="font-label text-[0.8rem] font-medium text-foreground-600">
             Sign In
           </Link>
           <button
@@ -105,7 +105,7 @@ export default function Header() {
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center rounded-md border border-background-50/20 text-background-50 transition-colors duration-200 cursor-pointer"
+            className="flex h-10 w-10 items-center justify-center rounded-md border border-background-300 text-foreground-700 transition-colors duration-200 cursor-pointer hover:border-background-400 hover:text-foreground-950"
           >
             <i className={`${menuOpen ? 'ri-close-line' : 'ri-menu-line'} text-xl leading-none`} aria-hidden="true"></i>
           </button>
@@ -114,21 +114,21 @@ export default function Header() {
 
       {/* Mobile menu */}
       {menuOpen ? (
-        <div className="border-t border-background-50/10 bg-foreground-900 lg:hidden">
+        <div className="border-t border-background-200 bg-background-50 lg:hidden">
           <nav aria-label="Mobile" className="flex flex-col px-5 py-3">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className="border-b border-background-50/10 py-3.5 font-label text-sm text-background-100 last:border-b-0"
+                className="border-b border-background-200 py-3.5 font-label text-sm text-foreground-700 last:border-b-0"
               >
                 {link.label}
               </Link>
             ))}
-            <Link to="/pricing" className="border-b border-background-50/10 py-3.5 font-label text-sm text-background-100">
+            <Link to="/pricing" className="border-b border-background-200 py-3.5 font-label text-sm text-foreground-700">
               Pricing
             </Link>
-            <Link to="/faq" className="border-b border-background-50/10 py-3.5 font-label text-sm text-background-100 last:border-b-0">
+            <Link to="/faq" className="border-b border-background-200 py-3.5 font-label text-sm text-foreground-700 last:border-b-0">
               FAQ
             </Link>
             <div className="pt-4 pb-2">

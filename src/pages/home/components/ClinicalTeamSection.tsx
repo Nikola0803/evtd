@@ -5,6 +5,8 @@ import Reveal from '@/components/base/Reveal';
 import { clinicians } from '@/mocks/people';
 
 export default function ClinicalTeamSection() {
+  const featured = clinicians.slice(0, 3);
+
   return (
     <section className="bg-background-50 py-20 md:py-28">
       <Container>
@@ -24,7 +26,7 @@ export default function ClinicalTeamSection() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {clinicians.map((person, index) => (
+          {featured.map((person, index) => (
             <Reveal key={person.id} delay={index * 55}>
               <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-background-200 bg-background-100">
                 <div className="relative h-72 w-full overflow-hidden bg-background-300">
@@ -51,7 +53,7 @@ export default function ClinicalTeamSection() {
         </div>
 
         <p className="mt-7 max-w-3xl text-[0.78rem] leading-relaxed text-foreground-600">
-          Clinician identities are shown as clearly marked placeholders until providers are contracted. EVOLV
+          Clinician identities are shown as clearly marked placeholders until providers are contracted. EVLV
           Today never invents medical identities or credentials.
         </p>
       </Container>

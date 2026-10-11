@@ -9,14 +9,14 @@ export default function HumanSupport() {
         <div className="relative min-h-[22rem] w-full lg:min-h-[40rem]">
           <img
             src={supportImage}
-            alt="A friendly EVOLV support specialist assisting at a bright minimal desk"
-            title="EVOLV Today patient support"
+            alt="A friendly EVLV support specialist assisting at a bright minimal desk"
+            title="EVLV Today patient support"
             className="h-full w-full object-cover object-top"
           />
           <div className="absolute inset-x-5 bottom-5 max-w-sm rounded-2xl bg-background-50/95 p-5 backdrop-blur-sm md:inset-x-8 md:bottom-8">
             <p className="flex items-center gap-2 font-label text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-primary-700">
               <i className="ri-customer-service-2-line text-sm leading-none" aria-hidden="true"></i>
-              EVOLV Support
+              EVLV Support
             </p>
             <p className="mt-2 text-[0.86rem] leading-relaxed text-foreground-700">
               Real people, no account required. We can help with accounts, billing and delivery.
@@ -34,7 +34,7 @@ export default function HumanSupport() {
               Technology makes it convenient. People make it care.
             </h2>
             <p className="mt-5 text-[0.95rem] leading-relaxed text-foreground-700">
-              Real people support you throughout the experience. EVOLV Support assists with accounts, billing
+              Real people support you throughout the experience. EVLV Support assists with accounts, billing
               and delivery. Licensed clinicians handle medical questions and treatment decisions.
             </p>
 

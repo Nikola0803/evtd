@@ -18,7 +18,7 @@ export default function FaqSection() {
             <SectionHeading
               eyebrow="Questions"
               title="Answers before you decide."
-              description="If you are unsure about anything, EVOLV Support can help — no account required."
+              description="If you are unsure about anything, EVLV Support can help — no account required."
             />
             <div className="mt-9">
               <Accordion items={items} defaultOpenId={items[0]?.id} />
@@ -35,14 +35,14 @@ export default function FaqSection() {
           <div className="relative hidden h-full min-h-[28rem] w-full overflow-hidden rounded-2xl bg-background-300 lg:block">
             <img
               src={faqImage}
-              alt="An adult relaxing at home while reading about their care options"
-              title="EVOLV Today patient questions"
+              alt="A relaxed adult at home reading calmly on a tablet"
+              title="EVLV Today — questions answered before you start"
               className="h-full w-full object-cover object-top"
             />
             <div className="absolute inset-x-5 bottom-5 rounded-xl bg-background-50/95 p-5 backdrop-blur-sm">
               <p className="flex items-center gap-2 font-label text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-primary-700">
                 <i className="ri-customer-service-2-line text-sm leading-none" aria-hidden="true"></i>
-                EVOLV Support
+                EVLV Support
               </p>
               <p className="mt-2 text-[0.84rem] leading-relaxed text-foreground-700">
                 Real people, no account required. We can help with accounts, billing and delivery.
