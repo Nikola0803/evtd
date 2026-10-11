@@ -210,7 +210,7 @@ export default function ConceptPage() {
       </section>
 
       {/* ── How it works ── */}
-      <section className="bg-[#1B1D19] px-4 py-20 text-white md:px-8 md:py-28">
+      <section className="bg-[#1B1D19] px-4 pt-20 pb-0 text-white md:px-8 md:pt-28">
         <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E8B89F]">How it works</p>
