@@ -37,22 +37,22 @@ export default function ConceptPage() {
           <i className="ri-shield-check-line text-xs" aria-hidden /> Peptide &amp; wellness education, US-wide
         </span>
 
-        <h1 className="mt-8 max-w-4xl font-display text-[3.2rem] font-semibold leading-[.93] tracking-[-0.05em] md:text-[5rem] lg:text-[6rem]">
+        <h1 className="mt-8 max-w-3xl font-display text-[2.6rem] font-semibold leading-[.95] tracking-[-0.04em] md:text-[3.8rem] lg:text-[4.6rem]">
           Start with how you feel.<br />
-          Build knowledge around<br />
+          Build a plan around<br />
           <span className="text-[#D77E5F]">your goals.</span>
         </h1>
 
-        <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-[#5A5550] md:text-lg">
-          EVLV is a peptide and wellness education platform. We translate the research into plain language -- peptide science, hormone health, longevity, and how it all connects to you.
+        <p className="mx-auto mt-7 max-w-lg text-base leading-relaxed text-[#5A5550]">
+          EVLV is a US-based wellness education platform. We translate peptide science, hormone health, and longevity research into clear, honest guidance -- built around your goals, not a generic script.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <Link href="/book" className="inline-flex items-center gap-2.5 rounded-full bg-[#D77E5F] px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#C86B4D]">
-            Book your free pep talk <span aria-hidden>--&gt;</span>
+            Book a free call <span aria-hidden>--&gt;</span>
           </Link>
           <Link href="/peptides" className="inline-flex items-center gap-2.5 rounded-full border border-[#1B1D19]/20 bg-white/60 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#1B1D19] transition hover:bg-white">
-            Browse our topics
+            Browse our services
           </Link>
         </div>
 
@@ -84,8 +84,8 @@ export default function ConceptPage() {
               <Image src="/images/brand/wellness-consultation.png" alt="Free pep talk" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
             </div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Free session</p>
-            <h3 className="mt-2 font-display text-2xl font-semibold">Your free pep talk</h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/55">15 minutes with a wellness expert. Bring whatever questions are on your mind -- no prep, no pitch, no commitment.</p>
+            <h3 className="mt-2 font-display text-2xl font-semibold">Wellness optimization call</h3>
+            <p className="mt-3 text-sm leading-relaxed text-white/55">15 minutes with a wellness expert. We listen, explain the research, and map out the topics that apply to your goals.</p>
             <div className="mt-6">
               <Link href="/book" className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-white/20">Book free call --&gt;</Link>
             </div>
@@ -100,32 +100,22 @@ export default function ConceptPage() {
       </section>
 
       {/* ============================================================
-          WHAT WE DO -- 3 pillars, clean strip
+          TRUST STRIP
       ============================================================ */}
-      <section className="border-y border-[#1B1D19]/8 bg-[#F0E8D5] px-5 py-14 md:px-10">
-        <div className="mx-auto grid max-w-[1400px] gap-8 md:grid-cols-3">
+      <section className="border-y border-[#1B1D19]/8 bg-[#F0E8D5] px-5 py-8 md:px-10">
+        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-center gap-x-10 gap-y-5 md:justify-between">
           {[
-            {
-              icon: "ri-book-open-line",
-              title: "Research made readable",
-              body: "We take peptide science, hormone health, and longevity research out of the journals and into plain language you can actually use.",
-            },
-            {
-              icon: "ri-chat-smile-2-line",
-              title: "Start with a free call",
-              body: "Bring any question -- no prep required. Your first 15-minute call with a wellness expert is always free and always no-obligation.",
-            },
-            {
-              icon: "ri-shield-check-line",
-              title: "Honest limits",
-              body: "EVLV is an education platform. We're clear about what the research says, what it doesn't, and when a question belongs with your doctor.",
-            },
+            { icon: "ri-chat-smile-2-line", label: "Free 15-min call", sub: "No obligation, no pitch" },
+            { icon: "ri-microscope-line", label: "Peptide science", sub: "Translated into plain language" },
+            { icon: "ri-shield-check-line", label: "Education only", sub: "Not medical advice" },
+            { icon: "ri-map-pin-user-line", label: "US-based experts", sub: "Wellness specialists" },
+            { icon: "ri-lock-line", label: "Private & secure", sub: "We never sell your data" },
           ].map((item) => (
-            <div key={item.title} className="flex gap-5">
-              <i className={`${item.icon} mt-0.5 shrink-0 text-2xl text-[#C4724A]`} aria-hidden />
+            <div key={item.label} className="flex items-center gap-3">
+              <i className={`${item.icon} text-xl text-[#C4724A]`} aria-hidden />
               <div>
-                <h3 className="font-display text-lg font-semibold">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#5A5550]">{item.body}</p>
+                <p className="text-sm font-semibold text-[#1B1D19]">{item.label}</p>
+                <p className="text-[11px] text-[#5A5550]">{item.sub}</p>
               </div>
             </div>
           ))}
