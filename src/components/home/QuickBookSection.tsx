@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -12,12 +13,9 @@ const GOALS = [
   { id: "general", label: "General Wellness", icon: "ri-leaf-line" },
 ];
 
-type Step = 1 | 2 | "done";
-
 export function QuickBookSection() {
-  const [step, setStep] = useState<Step>(1);
+  const router = useRouter();
   const [selected, setSelected] = useState<string[]>([]);
-  const [form, setForm] = useState({ name: "", email: "" });
 
   function toggleGoal(id: string) {
     setSelected((prev) =>
@@ -25,13 +23,13 @@ export function QuickBookSection() {
     );
   }
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!form.name || !form.email) return;
-    setStep("done");
+  function goToBooking() {
+    if (!selected.length) return;
+    const labels = selected.map((id) => GOALS.find((g) => g.id === id)?.label ?? id);
+    router.push(`/book?interests=${encodeURIComponent(labels.join(","))}`);
   }
 
-  const progress = step === 1 ? 33 : step === 2 ? 66 : 100;
+  const progress = selected.length > 0 ? 50 : 10;
 
   return (
     <section className="relative overflow-hidden bg-charcoal py-24 text-white md:py-36">
@@ -87,107 +85,42 @@ export function QuickBookSection() {
             </div>
 
             <div className="p-7 md:p-8">
-              {step === 1 && (
-                <div>
-                  <p className="mb-1 font-mono text-[10px] uppercase tracking-widest text-white/30">
-                    Step 1 of 2
-                  </p>
-                  <h3 className="mb-6 font-display text-xl font-semibold">
-                    What would you like to learn about?
-                  </h3>
-                  <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
-                    {GOALS.map((g) => (
-                      <button
-                        key={g.id}
-                        type="button"
-                        onClick={() => toggleGoal(g.id)}
-                        className={`flex flex-col items-start gap-2 rounded-md border p-4 text-left text-sm transition ${
-                          selected.includes(g.id)
-                            ? "border-copper bg-copper/10 text-white"
-                            : "border-white/10 text-white/60 hover:border-white/25 hover:text-white/80"
-                        }`}
-                      >
-                        <i
-                          className={`${g.icon} text-lg ${
-                            selected.includes(g.id) ? "text-copper" : "text-white/40"
-                          }`}
-                        />
-                        {g.label}
-                      </button>
-                    ))}
-                  </div>
+              <p className="mb-1 font-mono text-[10px] uppercase tracking-widest text-white/30">
+                What&apos;s on your mind?
+              </p>
+              <h3 className="mb-6 font-display text-xl font-semibold">
+                Choose your focus, then pick a time.
+              </h3>
+              <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+                {GOALS.map((g) => (
                   <button
+                    key={g.id}
                     type="button"
-                    disabled={selected.length === 0}
-                    onClick={() => setStep(2)}
-                    className="mt-7 flex h-11 w-full items-center justify-center rounded-md bg-copper text-[12px] font-semibold uppercase tracking-[0.15em] text-charcoal transition hover:bg-copper-light disabled:opacity-40"
+                    onClick={() => toggleGoal(g.id)}
+                    aria-pressed={selected.includes(g.id)}
+                    className={`flex flex-col items-start gap-2 rounded-md border p-4 text-left text-sm transition ${
+                      selected.includes(g.id)
+                        ? "border-copper bg-copper/10 text-white"
+                        : "border-white/10 text-white/60 hover:border-white/25 hover:text-white/80"
+                    }`}
                   >
-                    Continue <i className="ri-arrow-right-line ml-1.5 text-xs" />
+                    <i
+                      className={`${g.icon} text-lg ${
+                        selected.includes(g.id) ? "text-copper" : "text-white/40"
+                      }`}
+                    />
+                    {g.label}
                   </button>
-                </div>
-              )}
-
-              {step === 2 && (
-                <form onSubmit={handleSubmit}>
-                  <p className="mb-1 font-mono text-[10px] uppercase tracking-widest text-white/30">
-                    Step 2 of 2
-                  </p>
-                  <h3 className="mb-2 font-display text-xl font-semibold">
-                    Where do we reach you?
-                  </h3>
-                  <p className="mb-6 text-sm text-white/50">
-                    Our education team will review your topics and reach out to arrange the call.
-                  </p>
-                  <div className="flex flex-col gap-3">
-                    <input
-                      required
-                      type="text"
-                      placeholder="Your name"
-                      value={form.name}
-                      onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-                      className="h-12 rounded-md border border-white/10 bg-white/5 px-4 text-sm text-white outline-none placeholder:text-white/30 focus:border-copper"
-                    />
-                    <input
-                      required
-                      type="email"
-                      placeholder="Email address"
-                      value={form.email}
-                      onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                      className="h-12 rounded-md border border-white/10 bg-white/5 px-4 text-sm text-white outline-none placeholder:text-white/30 focus:border-copper"
-                    />
-                  </div>
-                  <div className="mt-5 flex gap-3">
-                    <button
-                      type="button"
-                      onClick={() => setStep(1)}
-                      className="flex h-11 items-center justify-center rounded-md border border-white/10 px-5 text-[12px] font-semibold uppercase tracking-[0.15em] text-white/50 transition hover:border-white/25 hover:text-white/70"
-                    >
-                      Back
-                    </button>
-                    <button
-                      type="submit"
-                      className="flex h-11 flex-1 items-center justify-center rounded-md bg-copper text-[12px] font-semibold uppercase tracking-[0.15em] text-charcoal transition hover:bg-copper-light"
-                    >
-                      Send My Questions <i className="ri-send-plane-line ml-1.5 text-xs" />
-                    </button>
-                  </div>
-                </form>
-              )}
-
-              {step === "done" && (
-                <div className="flex flex-col items-center py-8 text-center">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-copper/15">
-                    <i className="ri-checkbox-circle-line text-3xl text-copper" />
-                  </div>
-                  <h3 className="font-display text-xl font-semibold">We&apos;ve got your questions.</h3>
-                  <p className="mt-2 max-w-xs text-sm text-white/60">
-                    Our education team will reach out to help arrange your free first call.
-                  </p>
-                  <p className="mt-5 font-mono text-[10px] uppercase tracking-widest text-white/25">
-                    Check your inbox
-                  </p>
-                </div>
-              )}
+                ))}
+              </div>
+              <button
+                type="button"
+                disabled={selected.length === 0}
+                onClick={goToBooking}
+                className="mt-7 flex h-11 w-full items-center justify-center rounded-md bg-copper text-[12px] font-semibold uppercase tracking-[0.15em] text-charcoal transition hover:bg-copper-light disabled:opacity-40"
+              >
+                Choose a time <i className="ri-arrow-right-line ml-1.5 text-xs" />
+              </button>
             </div>
 
             <div className="flex items-center justify-between border-t border-white/10 bg-white/[0.02] px-6 py-3">
