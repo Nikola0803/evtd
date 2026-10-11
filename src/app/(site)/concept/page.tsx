@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 
 export const metadata: Metadata = {
-  title: { absolute: "EVLV | Peptide & Wellness Education" },
-  description: "Clear, practical education about peptide science, hormone health, longevity, and everyday wellness.",
+  title: { absolute: "EVLV | Peptide Education & Wellness Optimization" },
+  description: "EVLV helps you understand peptides, hormone health, and longevity -- so you can have an informed conversation with your prescribing doctor. Free 15-min calls. US-based wellness experts.",
 };
 
 const focusAreas = [
@@ -17,12 +17,12 @@ const focusAreas = [
 ];
 
 const faqs = [
-  ["What does the session cost?", "Nothing. Your first 15-minute call is free, with no obligation."],
-  ["Who will I be speaking with?", "One of our peptide education specialists. They listen to your questions and explain our resources in plain language."],
-  ["Do I need to prepare anything?", "No. Come with whatever questions are on your mind."],
-  ["Is this medical advice?", "No. EVLV is an education platform. We do not diagnose, prescribe, or provide treatment."],
-  ["Will you try to sell me something?", "No. The first call is educational. There is no pitch and no obligation."],
-  ["What happens to my information?", "It stays with our team. We follow applicable U.S. privacy laws and never sell your details."],
+  ["What does the session cost?", "Nothing. Your first 15-minute education call is completely free, with no obligation."],
+  ["Who will I be speaking with?", "One of our wellness education specialists. They have deep knowledge of peptide science, hormone health, and longevity research -- and they explain it in plain English, not clinical jargon."],
+  ["Do I need to prepare anything?", "No. Bring whatever questions are on your mind -- whether you're brand new to peptides or have been researching them for months."],
+  ["Is this medical advice?", "No. EVLV is a wellness education platform. We explain the research and science clearly so you can have an informed conversation with a licensed prescriber. We do not diagnose, prescribe, or recommend specific doses -- that is your doctor's role."],
+  ["Will you try to sell me something?", "No. The first call is purely educational. There is no pitch and no obligation. If you want to continue learning after the call, we offer a monthly education plan -- but that conversation only happens if you bring it up."],
+  ["What happens after the call?", "You will have a clear picture of which wellness topics apply to your goals, and you will know exactly what to bring up with your prescribing doctor. Most clients say they leave the call feeling genuinely prepared for the first time."],
 ];
 
 export default function ConceptPage() {
@@ -34,22 +34,22 @@ export default function ConceptPage() {
       ============================================================ */}
       <section className="flex min-h-[88vh] flex-col items-center justify-center px-5 pb-12 pt-20 text-center md:px-10 md:pb-16 md:pt-28">
         <span className="inline-flex items-center gap-2 rounded-full border border-[#D9C3A0] bg-[#F5EDD8] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8D4A38]">
-          <i className="ri-shield-check-line text-xs" aria-hidden /> Peptide &amp; wellness education, US-wide
+          <i className="ri-shield-check-line text-xs" aria-hidden /> Wellness optimization &amp; peptide education, US-wide
         </span>
 
         <h1 className="mt-8 max-w-3xl font-display text-[2.6rem] font-semibold leading-[.95] tracking-[-0.04em] md:text-[3.8rem] lg:text-[4.6rem]">
-          Start with how you feel.<br />
-          Build a plan around<br />
-          <span className="text-[#D77E5F]">your goals.</span>
+          Curious about peptides?<br />
+          We help you understand them.<br />
+          <span className="text-[#D77E5F]">Your doctor prescribes them.</span>
         </h1>
 
         <p className="mx-auto mt-7 max-w-lg text-base leading-relaxed text-[#5A5550]">
-          EVLV is a US-based wellness education platform. We translate peptide science, hormone health, and longevity research into clear, honest guidance -- built around your goals, not a generic script.
+          EVLV is a US-based wellness education platform. Our experts break down peptide science, hormone health, and longevity research so you arrive at your next appointment informed, confident, and knowing exactly what to ask.
         </p>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <Link href="/book" className="inline-flex items-center gap-2.5 rounded-full bg-[#D77E5F] px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#C86B4D]">
-            Book a free call <span aria-hidden>--&gt;</span>
+            Book a free education call <span aria-hidden>--&gt;</span>
           </Link>
           <Link href="/peptides" className="inline-flex items-center gap-2.5 rounded-full border border-[#1B1D19]/20 bg-white/60 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#1B1D19] transition hover:bg-white">
             Browse our services
@@ -70,7 +70,7 @@ export default function ConceptPage() {
             </div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Membership</p>
             <h3 className="mt-2 font-display text-2xl font-semibold">Monthly Wellness Plan</h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/55">Ongoing peptide education, a personal learning guide, and monthly 1-on-1 sessions with an EVLV wellness expert.</p>
+            <p className="mt-3 text-sm leading-relaxed text-white/55">For people serious about their wellness journey. Monthly 1-on-1 sessions with a dedicated EVLV expert, a personal learning guide, and ongoing support as your goals evolve.</p>
             <div className="mt-6 flex items-center gap-4">
               <Link href="/membership" className="inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#C86B4D]">See if I qualify</Link>
               <Link href="/membership" className="text-[11px] font-semibold text-white/50 transition hover:text-white">Learn more --&gt;</Link>
@@ -83,9 +83,9 @@ export default function ConceptPage() {
             <div className="relative mb-4 h-40 overflow-hidden rounded-xl">
               <Image src="/images/brand/wellness-consultation.png" alt="Free pep talk" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
             </div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Free session</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Free education call</p>
             <h3 className="mt-2 font-display text-2xl font-semibold">Wellness optimization call</h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/55">15 minutes with a wellness expert. We listen, explain the research, and map out the topics that apply to your goals.</p>
+            <p className="mt-3 text-sm leading-relaxed text-white/55">15 minutes with a wellness expert. We explain what peptides are, how they work, and which ones may apply to your goals -- so you can walk into your doctor's office fully prepared.</p>
             <div className="mt-6">
               <Link href="/book" className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-white/20">Book free call --&gt;</Link>
             </div>
@@ -105,10 +105,10 @@ export default function ConceptPage() {
       <section className="border-y border-[#1B1D19]/8 bg-[#F0E8D5] px-5 py-8 md:px-10">
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-center gap-x-10 gap-y-5 md:justify-between">
           {[
-            { icon: "ri-chat-smile-2-line", label: "Free 15-min call", sub: "No obligation, no pitch" },
-            { icon: "ri-microscope-line", label: "Peptide science", sub: "Translated into plain language" },
-            { icon: "ri-shield-check-line", label: "Education only", sub: "Not medical advice" },
-            { icon: "ri-map-pin-user-line", label: "US-based experts", sub: "Wellness specialists" },
+            { icon: "ri-chat-smile-2-line", label: "Free 15-min call", sub: "No pitch, no obligation" },
+            { icon: "ri-microscope-line", label: "Peptide science, explained", sub: "Plain English, not jargon" },
+            { icon: "ri-stethoscope-line", label: "Prepare for your doctor", sub: "Know exactly what to ask" },
+            { icon: "ri-map-pin-user-line", label: "US-based experts", sub: "Wellness specialists, not MDs" },
             { icon: "ri-lock-line", label: "Private & secure", sub: "We never sell your data" },
           ].map((item) => (
             <div key={item.label} className="flex items-center gap-3">
@@ -132,7 +132,7 @@ export default function ConceptPage() {
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#B45C42]">Explore by topic</p>
               <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-0.04em] md:text-6xl">Where do you<br />want to start?</h2>
             </div>
-            <p className="max-w-sm text-sm leading-relaxed text-[#5A5550]">Choose a focus area and we'll walk you through the research, context, and what questions to ask next.</p>
+            <p className="max-w-sm text-sm leading-relaxed text-[#5A5550]">Choose a focus area and we'll walk you through the science, the context, and the right questions to bring to your prescribing doctor.</p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -173,8 +173,8 @@ export default function ConceptPage() {
                 <i className="ri-chat-smile-2-line text-lg" aria-hidden />
               </div>
               <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Start here</p>
-              <h3 className="mt-2 font-display text-2xl font-semibold">Free Pep Talk</h3>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-white/55">A 15-minute call with a wellness expert. Bring whatever questions are on your mind -- no prep, no pitch, no commitment.</p>
+              <h3 className="mt-2 font-display text-2xl font-semibold">Free Education Call</h3>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-white/55">15 minutes with a wellness expert. We break down the peptides relevant to your goals and help you build the right questions for your prescribing doctor. No prep needed.</p>
               <Link href="/book" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#C86B4D]">Book free call <span aria-hidden>--&gt;</span></Link>
             </article>
 
@@ -185,7 +185,7 @@ export default function ConceptPage() {
               </div>
               <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Education sessions</p>
               <h3 className="mt-2 font-display text-2xl font-semibold">Topic Deep Dives</h3>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-white/55">Focused education sessions on peptide science, hormone health, longevity, and everyday wellness. Practical context, not medical advice.</p>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-white/55">Focused sessions on specific peptides, hormone health, longevity protocols, and more. Build real knowledge so you can have a genuinely informed conversation with your doctor.</p>
               <Link href="/peptides" className="mt-8 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/70 transition hover:text-white">Explore topics <span aria-hidden>--&gt;</span></Link>
             </article>
 
@@ -199,7 +199,7 @@ export default function ConceptPage() {
               </div>
               <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Membership</p>
               <h3 className="mt-2 font-display text-2xl font-semibold">Monthly Plan</h3>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-white/55">Ongoing education, a personal learning guide, and monthly 1-on-1 sessions with an EVLV wellness expert. Built around your goals.</p>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-white/55">For people who want ongoing support through their wellness journey. Monthly 1-on-1 sessions, a personal learning guide, and a dedicated expert who keeps up with your progress and goals.</p>
               <Link href="/membership" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#D77E5F]">See if I qualify <span aria-hidden>--&gt;</span></Link>
             </article>
 
@@ -235,14 +235,14 @@ export default function ConceptPage() {
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#B45C42]">Why EVLV</p>
             <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-0.04em] md:text-5xl">Clarity, not a pitch.</h2>
-            <p className="mt-5 text-base leading-relaxed text-[#5A5550]">Most wellness information either oversells or overwhelms. We built EVLV to be a third option: clear, honest, and built around your questions.</p>
+            <p className="mt-5 text-base leading-relaxed text-[#5A5550]">Most people researching peptides hit a wall -- vague forums, oversold products, or dense clinical papers. EVLV sits in between: real expertise, explained in plain language, focused on making you a more informed patient.</p>
 
             <div className="mt-10 space-y-7">
               {[
-                ["ri-file-search-line", "Research in context", "We don't cherry-pick studies. We explain what the evidence actually shows and where it has limits."],
-                ["ri-user-voice-line", "Your questions first", "Sessions are shaped around what you want to understand, not a script we need to get through."],
-                ["ri-shield-line", "No medical claims", "We never diagnose, prescribe, or recommend doses. That boundary isn't a disclaimer -- it's how we operate."],
-                ["ri-heart-line", "Education that sticks", "Learning pathways, not one-off answers. You leave every session with context, not just an answer."],
+                ["ri-file-search-line", "Peptide science without the noise", "We explain what peptides are, how they work, and what the research actually shows -- not a sales pitch, not a medical brochure."],
+                ["ri-stethoscope-line", "Prepare for your prescribing doctor", "You'll leave every session knowing which peptides align with your goals and exactly what questions to raise with a licensed provider."],
+                ["ri-user-voice-line", "Your goals, your pace", "Whether you're completely new or already deep in research, sessions are built around where you are and what you need to understand next."],
+                ["ri-shield-line", "Honest about our limits", "We are educators, not doctors. We never diagnose, prescribe, or suggest specific doses. That is your doctor's role -- and we help you get the most out of that conversation."],
               ].map(([icon, title, body]) => (
                 <div key={title as string} className="flex gap-5">
                   <i className={`${icon} mt-0.5 shrink-0 text-xl text-[#C4724A]`} aria-hidden />
@@ -255,7 +255,7 @@ export default function ConceptPage() {
             </div>
 
             <Link href="/book" className="mt-12 inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#2A2C27]">
-              Book your free pep talk
+              Book your free education call
             </Link>
           </div>
         </div>
@@ -274,7 +274,7 @@ export default function ConceptPage() {
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#B45C42]">Common questions</p>
             <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-0.04em] md:text-5xl">Straight answers.</h2>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-[#5A5550]">No hidden agenda and no medical service. Just honest answers to the questions we hear most.</p>
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-[#5A5550]">No hidden agenda, no medical service. Just honest answers to the questions people ask us most before their first call.</p>
             <Link href="/book" className="mt-10 inline-flex items-center gap-2 rounded-full border border-[#1B1D19]/20 bg-white/60 px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#1B1D19] transition hover:bg-white">
               Still have questions? Book a call
             </Link>
@@ -305,11 +305,11 @@ export default function ConceptPage() {
               One honest<br />conversation.
             </h2>
             <p className="mt-7 max-w-md text-base leading-relaxed text-white/60">
-              Tell us what you want to learn. We'll explain what EVLV can help you understand -- and what belongs with a licensed professional.
+              Tell us what you want to understand. We will explain the peptide science clearly, help you identify what applies to your goals, and make sure you walk away ready for a real conversation with a prescribing doctor.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-5">
               <Link href="/book" className="inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#C86B4D]">
-                Book your free pep talk
+                Book your free education call
               </Link>
               <span className="text-[11px] text-white/35">Education only &middot; No commitment &middot; Always free</span>
             </div>
