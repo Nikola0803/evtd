@@ -16,12 +16,12 @@ export default function GoalSelector({ activeGoal, onSelect }: GoalSelectorProps
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             tone="light"
-            eyebrow="Start with how you feel"
-            title="Shop by how you want to feel."
-            description="Pick the outcome that matters most right now. We'll surface the eligible options for that goal."
+            eyebrow="Start with your goal"
+            title="What matters most to you right now?"
+            description="Select a wellness goal and we’ll match you with the right consultation focus and, where appropriate, a personalized care plan."
           />
           <p className="max-w-xs text-sm leading-relaxed text-secondary-300 lg:text-right">
-            Every option is reviewed by a licensed clinician. Eligibility is never guaranteed.
+            Every plan begins with a free 15-minute conversation with a licensed clinician.
           </p>
         </div>
 

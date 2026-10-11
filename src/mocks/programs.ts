@@ -1,23 +1,5 @@
 export const programs = [
   {
-    id: 'sermorelin-care',
-    slug: 'sermorelin',
-    name: 'Sermorelin Care',
-    goalId: 'sleep-recovery',
-    goalLabel: 'Sleep & Recovery',
-    purpose: 'Sleep, recovery and natural growth-hormone support',
-    format: 'Subcutaneous',
-    formatGroup: 'Injectable',
-    priceFrom: 109,
-    priceLabel: 'From $109/month',
-    badge: 'Prescription treatment',
-    featured: true,
-    description:
-      'A clinician-guided approach for adults focused on sleep quality, overnight recovery and natural growth-hormone signaling.',
-    image:
-      'https://readdy.ai/api/search-image?query=Minimal%20clinical%20still%20life%20of%20a%20clean%20glass%20vial%20and%20neutral%20packaging%20on%20a%20soft%20stone%20surface%2C%20warm%20morning%20light%2C%20editorial%20product%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20mood%2C%20simple%20uncluttered%20background&width=1000&height=760&seq=evlv-program-sermorelin-01&orientation=landscape',
-  },
-  {
     id: 'cellular-energy-care',
     slug: 'nad',
     name: 'Cellular Energy Care',
@@ -33,7 +15,7 @@ export const programs = [
     description:
       'A prescription program exploring cellular wellness, daily energy and mental focus for adults pursuing longevity.',
     image:
-      'https://readdy.ai/api/search-image?query=Minimal%20clinical%20still%20life%20of%20an%20amber%20glass%20vial%20beside%20a%20small%20dish%20on%20a%20linen%20surface%2C%20soft%20warm%20daylight%2C%20editorial%20product%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20mood%2C%20simple%20uncluttered%20background&width=1000&height=760&seq=evlv-program-cellular-01&orientation=landscape',
+      'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1000&h=760&q=80',
   },
   {
     id: 'skin-renewal-care',
@@ -51,7 +33,7 @@ export const programs = [
     description:
       'A prescription topical option that may support skin renewal and healthier-looking hair as part of a simple routine.',
     image:
-      'https://readdy.ai/api/search-image?query=Minimal%20clinical%20still%20life%20of%20a%20matte%20dropper%20bottle%20with%20a%20glass%20pipette%20on%20a%20soft%20stone%20tray%2C%20warm%20natural%20light%2C%20editorial%20skincare%20product%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20mood&width=1000&height=760&seq=evlv-program-skin-01&orientation=landscape',
+      'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1000&h=760&q=80',
   },
   {
     id: 'metabolic-care',
@@ -69,7 +51,7 @@ export const programs = [
     description:
       'A personalized program built around weight and metabolic health, shaped by your clinician after review.',
     image:
-      'https://readdy.ai/api/search-image?query=Minimal%20clinical%20still%20life%20of%20a%20neutral%20unbranded%20carton%20and%20measuring%20cup%20on%20a%20clean%20stone%20surface%2C%20warm%20daylight%2C%20editorial%20product%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20mood%2C%20simple%20background&width=1000&height=760&seq=evlv-program-metabolic-01&orientation=landscape',
+      'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&h=760&q=80',
   },
   {
     id: 'sleep-support-care',
@@ -87,7 +69,7 @@ export const programs = [
     description:
       'A clinician-reviewed program for adults who want to improve their nightly routine and support restorative rest.',
     image:
-      'https://readdy.ai/api/search-image?query=Minimal%20clinical%20still%20life%20of%20a%20small%20neutral%20bottle%20beside%20folded%20linen%20on%20a%20stone%20surface%2C%20soft%20dim%20evening%20light%2C%20editorial%20product%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20mood&width=1000&height=760&seq=evlv-program-sleep-01&orientation=landscape',
+      'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1000&h=760&q=80',
   },
   {
     id: 'hair-retention-care',
@@ -105,7 +87,7 @@ export const programs = [
     description:
       'A prescription topical program that may support hair density and healthier-looking growth over time.',
     image:
-      'https://readdy.ai/api/search-image?query=Minimal%20clinical%20still%20life%20of%20a%20slim%20matte%20bottle%20with%20a%20pump%20on%20a%20soft%20linen%20square%2C%20warm%20daylight%2C%20editorial%20product%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20mood%2C%20simple%20background&width=1000&height=760&seq=evlv-program-hair-01&orientation=landscape',
+      'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&h=760&q=80',
   },
   {
     id: 'sexual-wellness-care',
@@ -123,7 +105,7 @@ export const programs = [
     description:
       'Private, judgment-free care reviewed by a licensed clinician and delivered discreetly to your door.',
     image:
-      'https://readdy.ai/api/search-image?query=Minimal%20clinical%20still%20life%20of%20a%20compact%20neutral%20case%20beside%20a%20folded%20cloth%20on%20a%20warm%20stone%20surface%2C%20soft%20natural%20light%2C%20editorial%20product%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20discreet%20premium%20mood&width=1000&height=760&seq=evlv-program-wellness-01&orientation=landscape',
+      'https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?auto=format&fit=crop&w=1000&h=760&q=80',
   },
   {
     id: 'recovery-performance-care',
@@ -141,6 +123,6 @@ export const programs = [
     description:
       'A clinician-guided program for adults focused on recovery between efforts and consistent daily performance.',
     image:
-      'https://readdy.ai/api/search-image?query=Minimal%20clinical%20still%20life%20of%20a%20glass%20vial%20and%20folded%20towel%20on%20a%20clean%20stone%20bench%2C%20soft%20morning%20light%2C%20editorial%20product%20photography%2C%20muted%20sage%20and%20stone%20palette%2C%20calm%20premium%20mood&width=1000&height=760&seq=evlv-program-recovery-01&orientation=landscape',
+      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&h=760&q=80',
   },
 ];
