@@ -41,27 +41,6 @@ const focusAreas = [
   },
 ];
 
-const programs = [
-  {
-    eyebrow: "Core education",
-    title: "Peptide Education",
-    copy: "Understand the language, research categories, and limits of common peptide claims.",
-    href: "/peptides",
-  },
-  {
-    eyebrow: "Health education",
-    title: "Hormone Health",
-    copy: "Build useful context around hormone health and learn to assess common claims.",
-    href: "/hormone-health",
-  },
-  {
-    eyebrow: "Ongoing learning",
-    title: "Monthly Membership",
-    copy: "Education sessions, organized resources, and support for the questions that matter to you.",
-    href: "/membership",
-  },
-];
-
 const comparisonRows = [
   "Plain-language explanations",
   "Research placed in context",
@@ -189,22 +168,71 @@ export default function ConceptPage() {
       </section>
 
       {/* ── Programs ── */}
-      <section className="bg-[#D9C3A0] px-4 py-20 md:px-8 md:py-28">
+      <section className="bg-[#FAF2E4] px-4 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-[1440px]">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#8D4A38]">Ways to learn</p>
-          <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] md:text-6xl">A clearer path through complex topics.</h2>
-          <div className="mt-12 grid gap-4 lg:grid-cols-3">
-            {programs.map((program, index) => (
-              <article key={program.title} className="flex min-h-[340px] flex-col rounded-[1.7rem] border border-black/10 bg-[#FCF3E5] p-7 md:p-9">
-                <div className="flex items-center justify-between">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#B45C42]">{program.eyebrow}</p>
-                  <span className="font-display text-4xl font-semibold text-black/10">0{index + 1}</span>
-                </div>
-                <h3 className="mt-12 max-w-xs font-display text-3xl font-semibold leading-tight">{program.title}</h3>
-                <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#62675F]">{program.copy}</p>
-                <Link href={program.href} className="mt-auto inline-flex items-center gap-2 pt-8 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1B1D19]">Explore education <span aria-hidden>→</span></Link>
-              </article>
-            ))}
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#B45C42]">What we offer</p>
+              <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.02] tracking-[-.035em] md:text-6xl">Choose the path that fits <span className="italic text-[#D77E5F]">where you are.</span></h2>
+            </div>
+            <p className="max-w-sm text-sm leading-relaxed text-[#62675F] lg:text-right">Education only. We do not diagnose, prescribe, or recommend treatment.</p>
+          </div>
+
+          <div className="mt-12 grid gap-4 lg:grid-cols-4">
+            {/* Pack 1: Free pep talk */}
+            <article className="flex flex-col rounded-[1.7rem] border border-black/8 bg-[#1B1D19] p-7 text-white md:p-8">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#F2A58C]">Start here</p>
+              <h3 className="mt-8 font-display text-2xl font-semibold leading-tight">Free Pep Talk</h3>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-white/60">A 15-minute call with a wellness expert. Bring whatever questions are on your mind -- no prep, no pitch, no commitment.</p>
+              <ul className="mt-6 space-y-2.5 border-t border-white/10 pt-6">
+                {["15 minutes, completely free", "Ask any wellness question", "Plain-language answers"].map((b) => (
+                  <li key={b} className="flex items-start gap-2.5 text-[12px] text-white/70"><span className="mt-1 text-[#F2A58C]">--</span>{b}</li>
+                ))}
+              </ul>
+              <Link href="/book" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#D77E5F] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#C86B4D]">Book free call <span aria-hidden>→</span></Link>
+            </article>
+
+            {/* Pack 2: Education sessions */}
+            <article className="flex flex-col rounded-[1.7rem] border border-black/8 bg-[#FCF3E5] p-7 md:p-8">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#B45C42]">Education sessions</p>
+              <h3 className="mt-8 font-display text-2xl font-semibold leading-tight text-[#1B1D19]">Topic Deep Dives</h3>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-[#62675F]">Focused education sessions on peptide science, hormone health, longevity, and everyday wellness. Practical context, not medical advice.</p>
+              <ul className="mt-6 space-y-2.5 border-t border-black/10 pt-6">
+                {["Peptide education", "Hormone health", "Energy & longevity"].map((b) => (
+                  <li key={b} className="flex items-start gap-2.5 text-[12px] text-[#62675F]"><span className="mt-1 text-[#B45C42]">--</span>{b}</li>
+                ))}
+              </ul>
+              <Link href="/peptides" className="mt-8 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1B1D19] transition hover:text-[#D77E5F]">Explore topics <span aria-hidden>→</span></Link>
+            </article>
+
+            {/* Pack 3: Monthly membership */}
+            <article className="flex flex-col rounded-[1.7rem] border-2 border-[#D77E5F] bg-[#FCF3E5] p-7 md:p-8">
+              <div className="flex items-center justify-between">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#B45C42]">Most popular</p>
+                <span className="rounded-full bg-[#D77E5F] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-white">Membership</span>
+              </div>
+              <h3 className="mt-8 font-display text-2xl font-semibold leading-tight text-[#1B1D19]">Monthly Membership</h3>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-[#62675F]">Ongoing education, a personal learning guide, and monthly 1-on-1 sessions with an EVLV wellness expert. Built around your goals.</p>
+              <ul className="mt-6 space-y-2.5 border-t border-black/10 pt-6">
+                {["Monthly 1-on-1 session", "Private resource library", "Community + education support"].map((b) => (
+                  <li key={b} className="flex items-start gap-2.5 text-[12px] text-[#62675F]"><span className="mt-1 text-[#D77E5F]">--</span>{b}</li>
+                ))}
+              </ul>
+              <Link href="/membership" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#D77E5F]">See if I qualify <span aria-hidden>→</span></Link>
+            </article>
+
+            {/* Pack 4: DNA Blueprint */}
+            <article className="flex flex-col rounded-[1.7rem] border border-black/8 bg-[#FCF3E5] p-7 md:p-8">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#B45C42]">Members only</p>
+              <h3 className="mt-8 font-display text-2xl font-semibold leading-tight text-[#1B1D19]">DNA Blueprint</h3>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-[#62675F]">A home collection kit, a comprehensive genetic wellness report, and a private 60-minute consultation on what your DNA means for your health.</p>
+              <ul className="mt-6 space-y-2.5 border-t border-black/10 pt-6">
+                {["Home DNA collection kit", "Full genetic wellness report", "Private 60-min consult"].map((b) => (
+                  <li key={b} className="flex items-start gap-2.5 text-[12px] text-[#62675F]"><span className="mt-1 text-[#B45C42]">--</span>{b}</li>
+                ))}
+              </ul>
+              <Link href="/dna-blueprint" className="mt-8 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1B1D19] transition hover:text-[#D77E5F]">Learn more <span aria-hidden>→</span></Link>
+            </article>
           </div>
         </div>
       </section>

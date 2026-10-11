@@ -32,8 +32,7 @@ export default function MembershipPage() {
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
               Ongoing education, organized resources, and a private community for people who want to learn with care.
             </p>
-            <p className="mt-6 font-display text-4xl font-semibold text-copper">$199<span className="text-lg text-white/50">/month</span></p>
-            <p className="mt-1 text-xs text-white/40">Cancel anytime · No lock-in contracts</p>
+            <p className="mt-6 text-sm text-white/50">Cancel anytime · No lock-in contracts</p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link href="/book" className="rounded-full bg-[#D77E5F] px-7 py-3.5 text-[12px] font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#C86B4D]">
                 Start with a Free Call
