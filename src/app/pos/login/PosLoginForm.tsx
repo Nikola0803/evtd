@@ -101,7 +101,7 @@ export function PosLoginForm() {
           })}
         </div>
 
-        {/* Error row — reserves space to prevent layout shift */}
+        {/* Error row -- reserves space to prevent layout shift */}
         <div className={`transition-opacity duration-200 ${error ? "opacity-100" : "opacity-0"}`}>
           <p className="text-xs text-red-400">{error || " "}</p>
         </div>
@@ -145,7 +145,7 @@ export function PosLoginForm() {
         })}
       </div>
 
-      {/* Submit — slides up and fades in when ≥ MIN_PIN digits */}
+      {/* Submit -- slides up and fades in when >= MIN_PIN digits */}
       <div
         className={`transition-all duration-300 ease-out ${
           ready ? "opacity-100 translate-y-0" : "pointer-events-none opacity-0 translate-y-2"
