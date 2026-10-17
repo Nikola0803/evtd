@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 };
 
 const focusAreas = [
-  { title: "Weight & Body Composition", href: "/weight-body-composition", icon: "ri-scales-3-line" },
-  { title: "Energy & Longevity", href: "/energy-longevity", icon: "ri-heart-pulse-line" },
-  { title: "Hormone Health", href: "/hormone-health", icon: "ri-test-tube-line" },
-  { title: "Performance & Energy", href: "/performance-energy", icon: "ri-flashlight-line" },
-  { title: "Sleep & Recovery", href: "/sleep-recovery", icon: "ri-moon-line" },
+  { title: "Weight & Body Composition", href: "/weight-body-composition", icon: "ri-scales-3-line", image: "/images/brand/weight-body-composition.png", imagePosition: "object-center", alt: "Woman standing confidently in a wellness studio" },
+  { title: "Energy & Longevity", href: "/energy-longevity", icon: "ri-heart-pulse-line", image: "/images/brand/focus-longevity.png", imagePosition: "object-center", alt: "Woman enjoying an active and healthy lifestyle outdoors" },
+  { title: "Hormone Health", href: "/hormone-health", icon: "ri-test-tube-line", image: "/images/brand/focus-hormone-balance.png", imagePosition: "object-center", alt: "Woman relaxing in a calm home setting" },
+  { title: "Performance & Energy", href: "/performance-energy", icon: "ri-flashlight-line", image: "/images/brand/focus-performance-energy.png", imagePosition: "object-center", alt: "Woman training with a kettlebell" },
+  { title: "Sleep & Recovery", href: "/sleep-recovery", icon: "ri-moon-line", image: "/images/brand/focus-sleep-recovery.png", imagePosition: "object-center", alt: "Woman stretching after a restful night" },
 ];
 
 const faqs = [
@@ -63,9 +63,9 @@ export default function ConceptPage() {
         <div className="mt-16 grid w-full max-w-[1100px] gap-4 text-left sm:grid-cols-2">
           {/* Membership card */}
           <div className="relative overflow-hidden rounded-2xl bg-[#1B1D19] p-7 text-white md:p-9">
-            <div className="absolute right-5 top-5 rounded-full bg-[#D77E5F] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-white">Most popular</div>
             <div className="relative mb-4 h-40 overflow-hidden rounded-xl">
               <Image src="/images/brand/wellness-hero.png" alt="Wellness membership" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
+              <div className="absolute right-4 top-4 z-20 rounded-full bg-[#D77E5F] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-white shadow-sm">Most popular</div>
             </div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Membership</p>
             <h3 className="mt-2 font-display text-2xl font-semibold">Monthly Wellness Plan</h3>
@@ -78,9 +78,9 @@ export default function ConceptPage() {
 
           {/* Free pep talk card */}
           <div className="relative overflow-hidden rounded-2xl bg-[#1B1D19] p-7 text-white md:p-9">
-            <div className="absolute right-5 top-5 rounded-full bg-[#F5EDD8] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-[#8D4A38]">Start here</div>
             <div className="relative mb-4 h-40 overflow-hidden rounded-xl">
               <Image src="/images/brand/wellness-consultation.png" alt="Free pep talk" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
+              <div className="absolute right-4 top-4 z-20 rounded-full bg-[#F5EDD8] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-[#8D4A38] shadow-sm">Start here</div>
             </div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Free education call</p>
             <h3 className="mt-2 font-display text-2xl font-semibold">Wellness optimization call</h3>
@@ -139,15 +139,23 @@ export default function ConceptPage() {
               <Link
                 key={area.title}
                 href={area.href}
-                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#1B1D19]/10 bg-[#F5EDD8] p-6 transition hover:-translate-y-1 hover:border-[#D77E5F] hover:shadow-[0_16px_40px_rgba(27,29,25,.09)]"
+                className="group relative flex min-h-[320px] flex-col justify-between overflow-hidden rounded-2xl border border-[#1B1D19]/10 bg-[#1B1D19] p-6 text-white transition hover:-translate-y-1 hover:border-[#D77E5F] hover:shadow-[0_16px_40px_rgba(27,29,25,.18)]"
               >
-                <div className="flex items-start justify-between">
-                  <i className={`${area.icon} text-2xl text-[#C4724A]`} aria-hidden />
-                  <span className="text-[10px] font-semibold tracking-[0.15em] text-[#1B1D19]/25">0{i + 1}</span>
+                <Image
+                  src={area.image}
+                  alt={area.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                  className={`object-cover ${area.imagePosition} transition duration-500 group-hover:scale-[1.04]`}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#1B1D19]/25 via-[#1B1D19]/20 to-[#1B1D19]/90" />
+                <div className="relative z-10 flex items-start justify-between">
+                  <i className={`${area.icon} text-2xl text-[#F2A58C]`} aria-hidden />
+                  <span className="text-[10px] font-semibold tracking-[0.15em] text-white/65">0{i + 1}</span>
                 </div>
-                <div className="mt-12">
+                <div className="relative z-10 mt-12">
                   <h3 className="font-display text-lg font-semibold leading-snug">{area.title}</h3>
-                  <span className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#B45C42] transition group-hover:gap-3">Explore <span aria-hidden>--&gt;</span></span>
+                  <span className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#F2A58C] transition group-hover:gap-3">Explore <span aria-hidden>--&gt;</span></span>
                 </div>
               </Link>
             ))}
