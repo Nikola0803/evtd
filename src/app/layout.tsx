@@ -42,6 +42,8 @@ export const metadata: Metadata = {
   keywords: [
     "women's wellness education",
     "health optimization for women",
+    "men's wellness optimization",
+    "peptide education for men",
     "peptide education",
     "hormone health education",
     "wellness education",

@@ -65,7 +65,7 @@ export async function Hero() {
             </a>
           ) : (
             <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white backdrop-blur-sm">
-              <i className="ri-shield-check-line text-copper" /> Evidence-Based &amp; Women-First
+              <i className="ri-shield-check-line text-copper" /> Women-First &amp; Open to Everyone
             </div>
           )}
           <span className="hidden h-4 w-px bg-white/20 sm:block" />

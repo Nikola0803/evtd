@@ -1,6 +1,6 @@
 const ITEMS = [
   { icon: "ri-heart-pulse-line", title: "Evidence-Based", subtitle: "Protocols" },
-  { icon: "ri-women-line", title: "Women-First", subtitle: "Approach" },
+  { icon: "ri-women-line", title: "Women-First", subtitle: "Men Welcome" },
   { icon: "ri-user-settings-line", title: "Personalized", subtitle: "Plans" },
   { icon: "ri-lock-line", title: "Private &", subtitle: "Confidential" },
 ];

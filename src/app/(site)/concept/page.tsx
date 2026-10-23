@@ -43,7 +43,7 @@ export default function ConceptPage() {
         </h1>
 
         <p className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-[#5A5550]">
-          Understand peptide science, hormone health, longevity, and everyday wellness. Clear education, no hype, and no medical promises.
+          Women-first wellness education, built for anyone serious about feeling and performing better. Understand peptide science, hormone health, longevity, and everyday optimization without hype or medical promises.
         </p>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
@@ -79,12 +79,12 @@ export default function ConceptPage() {
           {/* Free pep talk card */}
           <div className="relative overflow-hidden rounded-2xl bg-[#223128] p-7 text-white md:p-9">
             <div className="relative mb-4 aspect-square overflow-hidden rounded-xl bg-[#F0E4D1] sm:aspect-[16/9]">
-              <Image src="/images/brand/instagram-cartoon-call.png" alt="Illustrated EVLV education call" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-contain object-center" />
+              <Image src="/images/brand/instagram-cartoon-mens-consult.png" alt="Athletic man joining an EVLV wellness optimization call" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-contain object-center" />
               <div className="absolute right-4 top-4 z-20 rounded-full bg-[#F5EDD8] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-[#8D4A38] shadow-sm">Start here</div>
             </div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Free education call</p>
             <h3 className="mt-2 font-display text-2xl font-semibold">Wellness optimization call</h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/55">15 minutes with a wellness expert. We explain what peptides are, how they work, and which ones may apply to your goals -- so you can walk into your doctor's office fully prepared.</p>
+            <p className="mt-3 text-sm leading-relaxed text-white/55">15 minutes with a wellness expert. We explain peptide research through the lens of your performance, recovery, metabolic health, and longevity goals -- so you can speak with your doctor fully prepared.</p>
             <div className="mt-6">
               <Link href="/book" className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-white/20">Book free call --&gt;</Link>
             </div>
@@ -231,8 +231,8 @@ export default function ConceptPage() {
         <div className="mx-auto grid max-w-[1400px] items-center gap-16 lg:grid-cols-2">
           <div className="relative aspect-square overflow-hidden rounded-[1.5rem] lg:aspect-auto lg:min-h-[520px]">
             <Image
-              src="/images/brand/instagram-cartoon-peptide-education.png"
-              alt="Illustrated peptide education with a licensed clinician"
+              src="/images/brand/instagram-cartoon-mens-education.png"
+              alt="Athletic man reviewing peptide and wellness education with a clinician"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"
@@ -242,7 +242,7 @@ export default function ConceptPage() {
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#B45C42]">Why EVLV</p>
             <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-0.04em] md:text-5xl">Clarity, not a pitch.</h2>
-            <p className="mt-5 text-base leading-relaxed text-[#5A5550]">Most people researching peptides hit a wall -- vague forums, oversold products, or dense clinical papers. EVLV sits in between: real expertise, explained in plain language, focused on making you a more informed patient.</p>
+            <p className="mt-5 text-base leading-relaxed text-[#5A5550]">EVLV is women-first because women are too often underserved or talked past in wellness. Men are absolutely welcome. Everyone gets the same clear, research-led education designed to make them a more informed patient.</p>
 
             <div className="mt-10 space-y-7">
               {[
