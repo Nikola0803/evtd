@@ -16,6 +16,7 @@ export type BookingRequest = {
   notes?: string;
   privacyAccepted: boolean;
   marketingOptIn: boolean;
+  website?: string;
 };
 
 export type CrmBookingPayload = {

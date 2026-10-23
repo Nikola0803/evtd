@@ -41,6 +41,7 @@ export async function GET() {
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => null)) as BookingRequest | null;
   if (!body) return NextResponse.json({ error: "Invalid booking request." }, { status: 400 });
+  if (body.website?.trim()) return NextResponse.json({ ok: true });
 
   const validDate = availableDates().find((item) => item.date === body.requestedDate);
   const errors: Record<string, string> = {};
@@ -62,20 +63,28 @@ export async function POST(request: Request) {
   const crmUrl = process.env.CRM_API_URL;
   const publicKey = process.env.CRM_BOOKING_FORM_KEY;
 
-  if (crmUrl && publicKey) {
+  if (!crmUrl || !publicKey) {
+    if (process.env.NODE_ENV === "development") {
+      const previewId = `EVLV-${Date.now().toString(36).toUpperCase()}`;
+      return NextResponse.json({ ok: true, mode: "preview", bookingId: previewId, payload });
+    }
+    return NextResponse.json({ error: "Call registration is temporarily unavailable. Please try again shortly." }, { status: 503 });
+  }
+
+  try {
     const crmResponse = await fetch(`${crmUrl}/api/bookings`, {
       method: "POST",
       headers: { "Content-Type": "application/json", "x-public-key": publicKey },
       body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(15_000),
     });
 
     const crmData = await crmResponse.json().catch(() => ({}));
     if (!crmResponse.ok) {
       return NextResponse.json({ error: "We could not reserve that time. Please try another slot." }, { status: 502 });
     }
-    return NextResponse.json({ ok: true, mode: "crm", bookingId: crmData.bookingId ?? crmData.id ?? null, payload });
+    return NextResponse.json({ ok: true, mode: "crm", bookingId: crmData.bookingId ?? crmData.id ?? null });
+  } catch {
+    return NextResponse.json({ error: "Call registration is temporarily unavailable. Please try again shortly." }, { status: 502 });
   }
-
-  const previewId = `EVLV-${Date.now().toString(36).toUpperCase()}`;
-  return NextResponse.json({ ok: true, mode: "preview", bookingId: previewId, payload });
 }

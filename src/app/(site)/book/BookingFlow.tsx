@@ -166,6 +166,7 @@ export function BookingFlow() {
       notes,
       privacyAccepted,
       marketingOptIn,
+      website: String(new FormData(event.currentTarget).get("website") || ""),
     };
 
     setSubmitting(true);
@@ -330,6 +331,7 @@ export function BookingFlow() {
 
           {step === 3 && (
             <form onSubmit={submitBooking} className="p-6 md:p-10 lg:p-12">
+              <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#B45C42]">Almost finished</p>
               <h2 className="mt-3 font-display text-3xl font-semibold md:text-4xl">Where should we send the details?</h2>
 
