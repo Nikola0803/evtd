@@ -2,8 +2,8 @@ import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 
 const FEATURE_PHOTO = {
-  src: "/images/brand/reviews-member-conversation.png",
-  alt: "Two adults sharing a thoughtful conversation at home",
+  src: "/images/brand/instagram-cartoon-education.png",
+  alt: "Illustrated EVLV education conversation",
 };
 
 const REVIEWS = [

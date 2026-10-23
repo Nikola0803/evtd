@@ -63,8 +63,8 @@ export function CallLaunchPopup() {
 
         <div className="relative min-h-[250px] overflow-hidden md:min-h-[610px]">
           <Image
-            src="/images/brand/wellness-consultation.png"
-            alt="A personal EVLV education conversation"
+            src="/images/brand/instagram-cartoon-call.png"
+            alt="Illustrated personal EVLV education call"
             fill
             priority
             sizes="(min-width: 768px) 470px, 100vw"

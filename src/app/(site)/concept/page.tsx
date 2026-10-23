@@ -64,7 +64,7 @@ export default function ConceptPage() {
           {/* Membership card */}
           <div className="relative overflow-hidden rounded-2xl bg-[#1B1D19] p-7 text-white md:p-9">
             <div className="relative mb-4 h-40 overflow-hidden rounded-xl">
-              <Image src="/images/brand/wellness-hero.png" alt="Wellness membership" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
+              <Image src="/images/brand/instagram-cartoon-strength.png" alt="Illustrated member building strength and confidence" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
               <div className="absolute right-4 top-4 z-20 rounded-full bg-[#D77E5F] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-white shadow-sm">Most popular</div>
             </div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Membership</p>
@@ -79,7 +79,7 @@ export default function ConceptPage() {
           {/* Free pep talk card */}
           <div className="relative overflow-hidden rounded-2xl bg-[#1B1D19] p-7 text-white md:p-9">
             <div className="relative mb-4 h-40 overflow-hidden rounded-xl">
-              <Image src="/images/brand/wellness-consultation.png" alt="Free pep talk" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
+              <Image src="/images/brand/instagram-cartoon-call.png" alt="Illustrated EVLV education call" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
               <div className="absolute right-4 top-4 z-20 rounded-full bg-[#F5EDD8] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-[#8D4A38] shadow-sm">Start here</div>
             </div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Free education call</p>
@@ -231,8 +231,8 @@ export default function ConceptPage() {
         <div className="mx-auto grid max-w-[1400px] items-center gap-16 lg:grid-cols-2">
           <div className="relative min-h-[520px] overflow-hidden rounded-[1.5rem]">
             <Image
-              src="/images/brand/program-membership-education.png"
-              alt="Wellness education in a calm, focused setting"
+              src="/images/brand/instagram-cartoon-peptide-education.png"
+              alt="Illustrated peptide education with a licensed clinician"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"
@@ -323,8 +323,8 @@ export default function ConceptPage() {
           </div>
           <div className="relative min-h-[380px] lg:min-h-full">
             <Image
-              src="/images/brand/wellness-consultation.png"
-              alt="Warm wellness education conversation"
+              src="/images/brand/instagram-cartoon-prescribed-care.png"
+              alt="Illustrated clinician-guided prescribed peptide care"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-cover object-center"
