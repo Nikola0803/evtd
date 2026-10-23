@@ -62,9 +62,9 @@ export default function ConceptPage() {
         {/* Feature cards below hero */}
         <div className="mt-16 grid w-full max-w-[1100px] gap-4 text-left sm:grid-cols-2">
           {/* Membership card */}
-          <div className="relative overflow-hidden rounded-2xl bg-[#1B1D19] p-7 text-white md:p-9">
-            <div className="relative mb-4 aspect-square overflow-hidden rounded-xl sm:aspect-auto sm:h-40">
-              <Image src="/images/brand/instagram-cartoon-strength.png" alt="Illustrated member building strength and confidence" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
+          <div className="relative overflow-hidden rounded-2xl bg-[#223128] p-7 text-white md:p-9">
+            <div className="relative mb-4 aspect-square overflow-hidden rounded-xl bg-[#F0E4D1] sm:aspect-[16/9]">
+              <Image src="/images/brand/instagram-cartoon-strength.png" alt="Illustrated member building strength and confidence" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-contain object-center" />
               <div className="absolute right-4 top-4 z-20 rounded-full bg-[#D77E5F] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-white shadow-sm">Most popular</div>
             </div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Membership</p>
@@ -77,9 +77,9 @@ export default function ConceptPage() {
           </div>
 
           {/* Free pep talk card */}
-          <div className="relative overflow-hidden rounded-2xl bg-[#1B1D19] p-7 text-white md:p-9">
-            <div className="relative mb-4 aspect-square overflow-hidden rounded-xl sm:aspect-auto sm:h-40">
-              <Image src="/images/brand/instagram-cartoon-call.png" alt="Illustrated EVLV education call" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
+          <div className="relative overflow-hidden rounded-2xl bg-[#223128] p-7 text-white md:p-9">
+            <div className="relative mb-4 aspect-square overflow-hidden rounded-xl bg-[#F0E4D1] sm:aspect-[16/9]">
+              <Image src="/images/brand/instagram-cartoon-call.png" alt="Illustrated EVLV education call" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-contain object-center" />
               <div className="absolute right-4 top-4 z-20 rounded-full bg-[#F5EDD8] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-[#8D4A38] shadow-sm">Start here</div>
             </div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8B89F]">Free education call</p>
@@ -139,7 +139,7 @@ export default function ConceptPage() {
               <Link
                 key={area.title}
                 href={area.href}
-                className="group relative flex min-h-[320px] flex-col justify-between overflow-hidden rounded-2xl border border-[#1B1D19]/10 bg-[#1B1D19] p-6 text-white transition hover:-translate-y-1 hover:border-[#D77E5F] hover:shadow-[0_16px_40px_rgba(27,29,25,.18)]"
+                className="group relative flex min-h-[320px] flex-col justify-between overflow-hidden rounded-2xl border border-[#223128]/10 bg-[#223128] p-6 text-white transition hover:-translate-y-1 hover:border-[#D77E5F] hover:shadow-[0_16px_40px_rgba(34,49,40,.18)]"
               >
                 <Image
                   src={area.image}
@@ -148,7 +148,7 @@ export default function ConceptPage() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
                   className={`object-cover ${area.imagePosition} transition duration-500 group-hover:scale-[1.04]`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#1B1D19]/25 via-[#1B1D19]/20 to-[#1B1D19]/90" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#223128]/18 via-[#223128]/14 to-[#18231E]/88" />
                 <div className="relative z-10 flex items-start justify-between">
                   <i className={`${area.icon} text-2xl text-[#F2A58C]`} aria-hidden />
                   <span className="text-[10px] font-semibold tracking-[0.15em] text-white/65">0{i + 1}</span>
@@ -166,7 +166,7 @@ export default function ConceptPage() {
       {/* ============================================================
           PACKS -- what we offer
       ============================================================ */}
-      <section className="bg-[#1B1D19] px-5 py-24 text-white md:px-10 md:py-32">
+      <section className="bg-[#223128] px-5 py-24 text-white md:px-10 md:py-32">
         <div className="mx-auto max-w-[1400px]">
           <div className="mb-14">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E8B89F]">How to work with us</p>
@@ -261,7 +261,7 @@ export default function ConceptPage() {
               ))}
             </div>
 
-            <Link href="/book" className="mt-12 inline-flex items-center gap-2 rounded-full bg-[#1B1D19] px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#2A2C27]">
+            <Link href="/book" className="mt-12 inline-flex items-center gap-2 rounded-full bg-[#223128] px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#31453A]">
               Book your first call
             </Link>
           </div>
@@ -305,7 +305,7 @@ export default function ConceptPage() {
           FINAL CTA
       ============================================================ */}
       <section className="px-5 pb-10 pt-4 md:px-10">
-        <div className="mx-auto grid min-h-[560px] max-w-[1400px] overflow-hidden rounded-[2rem] bg-[#1B1D19] lg:grid-cols-[1.1fr_.9fr]">
+        <div className="mx-auto grid min-h-[560px] max-w-[1400px] overflow-hidden rounded-[2rem] bg-[#223128] lg:grid-cols-[1.1fr_.9fr]">
           <div className="flex flex-col justify-center p-10 text-white md:p-16 lg:p-20">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E8B89F]">Your first call is free</p>
             <h2 className="mt-5 font-display text-5xl font-semibold leading-[.95] tracking-[-0.04em] md:text-6xl lg:text-7xl">

@@ -27,7 +27,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-[32px] right-0 left-0 z-50 bg-[#0E1113]/95 backdrop-blur-md transition-shadow duration-300 ${
+      className={`fixed top-[32px] right-0 left-0 z-50 bg-[#18231E]/95 backdrop-blur-md transition-shadow duration-300 ${
         scrolled ? "shadow-sm shadow-black/20" : ""
       }`}
     >
@@ -69,7 +69,7 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-white/10 bg-[#0E1113] px-4 pb-5 pt-3 lg:hidden">
+        <nav className="flex flex-col gap-1 border-t border-white/10 bg-[#18231E] px-4 pb-5 pt-3 lg:hidden">
           {NAV.map((item) => (
             <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="py-2.5 text-sm font-medium uppercase tracking-wide text-white">
               {item.label}
