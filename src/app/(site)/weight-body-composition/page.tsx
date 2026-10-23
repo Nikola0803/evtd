@@ -14,8 +14,8 @@ export default function WeightBodyCompositionPage() {
       title="Understand the whole picture,"
       accent="not just the scale."
       intro="Learn how strength, movement, recovery, and metabolic context fit together - and where peptide research does and does not belong in the conversation."
-      image="/images/brand/focus-weight-optimization.png"
-      imageAlt="A woman exercising on a stationary bike"
+      image="/images/brand/instagram-cartoon-weight.png"
+      imageAlt="Illustrated woman tracking body-composition progress"
       foundationsTitle="Body composition is more than one number."
       foundationsIntro="Weight can change for many reasons. Body composition adds useful context by considering muscle, fat, and the habits that support both. No single metric tells the whole story."
       foundations={[

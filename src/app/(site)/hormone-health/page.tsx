@@ -14,7 +14,7 @@ export default function HormoneHealthPage() {
       title="Learn the language behind"
       accent="the conversation."
       intro="Build a clearer understanding of hormone signaling, everyday influences, and the limits of research - without turning general information into personal medical advice."
-      image="/images/brand/focus-hormone-balance.png"
+      image="/images/brand/instagram-cartoon-hormone.png"
       imageAlt="A woman reading in a calm, sunlit room"
       foundationsTitle="Hormones work as part of a system."
       foundationsIntro="Hormones are chemical messengers. Their patterns can vary with timing, life stage, sleep, stress, movement, nutrition, and many other factors. One observation rarely explains the whole picture."

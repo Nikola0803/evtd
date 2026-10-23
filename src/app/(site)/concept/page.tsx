@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 };
 
 const focusAreas = [
-  { title: "Weight & Body Composition", href: "/weight-body-composition", icon: "ri-scales-3-line", image: "/images/brand/weight-body-composition.png", imagePosition: "object-center", alt: "Woman standing confidently in a wellness studio" },
-  { title: "Energy & Longevity", href: "/energy-longevity", icon: "ri-heart-pulse-line", image: "/images/brand/focus-longevity.png", imagePosition: "object-center", alt: "Woman enjoying an active and healthy lifestyle outdoors" },
-  { title: "Hormone Health", href: "/hormone-health", icon: "ri-test-tube-line", image: "/images/brand/focus-hormone-balance.png", imagePosition: "object-center", alt: "Woman relaxing in a calm home setting" },
-  { title: "Performance & Energy", href: "/performance-energy", icon: "ri-flashlight-line", image: "/images/brand/focus-performance-energy.png", imagePosition: "object-center", alt: "Woman training with a kettlebell" },
-  { title: "Sleep & Recovery", href: "/sleep-recovery", icon: "ri-moon-line", image: "/images/brand/focus-sleep-recovery.png", imagePosition: "object-center", alt: "Woman stretching after a restful night" },
+  { title: "Weight & Body Composition", href: "/weight-body-composition", icon: "ri-scales-3-line", image: "/images/brand/instagram-cartoon-weight.png", imagePosition: "object-center", alt: "Illustrated woman tracking body-composition progress" },
+  { title: "Energy & Longevity", href: "/energy-longevity", icon: "ri-heart-pulse-line", image: "/images/brand/instagram-cartoon-longevity.png", imagePosition: "object-center", alt: "Illustrated woman enjoying active longevity" },
+  { title: "Hormone Health", href: "/hormone-health", icon: "ri-test-tube-line", image: "/images/brand/instagram-cartoon-hormone.png", imagePosition: "object-center", alt: "Illustrated hormone-health education conversation" },
+  { title: "Performance & Energy", href: "/performance-energy", icon: "ri-flashlight-line", image: "/images/brand/instagram-cartoon-performance.png", imagePosition: "object-center", alt: "Illustrated woman training with a kettlebell" },
+  { title: "Sleep & Recovery", href: "/sleep-recovery", icon: "ri-moon-line", image: "/images/brand/instagram-cartoon-sleep.png", imagePosition: "object-center", alt: "Illustrated evening recovery routine" },
 ];
 
 const faqs = [
@@ -63,7 +63,7 @@ export default function ConceptPage() {
         <div className="mt-16 grid w-full max-w-[1100px] gap-4 text-left sm:grid-cols-2">
           {/* Membership card */}
           <div className="relative overflow-hidden rounded-2xl bg-[#1B1D19] p-7 text-white md:p-9">
-            <div className="relative mb-4 h-40 overflow-hidden rounded-xl">
+            <div className="relative mb-4 aspect-square overflow-hidden rounded-xl sm:aspect-auto sm:h-40">
               <Image src="/images/brand/instagram-cartoon-strength.png" alt="Illustrated member building strength and confidence" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
               <div className="absolute right-4 top-4 z-20 rounded-full bg-[#D77E5F] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-white shadow-sm">Most popular</div>
             </div>
@@ -78,7 +78,7 @@ export default function ConceptPage() {
 
           {/* Free pep talk card */}
           <div className="relative overflow-hidden rounded-2xl bg-[#1B1D19] p-7 text-white md:p-9">
-            <div className="relative mb-4 h-40 overflow-hidden rounded-xl">
+            <div className="relative mb-4 aspect-square overflow-hidden rounded-xl sm:aspect-auto sm:h-40">
               <Image src="/images/brand/instagram-cartoon-call.png" alt="Illustrated EVLV education call" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-center" />
               <div className="absolute right-4 top-4 z-20 rounded-full bg-[#F5EDD8] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.15em] text-[#8D4A38] shadow-sm">Start here</div>
             </div>
@@ -229,7 +229,7 @@ export default function ConceptPage() {
       ============================================================ */}
       <section className="px-5 py-24 md:px-10 md:py-32">
         <div className="mx-auto grid max-w-[1400px] items-center gap-16 lg:grid-cols-2">
-          <div className="relative min-h-[520px] overflow-hidden rounded-[1.5rem]">
+          <div className="relative aspect-square overflow-hidden rounded-[1.5rem] lg:aspect-auto lg:min-h-[520px]">
             <Image
               src="/images/brand/instagram-cartoon-peptide-education.png"
               alt="Illustrated peptide education with a licensed clinician"

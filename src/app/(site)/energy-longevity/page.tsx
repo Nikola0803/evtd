@@ -14,7 +14,7 @@ export default function EnergyLongevityPage() {
       title="Build context for"
       accent="the long view."
       intro="Explore the everyday foundations of energy and healthy aging, then learn how to separate interesting peptide research from promises the evidence cannot make."
-      image="/images/brand/focus-longevity.png"
+      image="/images/brand/instagram-cartoon-longevity.png"
       imageAlt="An active woman outdoors in warm natural light"
       foundationsTitle="Longevity starts with capacity."
       foundationsIntro="For us, longevity is not a promise to reverse aging. It is a way to understand the habits and systems that support how you want to feel over time."

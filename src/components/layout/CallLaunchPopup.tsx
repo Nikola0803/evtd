@@ -61,7 +61,7 @@ export function CallLaunchPopup() {
           <i className="ri-close-line" aria-hidden="true" />
         </button>
 
-        <div className="relative min-h-[250px] overflow-hidden md:min-h-[610px]">
+        <div className="relative aspect-square overflow-hidden md:aspect-auto md:min-h-[610px]">
           <Image
             src="/images/brand/instagram-cartoon-call.png"
             alt="Illustrated personal EVLV education call"

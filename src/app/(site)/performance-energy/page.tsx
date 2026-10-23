@@ -14,7 +14,7 @@ export default function PerformanceEnergyPage() {
       title="Understand what supports"
       accent="your capacity."
       intro="Explore how training, recovery, fuel, and daily rhythms work together - then learn how to question peptide claims without mistaking a mechanism for a result."
-      image="/images/brand/focus-performance-energy.png"
+      image="/images/brand/instagram-cartoon-performance.png"
       imageAlt="A woman training with focus in a bright fitness space"
       foundationsTitle="Performance is built across the whole week."
       foundationsIntro="Energy is not one switch, and performance is not one workout. Useful context includes training load, recovery, nourishment, sleep, stress, and how consistently those pieces fit together."

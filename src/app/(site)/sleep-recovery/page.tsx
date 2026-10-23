@@ -14,7 +14,7 @@ export default function SleepRecoveryPage() {
       title="Build context for"
       accent="restored days."
       intro="Learn how sleep timing, daily rhythms, environment, and recovery fit together - and how to read peptide research without treating early findings as answers."
-      image="/images/brand/focus-sleep-recovery.png"
+      image="/images/brand/instagram-cartoon-sleep.png"
       imageAlt="A woman resting peacefully in a calm bedroom"
       foundationsTitle="Recovery begins before bedtime."
       foundationsIntro="Sleep and recovery are shaped by patterns across the day. Timing, light, movement, stress, environment, and routine can all be part of the wider picture."
