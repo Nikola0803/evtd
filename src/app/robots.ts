@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/account", "/checkout", "/order-success"],
+        disallow: ["/api/", "/admin/", "/pos/", "/account", "/checkout", "/order-success"],
       },
     ],
     sitemap: "https://evlvtoday.com/sitemap.xml",

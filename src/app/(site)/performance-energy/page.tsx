@@ -37,6 +37,10 @@ export default function PerformanceEnergyPage() {
         "Was the effect meaningful and repeated in human research?",
         "Are risks and unknowns given the same attention as possible benefits?",
       ]}
+      relatedArticles={[
+        { title: "Low energy is information", description: "A structured way to examine fatigue across sleep, workload, nutrition, training, and health.", href: "/blog/energy-is-information" },
+        { title: "Sustainable body recomposition", description: "Learn how strength, nourishment, and recovery work together without an all-or-nothing plan.", href: "/blog/sustainable-body-recomposition" },
+      ]}
     />
   );
 }

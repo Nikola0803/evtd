@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { getSessionStaff } from "@/lib/pos-auth";
 import { AdminSidebar } from "./AdminSidebar";
+
+export const metadata: Metadata = {
+  title: "EVLV Admin",
+  robots: { index: false, follow: false },
+};
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const staff = await getSessionStaff();

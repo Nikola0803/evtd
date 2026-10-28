@@ -8,6 +8,10 @@ const STATIC_ROUTES = [
   { path: "/shop", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/peptides", priority: 0.8, changeFrequency: "weekly" as const },
+  { path: "/concept", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "/plans", priority: 0.6, changeFrequency: "monthly" as const },
+  { path: "/dna-blueprint", priority: 0.5, changeFrequency: "monthly" as const },
+  { path: "/newsletter", priority: 0.5, changeFrequency: "monthly" as const },
   { path: "/hormone-health", priority: 0.6, changeFrequency: "weekly" as const },
   { path: "/weight-body-composition", priority: 0.7, changeFrequency: "weekly" as const },
   { path: "/energy-longevity", priority: 0.7, changeFrequency: "weekly" as const },
@@ -23,11 +27,11 @@ const STATIC_ROUTES = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const contentUpdated = new Date("2026-10-28");
 
   const staticEntries: MetadataRoute.Sitemap = STATIC_ROUTES.map((r) => ({
     url: `${BASE_URL}${r.path}`,
-    lastModified: now,
+    lastModified: contentUpdated,
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }));

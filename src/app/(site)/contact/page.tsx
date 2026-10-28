@@ -4,6 +4,7 @@ import { ContactForm } from "./ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch with the EVLV support team.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

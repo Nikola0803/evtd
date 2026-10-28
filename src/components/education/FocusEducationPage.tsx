@@ -7,6 +7,12 @@ type Foundation = {
   copy: string;
 };
 
+type RelatedArticle = {
+  title: string;
+  description: string;
+  href: string;
+};
+
 type FocusEducationPageProps = {
   eyebrow: string;
   title: string;
@@ -20,6 +26,7 @@ type FocusEducationPageProps = {
   peptideTitle: string;
   peptideParagraphs: string[];
   questions: string[];
+  relatedArticles: RelatedArticle[];
 };
 
 export function FocusEducationPage({
@@ -35,6 +42,7 @@ export function FocusEducationPage({
   peptideTitle,
   peptideParagraphs,
   questions,
+  relatedArticles,
 }: FocusEducationPageProps) {
   return (
     <main className="overflow-hidden bg-[#F6F0E7] text-[#1B1D19]">
@@ -105,6 +113,22 @@ export function FocusEducationPage({
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F6F0E7] px-4 py-20 md:px-8 md:py-24">
+        <div className="mx-auto max-w-[1240px]">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#B45C42]">Continue learning</p>
+          <h2 className="mt-4 max-w-2xl font-display text-4xl font-semibold leading-tight tracking-[-.035em] md:text-5xl">Related guides from the EVLV blog.</h2>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {relatedArticles.map((article) => (
+              <Link key={article.href} href={article.href} className="group rounded-[1.5rem] bg-white p-7 shadow-[0_16px_45px_rgba(34,31,25,.05)] md:p-9">
+                <h3 className="font-display text-2xl font-semibold leading-snug">{article.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[#62675F]">{article.description}</p>
+                <span className="mt-6 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#8D4A38]">Read the guide <i className="ri-arrow-right-line transition group-hover:translate-x-1" /></span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

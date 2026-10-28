@@ -37,6 +37,10 @@ export default function HormoneHealthPage() {
         "What other factors could influence the result?",
         "Does the source clearly explain uncertainty and limitations?",
       ]}
+      relatedArticles={[
+        { title: "Hormone health after 35", description: "A grounded guide to changing patterns, useful tracking, and preparing for a clinician conversation.", href: "/blog/hormone-health-after-35" },
+        { title: "How to prepare for a wellness consultation", description: "Organize your goals and questions before an educational or clinical conversation.", href: "/blog/prepare-for-a-wellness-consultation" },
+      ]}
     />
   );
 }

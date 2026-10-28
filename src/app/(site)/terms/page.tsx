@@ -2,8 +2,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | evolv",
-  description: "The terms that govern use of the evolv website and purchase of evolv products.",
+  title: "Terms & Conditions",
+  description: "The terms that govern use of the EVLV website and education services.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

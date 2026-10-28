@@ -6,6 +6,7 @@ import { ReviewsSection } from "@/components/home/ReviewsSection";
 export const metadata: Metadata = {
   title: { absolute: "EVLV | Peptide Education & Wellness Optimization" },
   description: "EVLV helps you understand peptides, hormone health, and longevity so you can have an informed conversation with your prescribing doctor. Free 15-minute calls. US-based wellness experts.",
+  alternates: { canonical: "/concept" },
 };
 
 const focusAreas = [

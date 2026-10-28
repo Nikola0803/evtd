@@ -37,6 +37,10 @@ export default function SleepRecoveryPage() {
         "How long did the study last, and were the findings consistent?",
         "Does the claim go beyond the outcome the researchers actually measured?",
       ]}
+      relatedArticles={[
+        { title: "Sleep is a health strategy", description: "Build a calmer, more consistent sleep routine and know when persistent problems need clinical attention.", href: "/blog/sleep-is-a-health-strategy" },
+        { title: "Low energy is information", description: "Explore how sleep, workload, nutrition, training, and health can overlap with fatigue.", href: "/blog/energy-is-information" },
+      ]}
     />
   );
 }

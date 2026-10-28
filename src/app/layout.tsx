@@ -34,7 +34,7 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "EVLV: Peptide & Wellness Education",
+    default: "Peptide & Wellness Education for Women and Men | EVLV",
     template: "%s | EVLV",
   },
   description:
@@ -70,6 +70,7 @@ export const metadata: Metadata = {
 const ORGANIZATION_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
   name: "EVLV",
   url: SITE_URL,
   logo: `${SITE_URL}/logo/evlv-logo-light.png`,
@@ -79,8 +80,10 @@ const ORGANIZATION_JSON_LD = {
 const WEBSITE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
   name: "EVLV",
   url: SITE_URL,
+  publisher: { "@id": `${SITE_URL}/#organization` },
   potentialAction: {
     "@type": "SearchAction",
     target: `${SITE_URL}/shop?q={search_term_string}`,

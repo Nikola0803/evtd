@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getJournalArticles } from "@/lib/journal-data";
 
 export const metadata: Metadata = {
-  title: "Wellness Blog",
+  title: "Peptide & Wellness Education Blog",
   description: "Evidence-aware articles on peptide science, hormone health, metabolic wellness, longevity, body composition, performance, and recovery.",
   alternates: { canonical: "/blog" },
   openGraph: {
@@ -17,9 +17,22 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const [featured, ...articles] = getJournalArticles();
+  const allArticles = [featured, ...articles];
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "EVLV peptide and wellness education articles",
+    itemListElement: allArticles.map((article, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `https://evlvtoday.com/blog/${article.slug}`,
+      name: article.title,
+    })),
+  };
 
   return (
     <main className="bg-[#FAF2E4] text-[#1B1D19]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <section className="px-4 py-6 md:px-8 md:py-10">
         <div className="mx-auto grid max-w-[1400px] overflow-hidden rounded-[2rem] bg-[#18231E] text-white lg:grid-cols-[.9fr_1.1fr]">
           <div className="flex flex-col justify-center p-8 md:p-14 lg:p-16">

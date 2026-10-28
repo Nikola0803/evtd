@@ -4,13 +4,25 @@ import { Accordion } from "@/components/ui/Accordion";
 import { ButtonLink } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "Peptide Education & Wellness FAQ",
   description: "Answers to common questions about EVLV education, membership, and how we work.",
+  alternates: { canonical: "/faq" },
 };
 
 export default function FaqPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <section className="-mt-[90px] bg-charcoal pb-20 pt-[150px] text-center text-white md:-mt-[100px] md:pb-32 md:pt-[170px]">
         <div className="mx-auto max-w-[1400px] px-4 md:px-8">
           <h1 className="mb-4 font-display text-4xl font-semibold md:text-5xl lg:text-6xl">Popular Questions</h1>

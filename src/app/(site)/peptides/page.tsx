@@ -69,6 +69,23 @@ export default function PeptidesPage() {
           </Link>
         </div>
       </section>
+
+      <section className="bg-[#DDD0BE] px-4 py-16 md:px-8 md:py-24">
+        <div className="mx-auto max-w-[900px]">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#8D4A38]">Continue learning</p>
+          <h2 className="mt-4 font-display text-3xl font-semibold text-charcoal md:text-4xl">Put peptide research in a wider wellness context.</h2>
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            <Link href="/blog/prepare-for-a-wellness-consultation" className="rounded-[1.4rem] bg-[#F9F5EE] p-7">
+              <h3 className="font-display text-2xl font-semibold">Prepare for a useful wellness conversation</h3>
+              <p className="mt-3 text-sm leading-relaxed text-soft-gray">Organize your goals and turn online research into clearer questions for a qualified professional.</p>
+            </Link>
+            <Link href="/blog/a-better-way-to-track-progress" className="rounded-[1.4rem] bg-[#F9F5EE] p-7">
+              <h3 className="font-display text-2xl font-semibold">Track progress without tracking everything</h3>
+              <p className="mt-3 text-sm leading-relaxed text-soft-gray">Choose a few useful signals and avoid letting the dashboard become the goal.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -37,6 +37,10 @@ export default function WeightBodyCompositionPage() {
         "How long did the study run, and what limitations did the authors report?",
         "Does the claim reflect one result or the wider body of evidence?",
       ]}
+      relatedArticles={[
+        { title: "Metabolic health beyond the scale", description: "See why energy, sleep, movement, and clinical context tell a broader story than weight alone.", href: "/blog/metabolic-health-beyond-the-scale" },
+        { title: "Sustainable body recomposition", description: "A practical framework for strength, muscle, recovery, and consistent progress.", href: "/blog/sustainable-body-recomposition" },
+      ]}
     />
   );
 }

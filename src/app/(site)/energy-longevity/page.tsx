@@ -37,6 +37,10 @@ export default function EnergyLongevityPage() {
         "What risks, unknowns, and study limitations were reported?",
         "Is the headline stronger than the evidence underneath it?",
       ]}
+      relatedArticles={[
+        { title: "Longevity starts with everyday capacity", description: "A useful view of healthy aging built around strength, movement, connection, and preventive care.", href: "/blog/longevity-starts-with-capacity" },
+        { title: "A better way to track progress", description: "Choose a few meaningful signals and keep the dashboard from becoming the goal.", href: "/blog/a-better-way-to-track-progress" },
+      ]}
     />
   );
 }
