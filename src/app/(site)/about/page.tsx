@@ -33,7 +33,7 @@ export default function AboutPage() {
       <section className="bg-ivory-soft py-16 md:py-24">
         <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-10 px-4 md:grid-cols-2 md:px-8">
           <div className="aspect-[4/3] w-full overflow-hidden rounded-lg">
-            <Image src="/images/brand/wellness-consultation.png" alt="EVLV wellness consultation" width={800} height={600} className="h-full w-full object-cover" priority />
+            <Image src="/images/brand/instagram-cartoon-peptide-education.png" alt="EVLV peptide and wellness education conversation" width={800} height={600} className="h-full w-full object-cover" priority />
           </div>
           <div>
             <span className="mb-4 inline-block rounded-full border border-stone bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-charcoal/60">
@@ -115,7 +115,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="aspect-[4/3] w-full overflow-hidden rounded-lg bg-ivory-soft">
-            <Image src="/images/brand/molecular-sculpture.png" alt="Abstract molecular sculpture" width={800} height={800} className="h-full w-full object-cover" />
+            <Image src="/images/brand/instagram-cartoon-mens-education.png" alt="Man reviewing wellness education with a clinician" width={800} height={800} className="h-full w-full object-cover" />
           </div>
         </div>
       </section>

@@ -7,7 +7,7 @@ const QUICK_LINKS = [
   { label: "Women's Optimization", href: "/shop?category=womens" },
   { label: "Membership Plans", href: "/plans" },
   { label: "Free Consultation", href: "/contact" },
-  { label: "Wellness Journal", href: "/journal" },
+  { label: "Wellness Blog", href: "/blog" },
 ];
 
 /**

@@ -5,7 +5,7 @@ import { NewsletterForm } from "./NewsletterForm";
 const RESEARCH_NAV = [
   { href: "/shop", label: "Education Library" },
   { href: "/#goals", label: "Focus Areas" },
-  { href: "/journal", label: "Journal" },
+  { href: "/blog", label: "Blog" },
 ];
 
 const COMPANY_NAV = [

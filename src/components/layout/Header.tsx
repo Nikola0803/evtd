@@ -8,7 +8,7 @@ const NAV = [
   { href: "/peptides", label: "Peptide Education" },
   { href: "/hormone-health", label: "Hormone Education" },
   { href: "/membership", label: "Membership" },
-  { href: "/journal", label: "Journal" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
 ];
 

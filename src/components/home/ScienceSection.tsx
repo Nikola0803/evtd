@@ -9,7 +9,7 @@ export function ScienceSection() {
     <section className="bg-ivory pb-20 pt-20 md:pb-32 md:pt-32">
       <div className="mx-auto max-w-[1400px] px-4 md:px-8">
         <Reveal className="mb-16 max-w-2xl md:mb-24">
-          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-copper">07 / The evolv Wellness Journal</p>
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-copper">07 / The EVLV Wellness Blog</p>
           <h2 className="font-display text-4xl font-semibold leading-tight text-charcoal md:text-5xl">
             Wellness deserves
             <br />
@@ -23,7 +23,7 @@ export function ScienceSection() {
 
         <Reveal stagger className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
           {articles.map((article, i) => (
-            <Link key={article.slug} href={`/journal/${article.slug}`} className="group block">
+            <Link key={article.slug} href={`/blog/${article.slug}`} className="group block">
               <div className="aspect-[4/3] w-full overflow-hidden rounded-lg bg-sage-mist">
                 <Image
                   src={article.image}
@@ -48,10 +48,10 @@ export function ScienceSection() {
 
         <div className="mt-12 text-center">
           <Link
-            href="/journal"
+            href="/blog"
             className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-sage-deep transition hover:text-charcoal"
           >
-            View All Journal Articles <i className="ri-arrow-right-line" />
+            View All Blog Articles <i className="ri-arrow-right-line" />
           </Link>
         </div>
       </div>

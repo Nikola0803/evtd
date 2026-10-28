@@ -31,7 +31,7 @@ const TOPICS = [
     title: "Metabolic Wellness",
     copy: "Understand the relationship between daily habits, energy, and metabolic wellbeing.",
     image: "/images/brand/instagram-cartoon-weight.png",
-    href: "/journal/metabolic-health-beyond-the-scale",
+    href: "/blog/metabolic-health-beyond-the-scale",
   },
   {
     title: "Performance & Energy",
@@ -64,10 +64,10 @@ const GUIDES = [
   },
   {
     eyebrow: "Fresh perspectives",
-    title: "The EVLV Journal",
+    title: "The EVLV Blog",
     copy: "Short, thoughtful reads about energy, recovery, longevity, and sustainable wellbeing.",
     image: "/images/brand/instagram-cartoon-call.png",
-    href: "/journal",
+    href: "/blog",
   },
 ];
 

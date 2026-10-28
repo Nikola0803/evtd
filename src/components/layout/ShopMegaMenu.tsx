@@ -83,8 +83,8 @@ export function ShopMegaMenu({ products }: { products?: Product[] }) {
                 <Link href="/coas" className="flex items-center gap-1 text-xs font-medium text-white/50 transition hover:text-white">
                   View COAs <i className="ri-arrow-right-line" />
                 </Link>
-                <Link href="/journal" className="flex items-center gap-1 text-xs font-medium text-white/50 transition hover:text-white">
-                  Research Journal <i className="ri-arrow-right-line" />
+                <Link href="/blog" className="flex items-center gap-1 text-xs font-medium text-white/50 transition hover:text-white">
+                  Wellness Blog <i className="ri-arrow-right-line" />
                 </Link>
                 <button type="button" onClick={openQuiz} className="flex items-center gap-1 text-xs font-medium text-copper transition hover:text-copper-light">
                   Take the Quiz <i className="ri-arrow-right-line" />

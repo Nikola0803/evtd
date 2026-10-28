@@ -6,7 +6,7 @@ const BASE_URL = "https://evlvtoday.com";
 const STATIC_ROUTES = [
   { path: "/", priority: 1, changeFrequency: "daily" as const },
   { path: "/shop", priority: 0.9, changeFrequency: "weekly" as const },
-  { path: "/journal", priority: 0.6, changeFrequency: "weekly" as const },
+  { path: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/peptides", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/hormone-health", priority: 0.6, changeFrequency: "weekly" as const },
   { path: "/weight-body-composition", priority: 0.7, changeFrequency: "weekly" as const },
@@ -32,12 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.priority,
   }));
 
-  const journalEntries: MetadataRoute.Sitemap = getJournalArticles().map((a) => ({
-    url: `${BASE_URL}/journal/${a.slug}`,
+  const blogEntries: MetadataRoute.Sitemap = getJournalArticles().map((a) => ({
+    url: `${BASE_URL}/blog/${a.slug}`,
     lastModified: new Date(a.publishedDate),
     changeFrequency: "monthly",
     priority: 0.5,
   }));
 
-  return [...staticEntries, ...journalEntries];
+  return [...staticEntries, ...blogEntries];
 }
