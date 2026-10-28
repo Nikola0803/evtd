@@ -40,7 +40,7 @@ export default function MembershipPage() {
             </div>
           </div>
           <div className="relative min-h-[360px] lg:min-h-[620px]">
-            <Image src="/images/brand/instagram-cartoon-strength.png" alt="Woman building strength and confidence through wellness education" fill priority sizes="(max-width: 1024px) 100vw, 52vw" className="object-cover object-center" />
+            <Image src="/images/brand/inner-membership-community.png" alt="EVLV members learning together in a wellness workshop" fill priority sizes="(max-width: 1024px) 100vw, 52vw" className="object-cover object-center" />
           </div>
         </div>
       </section>

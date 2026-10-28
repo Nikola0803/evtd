@@ -29,7 +29,7 @@ export default function PeptidesPage() {
             </div>
           </div>
           <div className="relative min-h-[360px] lg:min-h-[620px]">
-            <Image src="/images/brand/instagram-cartoon-peptide-education.png" alt="Woman learning about peptide science with a clinician" fill priority sizes="(max-width: 1024px) 100vw, 52vw" className="object-cover object-center" />
+            <Image src="/images/brand/inner-peptide-education.png" alt="Woman learning the foundations of peptide science" fill priority sizes="(max-width: 1024px) 100vw, 52vw" className="object-cover object-center" />
           </div>
         </div>
       </section>

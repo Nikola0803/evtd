@@ -30,7 +30,7 @@ export default function BookPage() {
             </div>
             </div>
             <div className="relative aspect-square overflow-hidden rounded-[1.5rem] bg-[#F0E4D1]">
-              <Image src="/images/brand/instagram-cartoon-call.png" alt="EVLV wellness education phone call" fill priority sizes="(max-width: 640px) 100vw, 280px" className="object-cover object-center" />
+              <Image src="/images/brand/inner-booking-call.png" alt="Woman scheduling an EVLV wellness education call" fill priority sizes="(max-width: 640px) 100vw, 280px" className="object-cover object-center" />
             </div>
           </div>
         </div>

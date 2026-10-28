@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "EVLV Wellness Blog",
     description: "Clear wellness education designed to help you ask better questions and make sense of the research.",
     url: "https://evlvtoday.com/blog",
-    images: [{ url: "/images/brand/instagram-cartoon-education.png", width: 1200, height: 1200, alt: "EVLV Wellness Blog" }],
+    images: [{ url: "/images/brand/blog-hero-reading.png", width: 1200, height: 1200, alt: "EVLV Wellness Blog" }],
   },
 };
 
@@ -37,7 +37,7 @@ export default function BlogPage() {
             </div>
           </div>
           <div className="relative min-h-[400px] lg:min-h-[650px]">
-            <Image src="/images/brand/instagram-cartoon-education.png" alt="EVLV wellness education and research" fill priority sizes="(max-width: 1024px) 100vw, 55vw" className="object-cover object-center" />
+            <Image src="/images/brand/blog-hero-reading.png" alt="Woman reading EVLV wellness research" fill priority sizes="(max-width: 1024px) 100vw, 55vw" className="object-cover object-center" />
           </div>
         </div>
       </section>

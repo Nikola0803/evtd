@@ -17,7 +17,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     title: "Hormone health after 35: what is changing, and what is not",
     excerpt:
       "A grounded guide to the shifts that can affect sleep, energy, mood and body composition - and how to prepare for a useful conversation with your clinician.",
-    image: "/images/brand/instagram-cartoon-hormone.png",
+    image: "/images/brand/blog-hormone-patterns.png",
     publishedDate: "2026-09-24",
     readTime: "6 min read",
     body: [
@@ -35,7 +35,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     title: "Metabolic health is bigger than the number on the scale",
     excerpt:
       "Why energy, blood pressure, sleep, daily movement and clinical markers tell a more useful story than body weight alone.",
-    image: "/images/brand/instagram-cartoon-weight.png",
+    image: "/images/brand/blog-metabolic-whole-health.png",
     publishedDate: "2026-09-20",
     readTime: "5 min read",
     body: [
@@ -52,7 +52,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     title: "Body recomposition without the all-or-nothing plan",
     excerpt:
       "A practical framework for building strength, supporting muscle and changing body composition without turning wellness into a second job.",
-    image: "/images/brand/instagram-cartoon-strength.png",
+    image: "/images/brand/blog-body-recomposition.png",
     publishedDate: "2026-09-16",
     readTime: "6 min read",
     body: [
@@ -70,7 +70,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     title: "Sleep is a health strategy, not leftover time",
     excerpt:
       "How to build a calmer, more consistent sleep routine - and when persistent sleep problems deserve clinical attention.",
-    image: "/images/brand/instagram-cartoon-sleep.png",
+    image: "/images/brand/blog-sleep-routine.png",
     publishedDate: "2026-09-12",
     readTime: "5 min read",
     body: [
@@ -87,7 +87,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     title: "Longevity starts with capacity for everyday life",
     excerpt:
       "A less glamorous - and more useful - way to think about living well for longer: strength, movement, connection and preventive care.",
-    image: "/images/brand/instagram-cartoon-longevity.png",
+    image: "/images/brand/blog-longevity-capacity.png",
     publishedDate: "2026-09-08",
     readTime: "6 min read",
     body: [
@@ -104,7 +104,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     title: "Low energy is information - not a character flaw",
     excerpt:
       "A structured way to examine fatigue across sleep, workload, nutrition, training and health without defaulting to more caffeine.",
-    image: "/images/brand/instagram-cartoon-performance.png",
+    image: "/images/brand/blog-energy-recovery.png",
     publishedDate: "2026-09-04",
     readTime: "5 min read",
     body: [
@@ -121,7 +121,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     title: "How to prepare for a useful wellness consultation",
     excerpt:
       "The notes, questions and priorities that turn a first conversation into a clearer and more personal plan.",
-    image: "/images/brand/instagram-cartoon-call.png",
+    image: "/images/brand/blog-prepare-call.png",
     publishedDate: "2026-08-30",
     readTime: "4 min read",
     body: [
@@ -139,7 +139,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     title: "A better way to track progress without tracking everything",
     excerpt:
       "How to choose a few meaningful signals, review them calmly and keep the dashboard from becoming the goal.",
-    image: "/images/brand/instagram-cartoon-mens-education.png",
+    image: "/images/brand/blog-track-progress.png",
     publishedDate: "2026-08-25",
     readTime: "5 min read",
     body: [
